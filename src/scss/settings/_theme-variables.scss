@@ -1,0 +1,27 @@
+// =======================================
+//     List of variables for layout
+// =======================================
+
+$header-height: 80px;
+$sidebar-width: 260px;
+$sidebar-collapsed-width: 80px;
+
+// header
+$header-background: #fff;
+$header-color: #525b69;
+$header-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+$brand-color: #161c25;
+
+// Menu
+$sidebar-background: #fff;
+$sidebar-color: #616161;
+$sidebar-active-color: $secondary;
+$sidebar-caption: #212121;
+$sidebar-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+
+// card block
+
+//$card-shadow: inset 0 0 0 1px rgba(144, 202, 249, 0.46);
+$card-shadow: none;
+
+$soft-bg-level: -80%;

@@ -1,0 +1,178 @@
+.auth-main {
+  position: relative;
+
+  .auth-wrapper {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+
+    .saprator {
+      position: relative;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $border-color;
+        z-index: 1;
+      }
+
+      span {
+        font-size: 0.875rem;
+        padding: 20px 70px;
+        background: #fff;
+        z-index: 5;
+        text-transform: uppercase;
+        color: $headings-color;
+        font-weight: 500;
+        outline: 1px solid $border-color;
+        outline-offset: -16px;
+        border-radius: 10px;
+      }
+    }
+    .auth-sidecontent {
+      overflow: hidden;
+    }
+    &.v2 {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        width: 100%;
+        padding: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        + .card {
+          margin-top: 80px;
+        }
+      }
+      .auth-form {
+        flex-direction: column;
+      }
+
+      .auth-sidecontent {
+        width: 500px;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        position: relative;
+        background: shift-color($primary, $soft-bg-level);
+        @media (max-width: 991.98px) {
+          display: none;
+        }
+
+        & > * {
+          position: relative;
+          z-index: 5;
+        }
+
+        &::after {
+          content: '';
+          background-image: url('../../../assets/images/authentication/auth2-login.svg');
+          background-repeat: no-repeat;
+          background-position: bottom;
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          bottom: 0px;
+          left: 0;
+          right: 0;
+          opacity: 0.1;
+        }
+
+        .carousel {
+          position: relative;
+          top: 25px;
+        }
+      }
+    }
+
+    &.v1 {
+      display: flex;
+      align-items: center;
+
+      .auth-form {
+        background: shift-color($primary, $soft-bg-level);
+        min-height: 100vh;
+        padding: 24px;
+      }
+
+      .auth-sidecontent {
+        width: 500px;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        position: relative;
+        @media (max-width: 991.98px) {
+          display: none;
+        }
+
+        & > * {
+          position: relative;
+          z-index: 5;
+        }
+
+        &::after {
+          content: '';
+          background-image: url('../../../assets/images/authentication/auth2-login.svg');
+          background-repeat: no-repeat;
+          background-position: bottom;
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          bottom: 0px;
+          left: 0;
+          right: 0;
+          opacity: 0.1;
+        }
+      }
+    }
+
+    &.v3 {
+      display: flex;
+      align-items: center;
+
+      .auth-form {
+        background: shift-color($primary, $soft-bg-level);
+        min-height: 100vh;
+        padding: 24px;
+      }
+    }
+    .auth-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+
+      .card {
+        width: 100%;
+        max-width: 480px;
+        box-shadow: none;
+      }
+
+      img {
+        padding-right: 15px;
+      }
+
+      h5 {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .auth-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

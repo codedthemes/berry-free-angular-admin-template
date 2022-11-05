@@ -1,0 +1,420 @@
+/**======================================================================
+=========================================================================
+Template Name: berry - Most Complete Bootstrap Admin Template
+Author: berry
+Support: berry@gmail.com
+File: style.css
+=========================================================================
+=================================================================================== */
+// theme font
+// main framework
+$menu-styler: 280px;
+$pct-colors: ();
+$pct-colors: map-merge(
+  (
+    'primary': $primary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'dark': $dark
+  ),
+  $pct-colors
+);
+
+.pct-c-btn {
+  display: block;
+  padding: 0;
+  position: fixed;
+  right: 10px;
+  top: 200px;
+  z-index: 1030;
+  transition: all 0.15s ease-in-out;
+  .btn {
+    padding: 12px;
+    border-radius: 50% 50% 4px 50%;
+    box-shadow: 0px 12px 14px 0px rgba(103, 58, 183, 0.3);
+  }
+}
+
+.doc-img,
+.theme-color {
+  display: block;
+  position: relative;
+  padding: 5px 5px 0;
+  margin-bottom: 10px;
+
+  > a {
+    position: relative;
+    width: 45px;
+    height: 30px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 8px;
+    background: $theme-background;
+    overflow: hidden;
+    box-shadow: 0.4px 0.9px 3px 0 rgba(0, 0, 0, 0.33);
+
+    span {
+      width: 100%;
+      position: absolute;
+
+      &:after,
+      &:before {
+        content: '';
+        height: 100%;
+        position: absolute;
+      }
+
+      &:before {
+        width: 30%;
+        left: 0;
+        background: $menu-dark-background;
+      }
+
+      &:after {
+        width: 70%;
+        right: 0;
+        background: $theme-background;
+      }
+    }
+
+    > span:nth-child(1) {
+      height: 30%;
+      top: 0;
+    }
+
+    > span:nth-child(2) {
+      height: 75%;
+      bottom: 0;
+    }
+
+    &.active {
+      box-shadow: 0 0 0 3px $primary;
+
+      &:before {
+        content: '\e8dc';
+        top: -1px;
+        font-size: 20px;
+        position: absolute;
+        left: 12px;
+        font-family: 'feather';
+        z-index: 1001;
+        color: $primary;
+        transition: 0.3s ease-in-out;
+        text-shadow: 0 1px 3px transparentize($primary, 0.1), 0 3px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    &[data-value='menu-light'] {
+      span {
+        &:before {
+          background: $menu-light-background;
+        }
+      }
+    }
+
+    &[data-value='reset'] {
+      background: $danger;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      top: -10px;
+      width: 135px;
+    }
+  }
+
+  &.small {
+    > a {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+
+      &:before {
+        font-size: 15px;
+        left: 5px;
+        top: 1px;
+      }
+
+      > span {
+        display: none;
+      }
+    }
+  }
+
+  // prebuild layout
+  &.prelayout-color {
+    > a {
+      margin-bottom: 5px;
+      &[data-value='l2'] {
+        > span {
+          &:nth-child(1) {
+            &:before {
+              background: $menu-dark-background;
+            }
+          }
+
+          &:nth-child(2) {
+            &:before {
+              background: $theme-color;
+            }
+          }
+        }
+      }
+
+      &[data-value='l2-2'] {
+        > span {
+          &:nth-child(1) {
+            &:before {
+              background: $menu-dark-background;
+            }
+          }
+
+          &:nth-child(2) {
+            &:before {
+              background: $theme-color2;
+            }
+          }
+        }
+      }
+
+      &[data-value='l3'] {
+        > span {
+          &:nth-child(1) {
+            &:before {
+              background: $menu-dark-background;
+            }
+          }
+
+          &:nth-child(2) {
+            &:before {
+              background: $primary;
+            }
+          }
+        }
+      }
+
+      &[data-value='l4'] {
+        > span {
+          &:nth-child(1) {
+            &:before {
+              background: $theme-color;
+            }
+          }
+        }
+      }
+
+      &[data-value='l4-2'] {
+        > span {
+          &:nth-child(1) {
+            &:before {
+              background: $theme-color2;
+            }
+          }
+        }
+      }
+
+      &[data-value='l5-h'] {
+        > span {
+          &:nth-child(1) {
+            height: 40%;
+
+            &:after,
+            &:before {
+              background: linear-gradient($primary 50%, #fff 0%);
+              box-shadow: 7px 0 15px 0 rgba(69, 90, 100, 0.09);
+              z-index: 1;
+            }
+          }
+
+          &:nth-child(2) {
+            height: 60%;
+
+            &:after,
+            &:before {
+              background: $theme-background;
+            }
+          }
+        }
+      }
+
+      &[data-value='l6'] {
+        > span {
+          &:nth-child(1) {
+            height: 50%;
+          }
+
+          &:nth-child(2) {
+            height: 50%;
+
+            &:after {
+              background: $theme-background;
+            }
+
+            &:before {
+              background: #fff;
+            }
+          }
+        }
+      }
+
+      &[data-value='l8'] {
+        > span {
+          &:nth-child(2) {
+            &:after {
+              background: $theme-background;
+            }
+
+            &:before {
+              background: linear-gradient(#fff 0px, #fff 5px, #fff 8px, #fff);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.body-color {
+  &.preset-color {
+    $i: 1;
+    @each $name, $value in $preset-colors {
+      > a {
+        &[data-value='preset-#{$i}'] {
+          > span:nth-child(1) {
+            background: map-get($value, 'primary');
+          }
+          > span:nth-child(2) {
+            background: map-get($value, 'secondary');
+          }
+        }
+      }
+      $i: $i + 1;
+    }
+    > a.active {
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 2;
+      }
+      &::after {
+        content: '\ebaa';
+        font-family: tabler-icons !important;
+        font-weight: 400;
+        color: #fff;
+        position: absolute;
+        z-index: 5;
+        font-size: 24px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  > a {
+    span {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform: rotate(138deg) scale(1.9);
+    }
+
+    > span:nth-child(1) {
+      top: -50%;
+      left: -50%;
+      background: $primary;
+    }
+
+    > span:nth-child(2) {
+      bottom: -50%;
+      right: -50%;
+      background: $secondary;
+    }
+  }
+}
+
+.doc-img {
+  > a {
+    width: 100px;
+    height: 65px;
+  }
+}
+
+// header color varient Start
+$header-c-background: #111936;
+$header-c-color: #fff;
+
+.pc-header {
+  &[class*='bg-'],
+  &.dark-header {
+    box-shadow: none;
+    background: $header-c-background;
+    color: $header-c-color;
+
+    @media (min-width: 1025px) {
+      .pc-head-link {
+        color: $header-c-color;
+
+        i {
+          color: $header-c-color;
+        }
+        &.active,
+        &:active,
+        &:focus,
+        &:hover {
+          color: $header-c-color;
+          background: transparentize($white, 0.85);
+        }
+
+        .user-desc {
+          color: transparentize($header-c-color, 0.3);
+        }
+      }
+    }
+  }
+}
+
+// header color varient end
+.pc-horizontal {
+  .topbar {
+    &.light-sidebar {
+      background: $sidebar-background;
+      box-shadow: $sidebar-shadow;
+
+      .pc-link {
+        color: $sidebar-color;
+
+        &:active,
+        &:focus,
+        &:hover {
+          color: $sidebar-active-color;
+        }
+      }
+    }
+  }
+}
+
+.auth-wrapper {
+  ~ .pct-customizer {
+    display: none;
+  }
+}
+
+// sidebar color varient end
