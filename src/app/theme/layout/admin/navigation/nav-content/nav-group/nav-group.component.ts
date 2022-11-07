@@ -19,7 +19,7 @@ export class NavGroupComponent implements OnInit {
 
   // Constructor
   constructor(private zone: NgZone, private location: Location, private locationStrategy: LocationStrategy) {
-    this.config = BerryConfig.config;
+    this.config = BerryConfig;
   }
 
   // Life cycle events
@@ -37,17 +37,17 @@ export class NavGroupComponent implements OnInit {
       const up_parent = parent?.parentElement?.parentElement;
       const last_parent = up_parent?.parentElement;
       if (parent?.classList.contains('coded-hasmenu')) {
-        if (this.config['layout'] === 'vertical') {
+        if (BerryConfig.layout === 'vertical') {
           parent.classList.add('coded-trigger');
         }
         parent.classList.add('active');
       } else if (up_parent?.classList.contains('coded-hasmenu')) {
-        if (this.config['layout'] === 'vertical') {
+        if (BerryConfig.layout === 'vertical') {
           up_parent.classList.add('coded-trigger');
         }
         up_parent.classList.add('active');
       } else if (last_parent?.classList.contains('coded-hasmenu')) {
-        if (this.config['layout'] === 'vertical') {
+        if (BerryConfig.layout === 'vertical') {
           last_parent.classList.add('coded-trigger');
         }
         last_parent.classList.add('active');

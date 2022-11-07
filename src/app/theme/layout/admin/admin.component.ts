@@ -20,7 +20,7 @@ export class AdminComponent implements OnInit {
 
   // Constructor
   constructor(private zone: NgZone, private location: Location, private locationStrategy: LocationStrategy) {
-    this.config = BerryConfig.config;
+    this.config = BerryConfig;
 
     let current_url = this.location.path();
     if (this.location['_baseHref']) {
@@ -35,7 +35,7 @@ export class AdminComponent implements OnInit {
     }
 
     this.windowWidth = window.innerWidth;
-    this.navCollapsed = this.windowWidth >= 1025 ? this.config['collapse-menu'] : false;
+    this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.collapse_menu : false;
     this.navCollapsedMob = false;
   }
 

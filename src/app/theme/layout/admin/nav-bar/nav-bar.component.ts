@@ -18,9 +18,9 @@ export class NavBarComponent implements OnInit {
 
   // Constructor
   constructor() {
-    this.config = BerryConfig.config;
+    this.config = BerryConfig;
     this.windowWidth = window.innerWidth;
-    this.navCollapsed = this.windowWidth >= 1025 ? this.config['collapse-menu'] : false;
+    this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.collapse_menu : false;
     this.navCollapsedMob = false;
   }
 

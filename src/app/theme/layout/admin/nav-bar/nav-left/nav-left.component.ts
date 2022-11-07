@@ -1,6 +1,5 @@
 // Angular import
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { BerryConfig } from 'src/app/app-config';
 
 @Component({
   selector: 'app-nav-left',
@@ -10,7 +9,6 @@ import { BerryConfig } from 'src/app/app-config';
 export class NavLeftComponent implements OnInit {
   // public props
   @Output() onNavCollapsedMob = new EventEmitter();
-  config: any;
   navCollapsedMob;
   headerStyle: string;
   menuClass: boolean;
@@ -18,7 +16,6 @@ export class NavLeftComponent implements OnInit {
 
   // Constructor
   constructor() {
-    this.config = BerryConfig.config;
     this.navCollapsedMob = false;
     this.headerStyle = '';
     this.menuClass = false;

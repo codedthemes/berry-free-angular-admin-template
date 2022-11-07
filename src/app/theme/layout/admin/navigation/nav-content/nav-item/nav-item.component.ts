@@ -19,8 +19,8 @@ export class NavItemComponent implements OnInit {
 
   // Constructor
   constructor(private location: Location, private locationStrategy: LocationStrategy) {
-    this.config = BerryConfig.config;
-    this.themeLayout = this.config['layout'];
+    this.config = BerryConfig;
+    this.themeLayout = BerryConfig.layout;
   }
 
   // Life cycle events
@@ -28,7 +28,7 @@ export class NavItemComponent implements OnInit {
 
   // public method
   closeOtherMenu(event: any) {
-    if (this.config['layout'] === 'vertical') {
+    if (BerryConfig.layout === 'vertical') {
       const ele = event.target;
       if (ele !== null && ele !== undefined) {
         const parent = ele.parentElement;

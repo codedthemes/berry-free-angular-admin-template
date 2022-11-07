@@ -33,8 +33,8 @@ export class NavCollapseComponent implements OnInit {
   // Constructor
   constructor() {
     this.visible = false;
-    this.config = BerryConfig.config;
-    this.themeLayout = this.config['layout'];
+    this.config = BerryConfig;
+    this.themeLayout = BerryConfig.layout;
     this.windowWidth = window.innerWidth;
   }
 

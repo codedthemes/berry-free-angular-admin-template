@@ -15,11 +15,11 @@ export class ConfigurationComponent implements OnInit {
   setFontFamily!: string;
 
   constructor(private zone: NgZone, private location: Location, private locationStrategy: LocationStrategy) {
-    this.berryConfig = BerryConfig.config;
+    this.berryConfig = BerryConfig;
   }
 
   ngOnInit(): void {
-    this.setFontFamily = this.berryConfig['set-font-family'];
+    this.setFontFamily = BerryConfig.fontFamily;
     this.setfontFamily(this.setFontFamily);
   }
 

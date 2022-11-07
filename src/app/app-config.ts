@@ -1,6 +1,5 @@
 export class BerryConfig {
-  static config = {
-    layout: 'vertical',
-    fontFamily: 'Roboto' // Roboto, poppins, inter
-  };
+  static layout: string = 'vertical';
+  static collapse_menu: boolean = false;
+  static fontFamily: string = 'Roboto' // Roboto, poppins, inter
 }

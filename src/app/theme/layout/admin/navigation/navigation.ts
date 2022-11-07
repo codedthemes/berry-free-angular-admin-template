@@ -124,9 +124,11 @@ const NavigationItems = [
         id: 'document',
         title: 'Document',
         type: 'item',
-        url: '/sample-page',
         classes: 'nav-item',
-        icon: 'ti ti-vocabulary'
+        url: 'https://codedthemes.gitbook.io/berry-angular/',
+        icon: 'ti ti-vocabulary',
+        target: true,
+        external: true
       }
     ]
   }

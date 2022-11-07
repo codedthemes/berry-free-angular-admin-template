@@ -31,6 +31,25 @@
     height: calc(100vh - #{$header-height});
   }
 
+  .version {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 16px 0px;
+    cursor: pointer;
+
+    label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-left: 8px;
+      padding-right: 8px;
+      white-space: nowrap;
+      background-color: rgb(250, 250, 250);
+      color: rgb(158, 158, 158);
+      border-radius: 16px;
+    }
+  }
+
   .header-logo {
     position: relative;
     align-items: center;
