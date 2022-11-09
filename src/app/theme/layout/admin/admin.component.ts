@@ -12,7 +12,6 @@ import { BerryConfig } from '../../../app-config';
 })
 export class AdminComponent implements OnInit {
   // public props
-  config: any;
   navCollapsed: boolean;
   navCollapsedMob: boolean;
   windowWidth: number;
@@ -20,22 +19,14 @@ export class AdminComponent implements OnInit {
 
   // Constructor
   constructor(private zone: NgZone, private location: Location, private locationStrategy: LocationStrategy) {
-    this.config = BerryConfig;
-
     let current_url = this.location.path();
     if (this.location['_baseHref']) {
       current_url = this.location['_baseHref'] + this.location.path();
     }
 
-    if (
-      current_url === this.location['_baseHref'] + '/layout/theme-compact' ||
-      current_url === this.location['_baseHref'] + '/layout/box'
-    ) {
-      this.config['theme-compact'] = true;
-    }
-
-    this.windowWidth = window.innerWidth;
-    this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.collapse_menu : false;
+    if (current_url === this.location['_baseHref'] + '/layout/theme-compact' || current_url === this.location['_baseHref'] + '/layout/box')
+      this.windowWidth = window.innerWidth;
+    this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.isCollapse_menu : false;
     this.navCollapsedMob = false;
   }
 

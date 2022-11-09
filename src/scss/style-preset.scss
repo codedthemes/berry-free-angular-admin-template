@@ -212,7 +212,7 @@ File: style.css
         fill: shift-color($value, $soft-bg-level);
         stroke: $value;
       }
-      
+
       .text-hover-#{$color}:hover {
         color: $value !important;
       }

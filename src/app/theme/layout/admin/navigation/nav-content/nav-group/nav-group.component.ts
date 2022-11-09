@@ -15,12 +15,9 @@ export class NavGroupComponent implements OnInit {
   // public props
   @Input() item!: NavigationItem;
   @Output() toggle: EventEmitter<any> = new EventEmitter();
-  config: any;
 
   // Constructor
-  constructor(private zone: NgZone, private location: Location, private locationStrategy: LocationStrategy) {
-    this.config = BerryConfig;
-  }
+  constructor(private zone: NgZone, private location: Location, private locationStrategy: LocationStrategy) {}
 
   // Life cycle events
   ngOnInit() {

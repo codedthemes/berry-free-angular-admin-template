@@ -4,7 +4,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 // project import
 import { NavigationItem } from '../../navigation';
 import { animate, style, transition, trigger } from '@angular/animations';
-import { BerryConfig } from '../../../../../../app-config';
+import { BerryConfig } from 'src/app/app-config';
 
 @Component({
   selector: 'app-nav-collapse',
@@ -26,14 +26,12 @@ export class NavCollapseComponent implements OnInit {
   @Input() item!: NavigationItem;
 
   visible;
-  config: any;
   themeLayout: string;
   windowWidth: number;
 
   // Constructor
   constructor() {
     this.visible = false;
-    this.config = BerryConfig;
     this.themeLayout = BerryConfig.layout;
     this.windowWidth = window.innerWidth;
   }

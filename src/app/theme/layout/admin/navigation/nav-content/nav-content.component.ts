@@ -19,7 +19,7 @@ export class NavContentComponent implements OnInit, AfterViewInit {
   // version
   title = 'Demo application for version numbering';
   currentApplicationVersion = environment.appVersion;
-  
+
   config: any;
   navigation: any;
   prevDisabled: string;

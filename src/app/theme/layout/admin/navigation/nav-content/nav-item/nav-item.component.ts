@@ -14,12 +14,10 @@ import { BerryConfig } from '../../../../../../app-config';
 export class NavItemComponent implements OnInit {
   // public props
   @Input() item!: NavigationItem;
-  config: any;
   themeLayout: string;
 
   // Constructor
   constructor(private location: Location, private locationStrategy: LocationStrategy) {
-    this.config = BerryConfig;
     this.themeLayout = BerryConfig.layout;
   }
 
@@ -51,9 +49,6 @@ export class NavItemComponent implements OnInit {
           last_parent.classList.add('active');
         }
       }
-      // if ((document.querySelector('app-navigation.coded-navbar') as HTMLDivElement).classList.contains('mob-open')) {
-      //   (document.querySelector('app-navigation.coded-navbar') as HTMLDivElement).classList.remove('mob-open');
-      // }
     } else {
       setTimeout(() => {
         const sections = document.querySelectorAll('.coded-hasmenu');

@@ -10,12 +10,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
 // bootstrap import
-import {
-  NgbDropdownModule,
-  NgbNavModule,
-  NgbModule,
-  NgbCollapseModule,
-} from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule, NgbNavModule, NgbModule, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [

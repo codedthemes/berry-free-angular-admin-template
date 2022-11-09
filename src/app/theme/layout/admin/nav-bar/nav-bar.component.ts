@@ -11,16 +11,14 @@ export class NavBarComponent implements OnInit {
   // public props
   @Output() onNavCollapse = new EventEmitter();
   @Output() onNavCollapsedMob = new EventEmitter();
-  config: any;
   navCollapsed;
   windowWidth: number;
   navCollapsedMob;
 
   // Constructor
   constructor() {
-    this.config = BerryConfig;
     this.windowWidth = window.innerWidth;
-    this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.collapse_menu : false;
+    this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.isCollapse_menu : false;
     this.navCollapsedMob = false;
   }
 

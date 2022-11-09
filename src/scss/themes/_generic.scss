@@ -133,7 +133,6 @@ $i: 1;
   }
 }
 
-
 /*====== more bootstrap colors start ======*/
 $more-colors: (
   'blue': (
@@ -147,7 +146,6 @@ $more-colors: (
     800: $blue-800,
     900: $blue-900
   ),
-  
   'purple': (
     100: $purple-100,
     200: $purple-200,
@@ -158,8 +156,7 @@ $more-colors: (
     700: $purple-700,
     800: $purple-800,
     900: $purple-900
-  ),
- 
+  )
 );
 @each $name, $value in $more-colors {
   $i: 100;

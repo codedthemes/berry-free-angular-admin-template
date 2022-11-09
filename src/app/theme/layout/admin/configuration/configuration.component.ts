@@ -10,13 +10,10 @@ import { BerryConfig } from 'src/app/app-config';
 export class ConfigurationComponent implements OnInit {
   // public method
   styleSelectorToggle!: boolean; // open configuration menu
-  berryConfig: any;
   fontFamily: string;
   setFontFamily!: string;
 
-  constructor(private zone: NgZone, private location: Location, private locationStrategy: LocationStrategy) {
-    this.berryConfig = BerryConfig;
-  }
+  constructor(private zone: NgZone, private location: Location, private locationStrategy: LocationStrategy) {}
 
   ngOnInit(): void {
     this.setFontFamily = BerryConfig.fontFamily;
@@ -30,5 +27,4 @@ export class ConfigurationComponent implements OnInit {
     (document.querySelector('body') as HTMLBodyElement).classList.remove('inter');
     (document.querySelector('body') as HTMLBodyElement).classList.add(font);
   }
-
 }
