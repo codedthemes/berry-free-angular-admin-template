@@ -101,8 +101,10 @@ const NavigationItems = [
         title: 'Tabler',
         type: 'item',
         classes: 'nav-item',
-        url: '/tabler',
-        icon: 'ti ti-plant-2'
+        url: 'https://tabler-icons.io/',
+        icon: 'ti ti-plant-2',
+        target: true,
+        external: true
       }
     ]
   },
