@@ -1,0 +1,20 @@
+<div class="m-header">
+  <!-- [ Header Topbar ] start -->
+  <a [routerLink]="['/default/']" class="b-brand">
+    <!-- ========   change your logo hear   ============ -->
+    <img src="assets/images/logo-dark.svg" alt="" class="logo logo-lg" />
+  </a>
+  <!-- ======= Menu collapse Icon ===== -->
+  <div class="pc-h-item">
+    <a
+      href="javascript:"
+      class="pc-head-link head-link-secondary m-0 mobile-menu"
+      [ngClass]="{ on: navCollapsed }"
+      id="sidebar-hide mobile-collapse"
+      (click)="navCollapse()"
+    >
+      <i class="ti ti-menu-2"></i>
+    </a>
+  </div>
+</div>
+<!-- [ Header ] end -->

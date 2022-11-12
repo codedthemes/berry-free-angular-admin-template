@@ -1,0 +1,9 @@
+<header class="pc-header coded-header">
+  <div class="">
+    <app-nav-logo [navCollapsed]="navCollapsed" (onNavCollapse)="navCollapse()"></app-nav-logo>
+  </div>
+  <div class="header-wrapper">
+    <app-nav-left (onNavCollapsedMob)="navCollapseMob()"></app-nav-left>
+    <app-nav-right></app-nav-right>
+  </div>
+</header>

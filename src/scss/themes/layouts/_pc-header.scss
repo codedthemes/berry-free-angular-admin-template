@@ -1,0 +1,486 @@
+// ============================
+//     header css start
+// ============================
+
+.pc-header {
+  background: $header-background;
+  color: $header-color;
+  min-height: $header-height;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1025;
+  display: flex;
+
+  ul {
+    margin-bottom: 0;
+    display: inline-flex;
+  }
+
+  .m-header {
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $sidebar-width;
+    padding: 16px 10px 16px 24px;
+  }
+
+  .header-wrapper {
+    display: flex;
+    padding: 0 20px;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .header-search {
+    position: relative;
+
+    .form-control {
+      border-radius: $border-radius;
+      padding: 0.813rem 3rem 0.813rem 3rem;
+      width: 434px;
+      max-width: 100%;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    .search-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 18px;
+    }
+
+    .btn-search {
+      position: absolute;
+      top: 7px;
+      right: 9px;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: $border-radius;
+    }
+  }
+
+  .pc-h-item {
+    min-height: $header-height;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .icon-search {
+    height: 20px;
+    width: 20px;
+
+    &:before {
+      font-size: 18px;
+    }
+  }
+
+  .pc-head-link {
+    color: $header-color;
+    margin: 0 16px;
+    position: relative;
+    font-weight: 500;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: $border-radius;
+
+    @each $color, $value in $theme-colors {
+      @if ($color == 'primary' or $color == 'secondary') {
+        &.head-link-#{$color} {
+          background: shift-color($value, $soft-bg-level);
+          color: $value;
+
+          > i {
+            color: $value;
+          }
+
+          &:hover {
+            background: $value;
+
+            color: #fff;
+
+            > i {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    > i {
+      font-size: 20px;
+      color: $primary;
+    }
+
+    > svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: $secondary;
+      background: shift-color($secondary, $soft-bg-level);
+    }
+
+    .pc-h-badge {
+      position: absolute;
+      top: 3px;
+      right: 10px;
+      border-radius: 50%;
+      font-size: 9px;
+
+      &.dots {
+        width: 9px;
+        height: 9px;
+        top: 7px;
+        right: 16px;
+        padding: 0;
+      }
+    }
+
+    .user-desc,
+    .user-name {
+      display: block;
+      line-height: 1;
+    }
+
+    .user-name {
+      margin-bottom: 5px;
+
+      font: {
+        size: 15px;
+        weight: 600;
+      }
+    }
+
+    .user-desc {
+      font: {
+        size: 12px;
+        weight: 400;
+      }
+
+      color: transparentize($header-color, 0.3);
+    }
+  }
+
+  .pc-h-dropdown {
+    .fa-circle {
+      font-size: 5px;
+      vertical-align: middle;
+    }
+
+    transform: none !important;
+    top: 100% !important;
+
+    &.dropdown-menu-end {
+      right: 0 !important;
+      left: auto !important;
+    }
+  }
+
+  .pc-level-menu {
+    position: relative;
+
+    &:hover {
+      > .dropdown-menu {
+        display: block;
+        left: 100%;
+        top: -18px !important;
+      }
+    }
+  }
+  .dropdown .dropdown-item {
+    small {
+      opacity: 0.8;
+      margin: 0 4px;
+    }
+  }
+
+  .drp-search {
+    min-width: 20rem;
+  }
+
+  .user-avtar {
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  .header-user-profile {
+    .pc-head-link {
+      height: 48px;
+      width: 92px;
+      border-radius: 50px;
+
+      > span > i {
+        font-size: 22px;
+        margin-right: 8px;
+      }
+
+      .user-avtar {
+        width: 34px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 48px;
+
+        .user-avtar {
+          margin-right: 0;
+        }
+
+        > span > i {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .dropdown-user-profile {
+    min-width: 330px;
+    max-width: 100%;
+
+    .dropdown-item {
+      border-radius: $border-radius;
+      padding-left: 24px;
+      padding-right: 24px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background: shift-color($secondary, $soft-bg-level);
+        color: $secondary;
+      }
+    }
+
+    .upgradeplan-block {
+      position: relative;
+      overflow: hidden;
+      padding: 24px;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        border-color: $warning;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+      }
+
+      &::before {
+        border: 3px solid;
+        top: 145px;
+        right: -70px;
+      }
+
+      &::after {
+        border: 19px solid;
+        top: 65px;
+        right: -150px;
+      }
+    }
+
+    .settings-block {
+      padding: 24px;
+
+      .form-switch {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        + .form-switch {
+          margin-top: 15px;
+        }
+
+        .form-check-input {
+          float: right;
+        }
+
+        .form-check-label {
+          color: $headings-color;
+          font-size: $h5-font-size;
+          font-weight: $headings-font-weight;
+        }
+      }
+    }
+  }
+
+  .dropdown-notification {
+    min-width: 330px;
+    max-width: 100%;
+
+    .list-group-item-action {
+      &:active,
+      &:hover,
+      &:focus {
+        background: shift-color($primary, $soft-bg-level);
+      }
+
+      .user-avtar,
+      h5 {
+        cursor: pointer;
+      }
+    }
+
+    .badge {
+      font-size: 0.8125rem;
+      padding: 0.43em 1em;
+    }
+
+    .user-avtar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+
+    .notification-file {
+      display: flex;
+      align-items: center;
+
+      i {
+        font-size: 20px;
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+.minimenu {
+  .pc-header {
+    left: $sidebar-collapsed-width;
+  }
+}
+
+@media (min-width: 1025px) {
+  .pc-header {
+    z-index: 1027;
+    .header-mobile-collapse {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .pc-header {
+    top: 0;
+    left: 0;
+    transition: all 0.15s ease-in-out;
+
+    .m-header {
+      display: none;
+    }
+
+    .pc-head-link {
+      .user-desc,
+      .user-name {
+        display: none;
+      }
+    }
+
+    .pcm-logo {
+      margin-left: 30px;
+
+      img {
+        max-width: 160px;
+      }
+    }
+
+    &.mob-header-active {
+      top: $header-height;
+
+      .header-wrapper {
+        background: $header-background;
+        position: relative;
+        z-index: 5;
+      }
+    }
+
+    .pc-md-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .pc-level-menu .dropdown-menu {
+      left: 0;
+      display: block;
+      padding-left: 30px;
+    }
+
+    .pc-mob-drp {
+      &.mob-drp-active {
+        .pc-h-item {
+          display: block;
+          min-height: auto;
+          position: relative;
+
+          .pc-head-link {
+            display: block;
+            margin: 5px 10px !important;
+          }
+
+          .dropdown-menu {
+            position: relative !important;
+            width: 100%;
+            float: none;
+            box-shadow: none;
+          }
+        }
+
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .minimenu {
+    .pc-header {
+      left: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .pc-header {
+    .pc-head-link {
+      padding: 0.65rem;
+      margin: 0 8px;
+    }
+
+    .pc-h-item {
+      position: static;
+
+      .pc-h-dropdown {
+        left: 0 !important;
+        right: 0 !important;
+      }
+    }
+  }
+}
+
+// header css end

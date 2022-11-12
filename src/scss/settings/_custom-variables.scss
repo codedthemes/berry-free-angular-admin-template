@@ -1,0 +1,318 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color System of Berry
+
+// BLUE Primary Color
+
+$blue-700: #1c76da;
+$purple-500: #673ab7;
+$purple-700: #542ca7;
+
+// Assign Main Theme Color
+$blue: $blue-500;
+$purple: $purple-500;
+
+// scss-docs-start colors-map
+$colors: (
+  'blue': $blue,
+  'purple': $purple
+);
+
+$primary: $blue; // change
+$secondary: $indigo; // change
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary
+);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, '$value');
+
+$min-contrast-ratio: 1.55;
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark: $body-color;
+
+$blues: (
+  'blue-500': $blue-500
+);
+
+$purples: (
+  'purple-500': $purple-500,
+  'purple-700': $purple-700
+);
+
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (('<', '%3c'), ('>', '%3e'), ('#', '%23'), ('(', '%28'), (')', '%29'));
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3
+);
+
+// scss-docs-start position-map
+$position-values: (
+  0: 0,
+  50: 50%,
+  100: 100%
+);
+
+$body-bg: #eceff1; // change
+$body-text-align: null;
+$link-color: $primary;
+$link-decoration: none;
+$link-shade-percentage: 20%;
+$link-hover-color: $link-color; // change
+$link-hover-decoration: underline;
+$stretched-link-pseudo-element: after;
+$stretched-link-z-index: 1;
+$paragraph-margin-bottom: 1rem;
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+// scss-docs-end container-max-widths
+
+@include _assert-ascending($container-max-widths, '$container-max-widths');
+
+// Grid columns
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+$grid-row-columns: 6;
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width;
+
+// scss-docs-start border-variables
+$border-width: 1px;
+$border-widths: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+);
+
+$border-color: #eeeeee;
+
+$border-radius: 8px; // change
+$border-radius-lg: 10px; // change
+$border-radius-sm: 4px; // change
+
+$border-radius-pill: 50rem;
+$component-active-bg: $primary;
+
+$font-size-base: 0.875rem;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+$h1-font-size: 34px; // change
+$h2-font-size: 24px; // change
+$h3-font-size: 20px; // change
+$h4-font-size: 16px; // change
+$h5-font-size: 14px; // change
+$h6-font-size: 12px; // change
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+);
+// scss-docs-end font-sizes
+
+$headings-margin-bottom: calc($spacer / 2);
+$headings-font-family: null;
+$headings-font-style: null;
+$headings-font-weight: 500;
+$headings-line-height: 1.2;
+
+// scss-docs-start display-headings
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+$display-font-weight: 300;
+$display-line-height: $headings-line-height;
+// scss-docs-end display-headings
+
+$small-font-size: 80%;
+
+$hr-margin-y: $spacer;
+$hr-color: inherit;
+$hr-height: $border-width;
+$hr-opacity: 0.13;
+
+$dt-font-weight: $font-weight-bold;
+$list-inline-padding: 0.5rem;
+
+$input-btn-padding-y: 0.5rem;
+$input-btn-padding-x: 1rem;
+$input-btn-font-size: 0.875rem;
+$input-btn-line-height: $line-height-base;
+
+$input-btn-focus-width: 0.2rem;
+$input-btn-focus-color-opacity: 0.25;
+$input-btn-focus-color: rgba($component-active-bg, $input-btn-focus-color-opacity);
+$input-btn-focus-blur: 0;
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+$input-btn-padding-y-sm: 0.25rem;
+$input-btn-padding-x-sm: 0.5rem;
+$input-btn-font-size-sm: $font-size-sm;
+$input-btn-padding-y-lg: 1rem;
+$input-btn-padding-x-lg: 1.3rem;
+$input-btn-font-size-lg: $font-size-lg;
+$input-btn-border-width: 1px;
+$input-font-size-sm: $input-btn-font-size-sm;
+
+// Buttons
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y: $input-btn-padding-y;
+$btn-padding-x: $input-btn-padding-x;
+$btn-font-family: $input-btn-font-family;
+$btn-font-size: $input-btn-font-size;
+$btn-line-height: $input-btn-line-height;
+$btn-white-space: null; // Set to `nowrap` to prevent text wrapping
+$btn-padding-y-sm: $input-btn-padding-y-sm;
+$btn-padding-x-sm: $input-btn-padding-x-sm;
+$btn-font-size-sm: $input-btn-font-size-sm;
+$btn-padding-y-lg: $input-btn-padding-y-lg;
+$btn-padding-x-lg: $input-btn-padding-x-lg;
+$btn-font-size-lg: $input-btn-font-size-lg;
+$btn-border-width: $input-btn-border-width;
+$btn-font-weight: 500;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius: 4px;
+$form-check-input-width: 1.25em;
+$form-check-min-height: $font-size-base * $line-height-base;
+$form-check-padding-start: $form-check-input-width + 0.5em;
+$form-check-margin-bottom: 0.125rem;
+$form-check-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out;
+$form-check-input-active-filter: brightness(90%);
+$form-check-input-bg: $input-bg;
+$form-check-input-border: 1px solid rgba(0, 0, 0, 0.25);
+$form-check-input-border-radius: 0.25em;
+$form-check-radio-border-radius: 50%;
+$form-check-input-disabled-opacity: 0.5;
+
+$input-group-addon-padding-y: $input-padding-y;
+$input-group-addon-padding-x: $input-padding-x;
+$input-group-addon-font-weight: $input-font-weight;
+$input-group-addon-color: $input-color;
+$input-group-addon-bg: $body-bg;
+$input-group-addon-border-color: $input-border-color;
+
+// scss-docs-start zindex-stack
+$zindex-dropdown: 1000;
+
+// scss-docs-start placeholders
+$placeholder-opacity-max: 0.5;
+$placeholder-opacity-min: 0.2;
+// scss-docs-end placeholders
+
+// Cards
+$card-spacer-y: 25px; // change
+$card-spacer-x: 25px; // change
+$card-title-spacer-y: calc($spacer / 2);
+$card-border-width: 0px; // change
+$card-border-radius: $border-radius;
+$card-border-color: rgba($black, 0.125);
+$card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width});
+$card-cap-padding-y: 25px;
+$card-cap-padding-x: 25px;
+$card-cap-bg: transparent;
+$card-bg: $white;
+$card-group-margin: calc($grid-gutter-width / 2);
+
+// List group
+
+$list-group-border-color: $border-color;
+$list-group-border-width: $border-width;
+$list-group-border-radius: $border-radius;
+$list-group-item-padding-y: calc($card-spacer-y / 1.5);
+$list-group-item-padding-x: $card-spacer-x;
+$list-group-item-bg-scale: -80%;
+$list-group-item-color-scale: 40%;
+$list-group-active-color: $component-active-color;
+$list-group-active-bg: $component-active-bg;
+$list-group-active-border-color: $list-group-active-bg;
+$list-group-disabled-bg: $list-group-bg;
+$list-group-action-hover-color: $list-group-action-color;
+$list-group-action-active-color: $body-color;
+$header-height: 70px;
+$Menu-width: 260px;
+$Menu-collapsed-width: 0px;
+
+//menu
+$menu-dark-background: #ffffff;
+$menu-dark-text-color: #616161;
+$menu-light-background: #fff;
+$menu-light-text-color: #3f4d67;
+
+//theme
+$theme-background: #f4f7fa;
+$theme-font-color: #888;
+$theme-heading-color: #111;
+
+$form-bg: #f0f3f6;
+$theme-color: linear-gradient(-135deg, #673ab7 0%, #673ab7 100%);
+$theme-color2: linear-gradient(-135deg, #899fd4 0%, #a389d4 100%);
+
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark
+  ),
+  $theme-colors
+); // Color contrast

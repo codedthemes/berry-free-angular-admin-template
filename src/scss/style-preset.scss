@@ -1,0 +1,371 @@
+/**======================================================================
+=========================================================================
+Template Name: berry - Most Complete Bootstrap Admin Template
+Author: CodedThemes
+Support: support@CodedThemes.net
+File: style.css
+=========================================================================
+=================================================================================== */
+
+// main framework
+@import 'settings/preset-variables';
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'settings/custom-variables';
+@import 'settings/theme-variables';
+
+@import 'node_modules/bootstrap/scss/mixins';
+
+@each $name, $value in $preset-colors {
+  [part='#{$name}'] {
+    $pc-body: map-get($value, 'body');
+    $pc-primary: map-get($value, 'primary');
+    $pc-primary-dark: map-get($value, 'primary-dark');
+    $pc-secondary: map-get($value, 'secondary');
+    $pc-secondary-dark: map-get($value, 'secondary-dark');
+
+    $pctheme-colors: (
+      'primary': $pc-primary,
+      'secondary': $pc-secondary,
+      'primary-dark': $pc-primary-dark,
+      'secondary-dark': $pc-secondary-dark
+    );
+    .pc-container {
+      background: $pc-body;
+    }
+    .pc-sidebar {
+      .pc-item {
+        &.active,
+        &:focus,
+        &:hover {
+          > .pc-link {
+            color: $pc-secondary;
+            .pc-micon {
+              i,
+              svg {
+                color: $pc-secondary;
+              }
+            }
+          }
+        }
+      }
+      .coded-inner-navbar {
+        > app-nav-group > app-nav-collapse li {
+          &.active,
+          &:focus,
+          &:hover {
+            > a {
+              color: $pc-secondary;
+            }
+          }
+          .coded-submenu > app-nav-item li {
+            &.active,
+            &:focus,
+            &:hover {
+              > a {
+                &:before {
+                  background: $pc-secondary;
+                }
+              }
+            }
+          }
+        }
+        .coded-hasmenu {
+          .coded-submenu {
+            app-nav-collapse li,
+            app-nav-item li {
+              &.active,
+              &.coded-trigger,
+              &:hover {
+                > a {
+                  color: $pc-secondary;
+                }
+              }
+            }
+          }
+        }
+        app-nav-item > li.nav-item,
+        > app-nav-group > app-nav-collapse > li {
+          &.active,
+          &.coded-trigger {
+            > a {
+              background: shift-color($pc-secondary, $soft-bg-level);
+              color: $pc-secondary;
+            }
+          }
+        }
+        app-nav-item > li.nav-item:hover,
+        > app-nav-group > app-nav-collapse > li:hover {
+          > a {
+            background: shift-color($pc-secondary, $soft-bg-level);
+          }
+        }
+        .nav-link:hover,
+        .nav-link:focus {
+          color: $pc-secondary;
+        }
+      }
+    }
+    a,
+    .btn-link {
+      --bs-link-color: $pc-primary;
+    }
+    .page-link {
+      color: $pc-primary;
+      &:hover {
+        background: shift-color($pc-primary, $soft-bg-level);
+      }
+    }
+    .accordion-button:not(.collapsed) {
+      color: $pc-primary;
+      background: shift-color($pc-primary, $soft-bg-level);
+    }
+    .progress-bar {
+      background-color: $pc-primary;
+    }
+    .page-item.active .page-link,
+    .list-group-item.active {
+      color: #ffffff;
+      background-color: $pc-primary;
+      border-color: $pc-primary;
+    }
+    .nav-link {
+      &:hover,
+      &:focus {
+        color: $pc-primary;
+      }
+    }
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+      background-color: $pc-primary;
+    }
+    .nav-pills .nav-link.active {
+      color: var(--bs-nav-pills-link-active-color);
+    }
+
+    .form-select,
+    .form-control {
+      &:focus {
+        border-color: $pc-primary;
+        box-shadow: 0 0 0 1px $pc-primary;
+      }
+    }
+    .form-check-input {
+      &:checked {
+        background-color: $pc-primary;
+        border-color: $pc-primary;
+      }
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($pc-primary, 0.25);
+      }
+    }
+    .form-floating {
+      > .form-control,
+      > .custom-select,
+      > .dataTable-selector,
+      > .dataTable-input {
+        &:focus {
+          ~ label {
+            // color: $pc-primary;
+          }
+        }
+      }
+    }
+
+    .choices__list--multiple {
+      .choices__item {
+        background-color: $pc-primary;
+        border: 1px solid $pc-primary;
+      }
+    }
+    .is-focused .choices__inner,
+    .is-open .choices__inner {
+      border-color: $pc-primary;
+      box-shadow: 0 0 0 1px $pc-primary;
+    }
+    @each $color, $value in $pctheme-colors {
+      .pc-header .pc-head-link.head-link-#{$color} {
+        background: shift-color($value, $soft-bg-level);
+        color: $value;
+        > i {
+          color: $value;
+        }
+        &:hover {
+          background: $value;
+          color: #fff;
+          > i {
+            color: #fff;
+          }
+        }
+      }
+      .text-#{$color} {
+        color: $value !important;
+      }
+      .bg-#{$color} {
+        background-color: $value !important;
+      }
+      .bg-light-#{$color} {
+        background: shift-color($value, $soft-bg-level);
+        color: $value;
+      }
+      .icon-svg-#{$color} {
+        fill: shift-color($value, $soft-bg-level);
+        stroke: $value;
+      }
+
+      .text-hover-#{$color}:hover {
+        color: $value !important;
+      }
+      .b-#{$color} {
+        border: 1px solid $value;
+      }
+      .border-bottom-#{$color} td {
+        border-bottom: 1px solid $value;
+      }
+      .border-bottom-#{$color} th {
+        border-bottom: 1px solid $value !important;
+      }
+      .fill-#{$color} {
+        fill: $value;
+      }
+      .btn-#{$color} {
+        @include button-variant($value, $value);
+      }
+      .btn-outline-#{$color} {
+        @include button-outline-variant($value);
+      }
+      .btn-light-#{$color} {
+        background: shift-color($value, $soft-bg-level);
+        color: $value;
+        border-color: shift-color($value, $soft-bg-level);
+        &.coupon-btn {
+          border-color: $value;
+        }
+        &:hover {
+          background: $value;
+          color: #fff;
+          border-color: $value;
+        }
+
+        &.focus,
+        &:focus {
+          background: $value;
+          color: #fff;
+          border-color: $value;
+        }
+
+        &:not(:disabled):not(.disabled).active,
+        &:not(:disabled):not(.disabled):active,
+        .show > &.dropdown-toggle {
+          background: $value;
+          color: #fff;
+          border-color: $value;
+        }
+      }
+      .btn-check:active,
+      .btn-check:checked {
+        + .btn-light-#{$color} {
+          background: $value;
+          color: #fff;
+          border-color: $value;
+        }
+      }
+      .btn-link-#{$color} {
+        background: transparent;
+        color: $value;
+        border-color: transparent;
+        &:hover {
+          background: shift-color($value, $soft-bg-level);
+          color: $value;
+          border-color: shift-color($value, $soft-bg-level);
+        }
+
+        &.focus,
+        &:focus {
+          background: shift-color($value, $soft-bg-level);
+          color: $value;
+          border-color: shift-color($value, $soft-bg-level);
+        }
+
+        &:not(:disabled):not(.disabled).active,
+        &:not(:disabled):not(.disabled):active,
+        .show > &.dropdown-toggle {
+          background: shift-color($value, $soft-bg-level);
+          color: $value;
+          border-color: shift-color($value, $soft-bg-level);
+        }
+      }
+      .btn-check:active,
+      .btn-check:checked {
+        + .btn-link-#{$color} {
+          background: shift-color($value, $soft-bg-level);
+          color: $value;
+          border-color: shift-color($value, $soft-bg-level);
+        }
+      }
+      $alert-background: shift-color($value, $alert-bg-scale);
+      $alert-border: shift-color($value, $alert-border-scale);
+      $alert-color: shift-color($value, $alert-color-scale);
+      @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
+        $alert-color: mix($value, color-contrast($alert-background), abs($alert-color-scale));
+      }
+      .alert-#{$color} {
+        @include alert-variant($alert-background, $alert-border, $alert-color);
+      }
+      .badge.bg-light-#{$color} {
+        background: shift-color($value, $soft-bg-level);
+        color: $value;
+        border-color: shift-color($value, $soft-bg-level);
+      }
+      .form-check {
+        .form-check-input {
+          &.input-#{$color} {
+            &:checked {
+              border-color: $value;
+              background-color: $value;
+            }
+          }
+
+          &.input-light-#{$color} {
+            &:checked {
+              border-color: shift-color($value, $soft-bg-level);
+              background-color: shift-color($value, $soft-bg-level);
+
+              &[type='checkbox'] {
+                background-image: escape-svg(
+                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$value}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>")
+                );
+              }
+
+              &[type='radio'] {
+                background-image: escape-svg(
+                  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$value}'/></svg>")
+                );
+              }
+            }
+          }
+
+          &.input-#{$color},
+          &.input-light-#{$color} {
+            &:focus {
+              &[type='checkbox'],
+              &[type='radio'] {
+                box-shadow: 0 0 0 0.2rem rgba($value, 0.25);
+              }
+            }
+          }
+        }
+
+        &.form-switch {
+          .form-check-input.input-light-#{$color} {
+            &:checked {
+              background-image: escape-svg(
+                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$value}'/></svg>")
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}

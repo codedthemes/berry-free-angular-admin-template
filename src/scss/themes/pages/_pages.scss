@@ -1,0 +1,297 @@
+/* ==============================================================
+                     image-cropper  Start
+====================================================== */
+.docs-buttons {
+  .btn {
+    margin-bottom: 10px !important;
+  }
+}
+
+.docs-data {
+  .input-group {
+    background: transparent;
+    margin-bottom: 10px;
+  }
+
+  > .input-group > label {
+    min-width: 80px;
+  }
+
+  .input-group > span {
+    min-width: 50px;
+  }
+}
+
+.img-container {
+  min-height: 200px;
+  max-height: 516px;
+  margin-bottom: 20px;
+
+  > img {
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    min-height: 516px;
+  }
+}
+
+.docs-preview {
+  margin-right: -15px;
+
+  .img-preview {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    > img {
+      max-width: 100%;
+    }
+  }
+
+  .preview-lg {
+    width: 100% !important;
+  }
+
+  .preview-md {
+    width: 139px;
+    height: 78px;
+  }
+
+  .preview-sm {
+    width: 69px;
+    height: 39px;
+  }
+
+  .preview-xs {
+    width: 35px;
+    height: 20px;
+    margin-right: 0;
+  }
+}
+
+.docs-buttons > .btn,
+.docs-buttons > .btn-group,
+.docs-buttons > .form-control {
+  margin-right: 5px;
+}
+
+.docs-toggles > .btn,
+.docs-toggles > .btn-group,
+.docs-toggles > .dropdown {
+  margin-bottom: 10px;
+}
+
+.docs-tooltip {
+  display: block;
+  margin: -6px -12px;
+  padding: 6px 12px;
+
+  > .icon {
+    margin: 0 -3px;
+    vertical-align: top;
+  }
+}
+
+.tooltip-inner {
+  white-space: normal;
+}
+
+.btn-upload {
+  .tooltip-inner {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn-group-crop {
+    margin-right: -15px !important;
+
+    > .btn {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .docs-tooltip {
+      margin-left: -5px;
+      margin-right: -5px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+
+.docs-options {
+  .dropdown-menu {
+    width: 100%;
+
+    > li {
+      padding: 3px 20px;
+      font-size: 14px;
+
+      &:hover {
+        background-color: #f7f7f7;
+      }
+
+      > label {
+        display: block;
+      }
+    }
+  }
+}
+
+.docs-cropped {
+  .modal-body {
+    text-align: center;
+
+    > img,
+    > canvas {
+      max-width: 100%;
+    }
+  }
+}
+
+.card-body {
+  .docs-options {
+    .dropdown-menu {
+      top: inherit;
+    }
+  }
+}
+
+.hovering-link {
+  a.text-muted {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+
+/* ==================  image-cropper end  ======================================= */
+
+.mailsent-modal {
+  .trumbowyg-box,
+  .trumbowyg-editor {
+    min-height: 200px;
+  }
+
+  .trumbowyg-editor,
+  .trumbowyg-textarea {
+    min-height: 130px;
+  }
+}
+
+.navbar.bg-white {
+  z-index: 99;
+  padding: 10px 0;
+
+  .nav-item {
+    .nav-link {
+      padding-right: 15px;
+    }
+  }
+}
+
+.front-header-image {
+  position: relative;
+  margin-top: 75px;
+
+  & > * {
+    position: relative;
+    z-index: 5;
+  }
+
+  .bg-img-overlay {
+    position: fixed;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  p {
+    span {
+      color: rgb(33, 150, 243);
+    }
+  }
+}
+
+.slider-img {
+  position: relative;
+
+  .soon-image {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    object-fit: cover;
+    position: absolute;
+    bottom: -128px;
+    left: 50px;
+    width: 400px;
+    transform: rotate(145deg);
+  }
+}
+
+.logo-img {
+  padding: 20px;
+
+  img {
+    width: 100px;
+  }
+}
+
+.slider-section {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 24px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.icon-content {
+  padding-left: 25px;
+
+  .social-icon {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 0 12px;
+
+      i {
+        font-size: 25px;
+      }
+    }
+  }
+
+  p {
+    padding: 0 12px;
+  }
+}
+
+.header-icon {
+  i {
+    padding-right: 15px;
+  }
+}
+
+.rating-icon {
+  list-style: none;
+  display: flex;
+  padding: 0;
+
+  li {
+    margin-right: 5px;
+    i {
+      font-size: 18px;
+    }
+  }
+}
+
+// new page css end

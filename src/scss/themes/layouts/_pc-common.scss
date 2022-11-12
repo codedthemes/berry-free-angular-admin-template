@@ -1,0 +1,231 @@
+// ============================
+//     Common layout css start
+// ============================
+
+body {
+  background-color: $sidebar-background;
+}
+
+.pc-container {
+  $temp: $header-height + 61;
+  position: relative;
+  top: $header-height;
+  margin-left: $sidebar-width;
+  margin-right: 20px;
+  min-height: calc(100vh - #{$temp});
+  background: $body-bg;
+  border-radius: 8px;
+
+  .coded-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+
+  .page-header + .row {
+    padding-top: 24px;
+  }
+  .page-header + .coded-content {
+    padding-top: calc(30px + 55px);
+  }
+}
+
+.minimenu {
+  .pc-container {
+    margin-left: $sidebar-collapsed-width;
+  }
+
+  .page-header {
+    left: $sidebar-collapsed-width;
+  }
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  top: $header-height;
+  left: $sidebar-width;
+  right: 0;
+  z-index: 1023;
+  min-height: 55px;
+  padding: 13px 25px;
+  box-shadow: $card-shadow;
+  background: $card-bg;
+  border-radius: $border-radius;
+  margin-bottom: 24px;
+
+  .page-block {
+    width: 100%;
+  }
+
+  .page-header-title {
+    display: inline-block;
+  }
+
+  h5 {
+    margin-bottom: 0;
+    margin-right: 8px;
+    padding-right: 8px;
+    font-weight: 500;
+    border-right: 1px solid darken($body-bg, 10%);
+  }
+
+  .breadcrumb {
+    padding: 0;
+    display: inline-flex;
+    margin-bottom: 0;
+    background: transparent;
+    font-size: 13px;
+
+    a {
+      color: $body-color;
+    }
+
+    .breadcrumb-item {
+      a:hover {
+        color: $primary;
+      }
+
+      + .breadcrumb-item::before {
+        position: relative;
+        top: 2px;
+      }
+
+      &:last-child {
+        opacity: 0.75;
+      }
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      vertical-align: baseline;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .pc-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    .page-header + .row,
+    .page-header + .coded-content,
+    .coded-content {
+      padding-top: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .page-header {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .minimenu {
+    .page-header {
+      left: 0;
+    }
+
+    .pc-container {
+      margin-left: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .pc-container {
+    .coded-content {
+      padding: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .page-header {
+    padding: 13px 20px;
+
+    h5 {
+      padding-bottom: 5px;
+      margin-bottom: 0;
+      border-right: none;
+      font-size: 14px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      margin-bottom: 0;
+      font-size: 11px;
+    }
+
+    .text-md-right {
+      margin-top: 5px;
+    }
+  }
+}
+
+.navbar-content {
+  position: relative;
+}
+
+/* Rtl support */
+
+.hs-dummy-scrollbar-size {
+  direction: rtl;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  height: 500px;
+  width: 500px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+// Common layout css end
+
+.footer-wrapper,
+.coded-content {
+  &.container {
+    @media (min-width: 768px) {
+      max-width: 540px;
+    }
+
+    @media (min-width: 992px) {
+      max-width: 720px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 960px;
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 1140px;
+    }
+  }
+}
+
+// dropdown
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.dropdown .dropdown-item {
+  padding: 10px 25px;
+
+  i {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+}
+
+.btn i {
+  font-size: 18px;
+}
