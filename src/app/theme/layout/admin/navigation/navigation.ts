@@ -88,6 +88,14 @@ const NavigationItems = [
         url: '/typography',
         icon: 'ti ti-typography'
       },
+      // {
+      //   id: 'color',
+      //   title: 'Colors',
+      //   type: 'item',
+      //   classes: 'nav-item',
+      //   url: '/color',
+      //   icon: 'ti ti-brush'
+      // },
       {
         id: 'color',
         title: 'Colors',
