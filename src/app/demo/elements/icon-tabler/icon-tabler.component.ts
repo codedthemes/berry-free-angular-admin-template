@@ -8,6 +8,4 @@ import { CommonModule } from '@angular/common';
   templateUrl: './icon-tabler.component.html',
   styleUrls: ['./icon-tabler.component.scss']
 })
-export default class IconTablerComponent {
-
-}
+export default class IconTablerComponent {}

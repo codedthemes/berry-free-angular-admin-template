@@ -9,6 +9,4 @@ import { SharedModule } from 'src/app/theme/shared/shared.module';
   templateUrl: './sample-page.component.html',
   styleUrls: ['./sample-page.component.scss']
 })
-export default class SamplePageComponent {
-
-}
+export default class SamplePageComponent {}

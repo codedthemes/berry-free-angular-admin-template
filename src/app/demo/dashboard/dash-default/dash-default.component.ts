@@ -46,7 +46,6 @@ export type ChartOptions1 = {
   stroke: ApexStroke;
 };
 
-
 @Component({
   selector: 'app-dash-default',
   standalone: true,
@@ -55,7 +54,6 @@ export type ChartOptions1 = {
   styleUrls: ['./dash-default.component.scss']
 })
 export default class DashDefaultComponent implements OnInit {
-
   // private props
   @ViewChild('growthChart') growthChart: ChartComponent;
   chartOptions: Partial<ChartOptions>;
@@ -311,5 +309,4 @@ export default class DashDefaultComponent implements OnInit {
       }
     }
   };
-
 }

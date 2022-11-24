@@ -9,6 +9,4 @@ import { RouterModule } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export default class LoginComponent {
-
-}
+export default class LoginComponent {}
