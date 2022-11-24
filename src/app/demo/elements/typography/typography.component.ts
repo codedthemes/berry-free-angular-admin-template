@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-typography',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, ],
   templateUrl: './typography.component.html',
   styleUrls: ['./typography.component.scss']
 })
-export class TypographyComponent {
+export default class TypographyComponent {
 
 }

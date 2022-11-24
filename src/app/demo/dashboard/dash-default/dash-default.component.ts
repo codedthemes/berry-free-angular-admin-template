@@ -1,10 +1,15 @@
 // Angular Import
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+// project import
+import { SharedModule } from 'src/app/theme/shared/shared.module';
 
 // Bootstrap Import
 import { NgbNavChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 
 // third party
+import { NgApexchartsModule } from 'ng-apexcharts';
 import ApexCharts from 'apexcharts';
 import {
   ApexAxisChartSeries,
@@ -41,12 +46,16 @@ export type ChartOptions1 = {
   stroke: ApexStroke;
 };
 
+
 @Component({
-  selector: 'app-default',
-  templateUrl: './default.component.html',
-  styleUrls: ['./default.component.scss']
+  selector: 'app-dash-default',
+  standalone: true,
+  imports: [CommonModule, SharedModule, NgApexchartsModule],
+  templateUrl: './dash-default.component.html',
+  styleUrls: ['./dash-default.component.scss']
 })
-export class DefaultComponent implements OnInit {
+export default class DashDefaultComponent implements OnInit {
+
   // private props
   @ViewChild('growthChart') growthChart: ChartComponent;
   chartOptions: Partial<ChartOptions>;
@@ -149,7 +158,7 @@ export class DefaultComponent implements OnInit {
     }, 500);
   }
 
-  // private Method
+  // public Method
   onNavChange(changeEvent: NgbNavChangeEvent) {
     if (changeEvent.nextId === 1) {
       setTimeout(() => {
@@ -302,4 +311,5 @@ export class DefaultComponent implements OnInit {
       }
     }
   };
+
 }

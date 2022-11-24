@@ -1,9 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ElementColorComponent } from './demo/elements/element-color/element-color.component';
-import { IconTablerComponent } from './demo/elements/icon-tabler/icon-tabler.component';
-import { TypographyComponent } from './demo/elements/typography/typography.component';
-import { SamplePageComponent } from './demo/sample-page/sample-page.component';
 import { AdminComponent } from './theme/layout/admin/admin.component';
 import { GuestComponent } from './theme/layout/guest/guest.component';
 
@@ -19,23 +15,23 @@ const routes: Routes = [
       },
       {
         path: 'default',
-        loadChildren: () => import('./demo/dashboard/default/default.module').then((m) => m.DefaultModule)
+        loadComponent: () => import('./demo/dashboard/dash-default/dash-default.component')
       },
       {
         path: 'typography',
-        component: TypographyComponent
+        loadComponent: () => import('./demo/elements/typography/typography.component')
       },
       {
         path: 'color',
-        component: ElementColorComponent
+        loadComponent: () => import('./demo/elements/element-color/element-color.component')
       },
       {
         path: 'tabler',
-        component: IconTablerComponent
+        loadComponent: () => import('./demo/elements/icon-tabler/icon-tabler.component')
       },
       {
         path: 'sample-page',
-        component: SamplePageComponent
+        loadComponent: () => import('./demo/sample-page/sample-page.component')
       }
     ]
   },

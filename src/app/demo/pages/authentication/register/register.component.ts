@@ -9,6 +9,6 @@ import { RouterModule } from '@angular/router';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent {
+export default class RegisterComponent {
 
 }
