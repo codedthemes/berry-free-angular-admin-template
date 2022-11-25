@@ -1,12 +1,12 @@
 // Angular import
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav-left',
   templateUrl: './nav-left.component.html',
   styleUrls: ['./nav-left.component.scss']
 })
-export class NavLeftComponent implements OnInit {
+export class NavLeftComponent {
   // public props
   @Output() onNavCollapsedMob = new EventEmitter();
   navCollapsedMob;
@@ -21,7 +21,4 @@ export class NavLeftComponent implements OnInit {
     this.menuClass = false;
     this.collapseStyle = 'none';
   }
-
-  // Life cycle events
-  ngOnInit(): void {}
 }

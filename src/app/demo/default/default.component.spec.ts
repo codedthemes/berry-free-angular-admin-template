@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashDefaultComponent } from './dash-default.component';
+import { DefaultComponent } from './default.component';
 
-describe('DashDefaultComponent', () => {
-  let component: DashDefaultComponent;
-  let fixture: ComponentFixture<DashDefaultComponent>;
+describe('DefaultComponent', () => {
+  let component: DefaultComponent;
+  let fixture: ComponentFixture<DefaultComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DashDefaultComponent]
+      imports: [DefaultComponent]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(DashDefaultComponent);
+    fixture = TestBed.createComponent(DefaultComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

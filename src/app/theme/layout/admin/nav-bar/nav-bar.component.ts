@@ -1,5 +1,5 @@
 // Angular import
-import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BerryConfig } from '../../../../app-config';
 
 @Component({
@@ -7,7 +7,7 @@ import { BerryConfig } from '../../../../app-config';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent {
   // public props
   @Output() onNavCollapse = new EventEmitter();
   @Output() onNavCollapsedMob = new EventEmitter();
@@ -21,9 +21,6 @@ export class NavBarComponent implements OnInit {
     this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.isCollapse_menu : false;
     this.navCollapsedMob = false;
   }
-
-  // Life cycle events
-  ngOnInit() {}
 
   // public method
   navCollapse() {

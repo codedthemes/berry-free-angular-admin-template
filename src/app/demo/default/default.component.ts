@@ -47,13 +47,13 @@ export type ChartOptions1 = {
 };
 
 @Component({
-  selector: 'app-dash-default',
+  selector: 'app-default',
   standalone: true,
   imports: [CommonModule, SharedModule, NgApexchartsModule],
-  templateUrl: './dash-default.component.html',
-  styleUrls: ['./dash-default.component.scss']
+  templateUrl: './default.component.html',
+  styleUrls: ['./default.component.scss']
 })
-export default class DashDefaultComponent implements OnInit {
+export default class DefaultComponent {
   // private props
   @ViewChild('growthChart') growthChart: ChartComponent;
   chartOptions: Partial<ChartOptions>;

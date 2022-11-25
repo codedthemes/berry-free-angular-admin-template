@@ -15,7 +15,7 @@ const routes: Routes = [
       },
       {
         path: 'default',
-        loadComponent: () => import('./demo/dashboard/dash-default/dash-default.component')
+        loadComponent: () => import('./demo/default/default.component')
       },
       {
         path: 'typography',

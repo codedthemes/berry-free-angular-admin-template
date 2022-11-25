@@ -1,12 +1,12 @@
 // Angular import
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav-logo',
   templateUrl: './nav-logo.component.html',
   styleUrls: ['./nav-logo.component.scss']
 })
-export class NavLogoComponent implements OnInit {
+export class NavLogoComponent {
   // public props
   @Input() navCollapsed: boolean;
   @Output() onNavCollapse = new EventEmitter();
@@ -16,9 +16,6 @@ export class NavLogoComponent implements OnInit {
   constructor() {
     this.windowWidth = window.innerWidth;
   }
-
-  // Life cycle events
-  ngOnInit(): void {}
 
   // public import
   navCollapse() {
