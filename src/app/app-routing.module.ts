@@ -26,10 +26,6 @@ const routes: Routes = [
         loadComponent: () => import('./demo/elements/element-color/element-color.component')
       },
       {
-        path: 'tabler',
-        loadComponent: () => import('./demo/elements/icon-tabler/icon-tabler.component')
-      },
-      {
         path: 'sample-page',
         loadComponent: () => import('./demo/sample-page/sample-page.component')
       }
