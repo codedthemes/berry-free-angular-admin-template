@@ -34,17 +34,9 @@ export type ChartOptions = {
   colors: string[];
   grid: ApexGrid;
   tooltip: ApexTooltip;
-};
-
-export type ChartOptions1 = {
-  series: ApexAxisChartSeries;
-  chart: ApexChart;
-  dataLabels: ApexDataLabels;
-  plotOptions: ApexPlotOptions;
-  responsive: ApexResponsive[];
-  colors: string[];
   stroke: ApexStroke;
 };
+
 
 @Component({
   selector: 'app-default',
@@ -58,7 +50,7 @@ export default class DefaultComponent {
   @ViewChild('growthChart') growthChart: ChartComponent;
   chartOptions: Partial<ChartOptions>;
   @ViewChild('bajajchart') bajajchart: ChartComponent;
-  chartOptions1: Partial<ChartOptions1>;
+  chartOptions1: Partial<ChartOptions>;
   monthChart: any;
   yearChart: any;
   colorChart = ['#673ab7'];
@@ -125,7 +117,7 @@ export default class DefaultComponent {
         theme: 'dark'
       }
     };
-    this.chartOptions1 = {
+    this.chartOptions = {
       chart: {
         type: 'area',
         height: 95,
