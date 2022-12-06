@@ -117,7 +117,7 @@ export default class DefaultComponent {
         theme: 'dark'
       }
     };
-    this.chartOptions = {
+    this.chartOptions1 = {
       chart: {
         type: 'area',
         height: 95,
