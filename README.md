@@ -72,7 +72,7 @@ git clone https://github.com/codedthemes/berry-free-angular-admin-template.git
 ## Technology Stack
 
  - Bootstrap 5
- - Angular 14
+ - Angular 15
  
 
 ## Author
