@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-typography',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './typography.component.html',
   styleUrls: ['./typography.component.scss']
 })
-export class TypographyComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export default class TypographyComponent {}

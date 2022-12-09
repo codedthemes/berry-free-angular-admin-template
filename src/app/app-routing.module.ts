@@ -15,23 +15,19 @@ const routes: Routes = [
       },
       {
         path: 'default',
-        loadChildren: () => import('./demo/dashboard/default/default.module').then((m) => m.DefaultModule)
+        loadComponent: () => import('./demo/default/default.component')
       },
       {
         path: 'typography',
-        loadChildren: () => import('./demo/elements/typography/typography.module').then((m) => m.TypographyModule)
+        loadComponent: () => import('./demo/elements/typography/typography.component')
       },
       {
         path: 'color',
-        loadChildren: () => import('./demo/elements/color/color.module').then((m) => m.ColorModule)
-      },
-      {
-        path: 'tabler',
-        loadChildren: () => import('./demo/elements/tabler/tabler.module').then((m) => m.TablerModule)
+        loadComponent: () => import('./demo/elements/element-color/element-color.component')
       },
       {
         path: 'sample-page',
-        loadChildren: () => import('./demo/sample-page/sample-page.module').then((module) => module.SamplePageModule)
+        loadComponent: () => import('./demo/sample-page/sample-page.component')
       }
     ]
   },

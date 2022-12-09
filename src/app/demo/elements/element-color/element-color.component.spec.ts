@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TablerComponent } from './tabler.component';
+import { ElementColorComponent } from './element-color.component';
 
-describe('TablerComponent', () => {
-  let component: TablerComponent;
-  let fixture: ComponentFixture<TablerComponent>;
+describe('ElementColorComponent', () => {
+  let component: ElementColorComponent;
+  let fixture: ComponentFixture<ElementColorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TablerComponent]
+      imports: [ElementColorComponent]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TablerComponent);
+    fixture = TestBed.createComponent(ElementColorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

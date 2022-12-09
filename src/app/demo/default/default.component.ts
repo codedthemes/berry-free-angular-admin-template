@@ -1,10 +1,15 @@
 // Angular Import
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+// project import
+import { SharedModule } from 'src/app/theme/shared/shared.module';
 
 // Bootstrap Import
 import { NgbNavChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 
 // third party
+import { NgApexchartsModule } from 'ng-apexcharts';
 import ApexCharts from 'apexcharts';
 import {
   ApexAxisChartSeries,
@@ -29,29 +34,23 @@ export type ChartOptions = {
   colors: string[];
   grid: ApexGrid;
   tooltip: ApexTooltip;
-};
-
-export type ChartOptions1 = {
-  series: ApexAxisChartSeries;
-  chart: ApexChart;
-  dataLabels: ApexDataLabels;
-  plotOptions: ApexPlotOptions;
-  responsive: ApexResponsive[];
-  colors: string[];
   stroke: ApexStroke;
 };
 
+
 @Component({
   selector: 'app-default',
+  standalone: true,
+  imports: [CommonModule, SharedModule, NgApexchartsModule],
   templateUrl: './default.component.html',
   styleUrls: ['./default.component.scss']
 })
-export class DefaultComponent implements OnInit {
+export default class DefaultComponent {
   // private props
   @ViewChild('growthChart') growthChart: ChartComponent;
   chartOptions: Partial<ChartOptions>;
   @ViewChild('bajajchart') bajajchart: ChartComponent;
-  chartOptions1: Partial<ChartOptions1>;
+  chartOptions1: Partial<ChartOptions>;
   monthChart: any;
   yearChart: any;
   colorChart = ['#673ab7'];
@@ -149,7 +148,7 @@ export class DefaultComponent implements OnInit {
     }, 500);
   }
 
-  // private Method
+  // public Method
   onNavChange(changeEvent: NgbNavChangeEvent) {
     if (changeEvent.nextId === 1) {
       setTimeout(() => {

@@ -142,7 +142,6 @@ File: style.css
     .nav-pills .nav-link.active {
       color: var(--bs-nav-pills-link-active-color);
     }
-
     .form-select,
     .form-control {
       &:focus {
@@ -171,7 +170,6 @@ File: style.css
         }
       }
     }
-
     .choices__list--multiple {
       .choices__item {
         background-color: $pc-primary;
@@ -182,6 +180,9 @@ File: style.css
     .is-open .choices__inner {
       border-color: $pc-primary;
       box-shadow: 0 0 0 1px $pc-primary;
+    }
+    .auth-form{
+      background: $pc-body;
     }
     @each $color, $value in $pctheme-colors {
       .pc-header .pc-head-link.head-link-#{$color} {
