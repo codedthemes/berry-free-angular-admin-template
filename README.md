@@ -60,10 +60,20 @@ Berry offers everything you need to create dashboards. We have included the foll
  
 ## Getting Started
 
-Clone from Github 
+1. Clone from Github 
 ```
 git clone https://github.com/codedthemes/berry-free-angular-admin-template.git
 ```
+2. Install packages
+```
+npm i --legacy-peer-deps
+```
+
+3. Run project
+```
+npm run start
+```
+
 
 ## Documentation
 
