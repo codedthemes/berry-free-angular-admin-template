@@ -18,7 +18,7 @@ File: style.css
 
 @each $name, $value in $preset-colors {
   [part='#{$name}'] {
-    $pc-body: map-get($value, 'body');
+    $pc-body: #EEF2F6;
     $pc-primary: map-get($value, 'primary');
     $pc-primary-dark: map-get($value, 'primary-dark');
     $pc-secondary: map-get($value, 'secondary');
