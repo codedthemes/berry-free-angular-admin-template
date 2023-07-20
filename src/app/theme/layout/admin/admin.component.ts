@@ -1,5 +1,5 @@
 // Angular import
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { Location, LocationStrategy } from '@angular/common';
 
 // Project import
@@ -10,32 +10,38 @@ import { BerryConfig } from '../../../app-config';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss']
 })
-export class AdminComponent implements OnInit {
+export class AdminComponent {
   // public props
+  berryConfig;
   navCollapsed: boolean;
-  navCollapsedMob: boolean;
+  navCollapsedMob = false;
   windowWidth: number;
-  submenuCollapse: boolean;
 
   // Constructor
-  constructor(private zone: NgZone, private location: Location, private locationStrategy: LocationStrategy) {
+  constructor(
+    private zone: NgZone,
+    private location: Location,
+    private locationStrategy: LocationStrategy
+  ) {
+    this.berryConfig = BerryConfig;
+
     let current_url = this.location.path();
-    if (this.location['_baseHref']) {
-      current_url = this.location['_baseHref'] + this.location.path();
+    const baseHref = this.locationStrategy.getBaseHref();
+    if (baseHref) {
+      current_url = baseHref + this.location.path();
     }
 
-    if (current_url === this.location['_baseHref'] + '/layout/theme-compact' || current_url === this.location['_baseHref'] + '/layout/box')
-      this.windowWidth = window.innerWidth;
-    this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.isCollapse_menu : false;
-    this.navCollapsedMob = false;
-  }
+    if (current_url === baseHref + '/layout/theme-compact' || current_url === baseHref + '/layout/box') {
+      this.berryConfig.isCollapse_menu = true;
+    }
 
-  // Life cycle events
-  ngOnInit() {}
+    this.windowWidth = window.innerWidth;
+    this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.isCollapse_menu : false;
+  }
 
   // public method
   navMobClick() {
-    if (this.navCollapsedMob && (document.querySelector('app-navigation.coded-navbar') as HTMLDivElement).classList.contains('mob-open')) {
+    if (this.navCollapsedMob && !document.querySelector('app-navigation.coded-navbar')?.classList.contains('mob-open')) {
       this.navCollapsedMob = !this.navCollapsedMob;
       setTimeout(() => {
         this.navCollapsedMob = !this.navCollapsedMob;

@@ -37,7 +37,6 @@ export type ChartOptions = {
   stroke: ApexStroke;
 };
 
-
 @Component({
   selector: 'app-default',
   standalone: true,

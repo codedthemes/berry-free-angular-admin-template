@@ -1,0 +1,20 @@
+.form-floating {
+  > label {
+    top: 1px;
+  }
+  > .form-control:focus,
+  > .form-control:not(:placeholder-shown),
+  > .form-select {
+    ~ label {
+      color: $gray-600;
+    }
+  }
+  > .form-control:focus {
+    ~ label {
+      color: $component-active-bg;
+    }
+  }
+  > input {
+    color: $body-color;
+  }
+}

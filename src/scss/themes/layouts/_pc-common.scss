@@ -30,16 +30,6 @@ body {
   }
 }
 
-.minimenu {
-  .pc-container {
-    margin-left: $sidebar-collapsed-width;
-  }
-
-  .page-header {
-    left: $sidebar-collapsed-width;
-  }
-}
-
 .page-header {
   display: flex;
   align-items: center;
@@ -88,7 +78,7 @@ body {
 
       + .breadcrumb-item::before {
         position: relative;
-        top: 2px;
+        top: 0px;
       }
 
       &:last-child {
@@ -123,16 +113,6 @@ body {
     top: 0;
     margin-left: 10px;
     margin-right: 10px;
-  }
-
-  .minimenu {
-    .page-header {
-      left: 0;
-    }
-
-    .pc-container {
-      margin-left: 0;
-    }
   }
 }
 
@@ -176,18 +156,6 @@ body {
   position: relative;
 }
 
-/* Rtl support */
-
-.hs-dummy-scrollbar-size {
-  direction: rtl;
-  position: fixed;
-  opacity: 0;
-  visibility: hidden;
-  height: 500px;
-  width: 500px;
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
 // Common layout css end
 
 .footer-wrapper,

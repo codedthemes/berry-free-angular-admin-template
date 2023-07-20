@@ -4,17 +4,15 @@
       <div class="row align-items-center">
         <div class="col-md-12">
           <div class="page-header-title">
-            <ng-container *ngFor="let breadcrumb of navigationList; let last = last"
-              ><h5 class="m-b-10" *ngIf="last">
+            <ng-container *ngFor="let breadcrumb of navigationList; let last = last">
+              <h5 class="mb-2" *ngIf="last">
                 {{ breadcrumb.title }}
-              </h5></ng-container
-            >
+              </h5>
+            </ng-container>
           </div>
           <ul class="breadcrumb">
             <li class="breadcrumb-item">
-              <a [routerLink]="['/default/']" *ngIf="type === 'theme3'">Home</a>
-              <a [routerLink]="['/default/']" *ngIf="type === 'theme2'">Home</a>
-              <a [routerLink]="['/default/']" *ngIf="type === 'theme1'">Home</a>
+              <a [routerLink]="['/default/']">Home</a>
             </li>
             <ng-container *ngFor="let breadcrumb of navigationList">
               <li class="breadcrumb-item" *ngIf="breadcrumb.url !== false">

@@ -1,10 +1,9 @@
 // Angular import
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 // project import
 import { NavigationItem } from '../../navigation';
 import { animate, style, transition, trigger } from '@angular/animations';
-import { BerryConfig } from 'src/app/app-config';
 
 @Component({
   selector: 'app-nav-collapse',
@@ -20,41 +19,22 @@ import { BerryConfig } from 'src/app/app-config';
     ])
   ]
 })
-export class NavCollapseComponent implements OnInit {
+export class NavCollapseComponent {
   // public props
-  @Output() toggle: EventEmitter<any> = new EventEmitter();
   @Input() item!: NavigationItem;
 
-  visible;
-  themeLayout: string;
-  windowWidth: number;
-
-  // Constructor
-  constructor() {
-    this.visible = false;
-    this.themeLayout = BerryConfig.layout;
-    this.windowWidth = window.innerWidth;
-  }
-
-  // Life cycle events
-  ngOnInit() {}
+  windowWidth = window.innerWidth;
 
   // public method
   navCollapse(e: any) {
-    this.visible = !this.visible;
-
     let parent = e.target;
-    if (this.themeLayout === 'vertical') {
-      parent = parent.parentElement;
-    }
-
+    parent = parent.parentElement;
     const sections = document.querySelectorAll('.coded-hasmenu');
     for (let i = 0; i < sections.length; i++) {
       if (sections[i] !== parent) {
         sections[i].classList.remove('coded-trigger');
       }
     }
-
     let first_parent = parent.parentElement;
     let pre_parent = parent.parentElement.parentElement;
     if (first_parent.classList.contains('coded-hasmenu')) {

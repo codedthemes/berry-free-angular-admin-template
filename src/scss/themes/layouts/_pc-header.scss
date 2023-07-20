@@ -194,18 +194,6 @@
       left: auto !important;
     }
   }
-
-  .pc-level-menu {
-    position: relative;
-
-    &:hover {
-      > .dropdown-menu {
-        display: block;
-        left: 100%;
-        top: -18px !important;
-      }
-    }
-  }
   .dropdown .dropdown-item {
     small {
       opacity: 0.8;
@@ -365,12 +353,6 @@
   }
 }
 
-.minimenu {
-  .pc-header {
-    left: $sidebar-collapsed-width;
-  }
-}
-
 @media (min-width: 1025px) {
   .pc-header {
     z-index: 1027;
@@ -395,72 +377,6 @@
       .user-name {
         display: none;
       }
-    }
-
-    .pcm-logo {
-      margin-left: 30px;
-
-      img {
-        max-width: 160px;
-      }
-    }
-
-    &.mob-header-active {
-      top: $header-height;
-
-      .header-wrapper {
-        background: $header-background;
-        position: relative;
-        z-index: 5;
-      }
-    }
-
-    .pc-md-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 1;
-      background: rgba(0, 0, 0, 0.2);
-    }
-
-    .pc-level-menu .dropdown-menu {
-      left: 0;
-      display: block;
-      padding-left: 30px;
-    }
-
-    .pc-mob-drp {
-      &.mob-drp-active {
-        .pc-h-item {
-          display: block;
-          min-height: auto;
-          position: relative;
-
-          .pc-head-link {
-            display: block;
-            margin: 5px 10px !important;
-          }
-
-          .dropdown-menu {
-            position: relative !important;
-            width: 100%;
-            float: none;
-            box-shadow: none;
-          }
-        }
-
-        ul {
-          display: block;
-        }
-      }
-    }
-  }
-
-  .minimenu {
-    .pc-header {
-      left: 0;
     }
   }
 }

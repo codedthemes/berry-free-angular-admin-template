@@ -5,13 +5,9 @@ import { CommonModule } from '@angular/common';
 // project import
 import { CardComponent } from './card.component';
 
-// bootstrap import
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
-
 @NgModule({
-  imports: [CommonModule, NgbDropdownModule],
+  imports: [CommonModule],
   declarations: [CardComponent],
-  exports: [CardComponent],
-  providers: []
+  exports: [CardComponent]
 })
 export class CardModule {}
