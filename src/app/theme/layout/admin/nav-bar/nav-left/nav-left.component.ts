@@ -8,17 +8,5 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class NavLeftComponent {
   // public props
-  @Output() onNavCollapsedMob = new EventEmitter();
-  navCollapsedMob;
-  headerStyle: string;
-  menuClass: boolean;
-  collapseStyle: string;
-
-  // Constructor
-  constructor() {
-    this.navCollapsedMob = false;
-    this.headerStyle = '';
-    this.menuClass = false;
-    this.collapseStyle = 'none';
-  }
+  @Output() NavCollapsedMob = new EventEmitter();
 }

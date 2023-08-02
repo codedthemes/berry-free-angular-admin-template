@@ -1,5 +1,5 @@
 // Angular import
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
@@ -11,7 +11,7 @@ import { NavigationItem } from '../../../layout/admin/navigation/navigation';
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss']
 })
-export class BreadcrumbComponent implements OnInit {
+export class BreadcrumbComponent {
   // public props
   @Input() type: string;
   navigation: any;
@@ -19,14 +19,14 @@ export class BreadcrumbComponent implements OnInit {
   navigationList: any;
 
   // Constructor
-  constructor(private _router: Router, public nav: NavigationItem, private titleService: Title) {
+  constructor(
+    private _router: Router,
+    public nav: NavigationItem,
+    private titleService: Title
+  ) {
     this.navigation = this.nav.get();
     this.setBreadcrumb();
-    this.type = 'theme2';
   }
-
-  // Life cycle events
-  ngOnInit() {}
 
   // public method
   setBreadcrumb() {

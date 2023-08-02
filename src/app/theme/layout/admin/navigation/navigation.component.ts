@@ -1,32 +1,21 @@
 // Angular import
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
   // public props
-  @Output() onNavCollapsedMob = new EventEmitter();
-  @Output() onSubmenuCollapse = new EventEmitter();
-  navCollapsedMob;
+  @Output() NavCollapsedMob = new EventEmitter();
+  navCollapsedMob = window.innerWidth;
   windowWidth: number;
-  public themeLayout!: string;
-
-  // Constructor
-  constructor() {
-    this.windowWidth = window.innerWidth;
-    this.navCollapsedMob = false;
-  }
-
-  // Life cycle events
-  ngOnInit() {}
 
   // public method
   navCollapseMob() {
     if (this.windowWidth < 1025) {
-      this.onNavCollapsedMob.emit();
+      this.NavCollapsedMob.emit();
     }
   }
 }

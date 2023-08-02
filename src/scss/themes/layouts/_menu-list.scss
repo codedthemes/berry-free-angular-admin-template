@@ -787,7 +787,9 @@
           opacity: 0;
           visibility: hidden;
           transform-origin: 50% 50%;
-          transition: transform 0.3s, opacity 0.3s;
+          transition:
+            transform 0.3s,
+            opacity 0.3s;
           transform-style: preserve-3d;
           transform: rotateX(-90deg);
           position: absolute;
@@ -805,10 +807,6 @@
       }
     }
   }
-}
-
-.ps__rail-y {
-  z-index: 1029;
 }
 
 .coded-navbar {
@@ -870,7 +868,9 @@ $style-block-width: 279px;
         line-height: 0;
         color: $pc-secondary;
         transition: 0.3s ease-in-out;
-        text-shadow: -1px 0 8px transparentize($pc-secondary, 0.1), -6px 0 8px rgba(0, 0, 0, 0.1);
+        text-shadow:
+          -1px 0 8px transparentize($pc-secondary, 0.1),
+          -6px 0 8px rgba(0, 0, 0, 0.1);
       }
 
       &:after {
@@ -1022,7 +1022,9 @@ $style-block-width: 279px;
           z-index: 1001;
           color: $primary;
           transition: 0.3s ease-in-out;
-          text-shadow: 0 1px 3px transparentize($primary, 0.1), 0 3px 8px rgba(0, 0, 0, 0.1);
+          text-shadow:
+            0 1px 3px transparentize($primary, 0.1),
+            0 3px 8px rgba(0, 0, 0, 0.1);
         }
 
         &:after {

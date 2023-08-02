@@ -189,6 +189,16 @@ $hr-opacity: 0.13;
 $dt-font-weight: $font-weight-bold;
 $list-inline-padding: 0.5rem;
 
+$input-bg: $white;
+$input-disabled-bg: $gray-200;
+$input-disabled-border-color: null;
+
+$input-focus-bg: $input-bg;
+$input-focus-border-color: $primary;
+$input-focus-color: $input-color;
+$input-focus-width: $input-btn-focus-width;
+$input-focus-box-shadow: 0 0 0 1px $component-active-bg;
+
 $input-btn-padding-y: 0.5rem;
 $input-btn-padding-x: 1rem;
 $input-btn-font-size: 0.875rem;
@@ -232,7 +242,10 @@ $form-check-input-width: 1.25em;
 $form-check-min-height: $font-size-base * $line-height-base;
 $form-check-padding-start: $form-check-input-width + 0.5em;
 $form-check-margin-bottom: 0.125rem;
-$form-check-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out;
+$form-check-transition:
+  background-color 0.15s ease-in-out,
+  background-position 0.15s ease-in-out,
+  border-color 0.15s ease-in-out;
 $form-check-input-active-filter: brightness(90%);
 $form-check-input-bg: $input-bg;
 $form-check-input-border: 1px solid rgba(0, 0, 0, 0.25);
@@ -246,6 +259,23 @@ $input-group-addon-font-weight: $input-font-weight;
 $input-group-addon-color: $input-color;
 $input-group-addon-bg: $body-bg;
 $input-group-addon-border-color: $input-border-color;
+
+$form-select-padding-y: $input-padding-y;
+$form-select-padding-x: $input-padding-x;
+$form-select-font-family: $input-font-family;
+$form-select-font-size: $input-font-size;
+$form-select-indicator-padding: 2rem; // Extra padding to account for the presence of the background-image based indicator
+$form-select-font-weight: $input-font-weight;
+$form-select-line-height: $input-line-height;
+$form-select-color: $input-color;
+$form-select-disabled-color: $gray-600;
+$form-select-bg: $input-bg;
+$form-select-disabled-bg: $gray-200;
+$form-select-disabled-border-color: $input-disabled-border-color;
+$form-select-bg-position: right $form-select-padding-x center;
+$form-select-bg-size: 16px 12px; // In pixels because image dimensions
+$form-select-indicator-color: $gray-800;
+$form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>");
 
 // scss-docs-start zindex-stack
 $zindex-dropdown: 1000;
@@ -271,6 +301,7 @@ $card-group-margin: calc($grid-gutter-width / 2);
 
 // List group
 
+$list-group-bg: $white;
 $list-group-border-color: $border-color;
 $list-group-border-width: $border-width;
 $list-group-border-radius: $border-radius;
@@ -287,6 +318,38 @@ $list-group-action-active-color: $body-color;
 $header-height: 70px;
 $Menu-width: 260px;
 $Menu-collapsed-width: 0px;
+
+// dropdowns
+
+$dropdown-bg: $white;
+
+// Navs
+
+$nav-link-padding-y: 0.5rem;
+$nav-link-padding-x: 1rem;
+$nav-link-font-size: null;
+$nav-link-font-weight: null;
+$nav-link-color: null;
+$nav-link-hover-color: null;
+$nav-link-transition:
+  color 0.15s ease-in-out,
+  background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out;
+$nav-link-disabled-color: $gray-600;
+
+$nav-tabs-border-color: $gray-300;
+$nav-tabs-border-width: $border-width;
+$nav-tabs-border-radius: $border-radius;
+$nav-tabs-link-hover-border-color: $gray-200 $gray-200 $nav-tabs-border-color;
+$nav-tabs-link-active-color: $gray-700;
+$nav-tabs-link-active-bg: $white; // change
+$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg;
+
+$nav-pills-border-radius: $border-radius;
+$nav-pills-link-active-color: $component-active-color;
+$nav-pills-link-active-bg: $component-active-bg;
+
+// Navbar
 
 //menu
 $menu-dark-background: #ffffff;

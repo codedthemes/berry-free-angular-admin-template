@@ -36,41 +36,6 @@
   }
 }
 
-.docs-preview {
-  margin-right: -15px;
-
-  .img-preview {
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    overflow: hidden;
-
-    > img {
-      max-width: 100%;
-    }
-  }
-
-  .preview-lg {
-    width: 100% !important;
-  }
-
-  .preview-md {
-    width: 139px;
-    height: 78px;
-  }
-
-  .preview-sm {
-    width: 69px;
-    height: 39px;
-  }
-
-  .preview-xs {
-    width: 35px;
-    height: 20px;
-    margin-right: 0;
-  }
-}
-
 .docs-buttons > .btn,
 .docs-buttons > .btn-group,
 .docs-buttons > .form-control {

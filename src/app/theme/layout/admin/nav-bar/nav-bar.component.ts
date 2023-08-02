@@ -9,8 +9,8 @@ import { BerryConfig } from '../../../../app-config';
 })
 export class NavBarComponent {
   // public props
-  @Output() onNavCollapse = new EventEmitter();
-  @Output() onNavCollapsedMob = new EventEmitter();
+  @Output() NavCollapse = new EventEmitter();
+  @Output() NavCollapsedMob = new EventEmitter();
   navCollapsed;
   windowWidth: number;
   navCollapsedMob;
@@ -26,13 +26,13 @@ export class NavBarComponent {
   navCollapse() {
     if (this.windowWidth >= 1025) {
       this.navCollapsed = !this.navCollapsed;
-      this.onNavCollapse.emit();
+      this.NavCollapse.emit();
     }
   }
 
   navCollapseMob() {
     if (this.windowWidth < 1025) {
-      this.onNavCollapsedMob.emit();
+      this.NavCollapsedMob.emit();
     }
   }
 }
