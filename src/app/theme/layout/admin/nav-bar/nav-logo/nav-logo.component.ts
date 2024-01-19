@@ -10,12 +10,7 @@ export class NavLogoComponent {
   // public props
   @Input() navCollapsed: boolean;
   @Output() NavCollapse = new EventEmitter();
-  windowWidth: number;
-
-  // Constructor
-  constructor() {
-    this.windowWidth = window.innerWidth;
-  }
+  windowWidth= window.innerWidth;
 
   // public import
   navCollapse() {
