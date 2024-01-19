@@ -1,6 +1,8 @@
 <div class="card">
   <div class="card-header">
-    <h5 *ngIf="!customHeader">{{ cardTitle }}</h5>
+    @if (!customHeader) {
+      <h5>{{ cardTitle }}</h5>
+    }
   </div>
   <div class="card-block">
     <ng-content></ng-content>
