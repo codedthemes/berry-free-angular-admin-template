@@ -78,6 +78,11 @@ File: style.css
               color: $pc-secondary;
             }
           }
+          &.active {
+            > a {
+              font-weight: 500;
+            }
+          }
         }
         app-nav-item > li.nav-item:hover,
         > app-nav-group > app-nav-collapse > li:hover {

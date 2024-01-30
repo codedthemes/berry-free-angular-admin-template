@@ -1,10 +1,10 @@
 // Angular import
-import { Component, EventEmitter, NgZone, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Location, LocationStrategy } from '@angular/common';
-import { environment } from 'src/environments/environment';
 
 // project import
 import { NavigationItem } from '../navigation';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-nav-content',
@@ -24,7 +24,6 @@ export class NavContentComponent implements OnInit {
   // Constructor
   constructor(
     public nav: NavigationItem,
-    private zone: NgZone,
     private location: Location,
     private locationStrategy: LocationStrategy
   ) {

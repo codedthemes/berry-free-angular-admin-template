@@ -25,7 +25,7 @@ const NavigationItems = [
     children: [
       {
         id: 'default',
-        title: 'Default',
+        title: 'Dashboard',
         type: 'item',
         classes: 'nav-item',
         url: '/default',
