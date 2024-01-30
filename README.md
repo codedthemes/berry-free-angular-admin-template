@@ -1,4 +1,4 @@
-# Berry Free Angular Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://berrydashboard.io&via=codedthemes&hashtags=angular,webdev,developers,javascript)
+# Berry Free Angular Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20angular%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://berrydashboard.io/angular/default&via=codedthemes&hashtags=angular,webdev,developers,javascript)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/berry-free-angular-admin-template/blob/main/LICENSE)
@@ -10,7 +10,7 @@ Berry is a free angular admin dashboard template built with Angular and latest B
 
 ![IMG_8566.jpg](https://berrydashboard.io/imp-images/berry-github-free-angular-repo-1.jpg)
 
-[Pro version](https://berrydashboard.io/angular/default) of Berry Angular Dashboard template contains features like TypeScript, Apps, Authentication Methods (i.e. JWT, Auth0, Firebase), Advance Components, Form Plugins, Layouts, Widgets, and many more.
+[Pro version](https://berrydashboard.io/angular/default) of Berry Angular Dashboard template contains features like TypeScript, Apps, Authentication Methods (i.e. JWT), Advance Components, Form Plugins, Layouts, Widgets, and many more.
 
 | [Berry Free](https://berrydashboard.io/angular/free/) | [Berry](https://codedthemes.com/item/berry-angular-admin-dashboard-template/)             |
 | ----------------------------------------------------- | :---------------------------------------------------------------------------------------- |
@@ -107,12 +107,14 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/berry-f
 
 - [Datta Able Angular](https://codedthemes.com/item/datta-able-angular-lite/)
 - [Gradient Able Angular](https://codedthemes.com/item/gradient-able-angular-free-admin-template/)
+- [Mantis Angular](https://codedthemes.com/item/mantis-angular-free-admin-template/)
 - [Next Angular](https://codedthemes.com/item/next-free-admin-template/)
 
 ## More Premium Angular Dashboard Templates
 
 - [Datta Able Angular Pro](https://codedthemes.com/item/datta-able-angular/)
 - [Gradient Able Angular Pro](https://codedthemes.com/item/gradient-able-angular-admin-template/)
+- [mantis Angular Pro](https://codedthemes.com/item/mantis-angular-admin-template/)
 - [Next Angular Pro](https://codedthemes.com/item/next-angular-admin-template/)
 
 ## Follow us
