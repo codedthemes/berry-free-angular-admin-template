@@ -10,7 +10,7 @@ Berry is a free angular admin dashboard template built with Angular and latest B
 
 ![IMG_8566.jpg](https://berrydashboard.io/imp-images/berry-github-free-angular-repo-1.jpg)
 
-[Pro version](https://berrydashboard.io) of Berry Angular Dashboard template contains features like TypeScript, Apps, Authentication Methods (i.e. JWT, Auth0, Firebase), Advance Components, Form Plugins, Layouts, Widgets, and many more.
+[Pro version](https://berrydashboard.io/angular/default) of Berry Angular Dashboard template contains features like TypeScript, Apps, Authentication Methods (i.e. JWT, Auth0, Firebase), Advance Components, Form Plugins, Layouts, Widgets, and many more.
 
 | [Berry Free](https://berrydashboard.io/angular/free/) | [Berry](https://codedthemes.com/item/berry-angular-admin-dashboard-template/)             |
 | ----------------------------------------------------- | :---------------------------------------------------------------------------------------- |
@@ -18,8 +18,10 @@ Berry is a free angular admin dashboard template built with Angular and latest B
 | -                                                     | ✓ Multi-language                                                                          |
 | -                                                     | ✓ Dark/Light Mode 🌓                                                                      |
 | -                                                     | ✓ TypeScript version                                                                      |
+| -                                                     | ✓ Design files (Figma)                                                                    |
 | -                                                     | ✓ 6+ color Options                                                                        |
 | -                                                     | ✓ RTL                                                                                     |
+| -                                                     | ✓ JWT authentications                                                                     |
 | -                                                     | ✓ [More components](https://codedthemes.com/item/berry-angular-admin-dashboard-template/) |
 
 ## Why Berry?
@@ -82,7 +84,7 @@ npm run start
 ## Technology Stack
 
 - Bootstrap 5
-- Angular 15
+- Angular 17
 
 ## Author
 
@@ -115,7 +117,7 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/berry-f
 
 ## Follow us
 
-- [Website](https://berrydashboard.io/angular/)
+- [Website](https://berrydashboard.io/angular/default/)
 - [Blog](https://blog.berrydashboard.io)
 - [CodedThemes](https://codedthemes.com)
 - [Dribbble](https://dribbble.com/codedthemes)
