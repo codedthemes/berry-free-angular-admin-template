@@ -22,7 +22,7 @@ Berry is a free angular admin dashboard template built with Angular and latest B
 | -                                                     | ✓ 6+ color Options                                                                        |
 | -                                                     | ✓ RTL                                                                                     |
 | -                                                     | ✓ JWT authentications                                                                     |
-| -                                                     | ✓ [More components](https://codedthemes.com/item/berry-angular-admin-dashboard-template/) |
+| -                                                     | ✓ [More components](https://berrydashboard.io/angular/default/basic/alert)                |
 
 ## Why Berry?
 
@@ -114,7 +114,7 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/berry-f
 
 - [Datta Able Angular Pro](https://codedthemes.com/item/datta-able-angular/)
 - [Gradient Able Angular Pro](https://codedthemes.com/item/gradient-able-angular-admin-template/)
-- [mantis Angular Pro](https://codedthemes.com/item/mantis-angular-admin-template/)
+- [Mantis Angular Pro](https://codedthemes.com/item/mantis-angular-admin-template/)
 - [Next Angular Pro](https://codedthemes.com/item/next-angular-admin-template/)
 
 ## Follow us
