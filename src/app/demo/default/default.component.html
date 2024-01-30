@@ -46,7 +46,7 @@
                 <ng-template ngbNavContent>
                   <div class="row">
                     <div class="col-6">
-                      <span class="text-white d-block fs-1 fw-bold my-2">$108<i class="ti ti-arrow-up-right-circle opacity-50"></i></span>
+                      <span class="text-white d-block fs-1 fw-bold my-2">$108 <i class="ti ti-arrow-up-right-circle opacity-50"></i></span>
                       <p class="mb-0 opacity-50">Total Earning</p>
                     </div>
                     <div class="col-6">
@@ -175,20 +175,24 @@
           </div>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item px-0" *ngFor="let list of ListGroup">
-            <div class="row align-items-start">
-              <div class="col">
-                <h5 class="mb-0">{{ list.name }}</h5>
-                <small class="text-success">{{ list.profit }}</small>
+          @for (list of ListGroup; track list) {
+            <li class="list-group-item px-0">
+              <div class="row align-items-start">
+                <div class="col">
+                  <h5 class="mb-0">{{ list.name }}</h5>
+                  <small class="text-success">{{ list.profit }}</small>
+                </div>
+                <div class="col-auto">
+                  <h4 class="mb-0">
+                    {{ list.invest
+                    }}<span class="ms-2 align-top avtar avtar-xxs {{ list.bgColor }}"
+                      ><i class="{{ list.icon }} {{ list.color }}"></i
+                    ></span>
+                  </h4>
+                </div>
               </div>
-              <div class="col-auto">
-                <h4 class="mb-0">
-                  {{ list.invest
-                  }}<span class="ms-2 align-top avtar avtar-xxs {{ list.bgColor }}"><i class="{{ list.icon }} {{ list.color }}"></i></span>
-                </h4>
-              </div>
-            </div>
-          </li>
+            </li>
+          }
         </ul>
         <div class="text-center">
           <a href="javascripr:" class="b-b-primary text-primary">View all <i class="ti ti-chevron-right"></i></a>

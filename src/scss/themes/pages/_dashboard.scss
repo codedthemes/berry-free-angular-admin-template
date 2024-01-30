@@ -1,0 +1,79 @@
+.dashnum-card {
+  position: relative;
+
+  .avtar:not([class*='bg-']) {
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  .card-body {
+    position: relative;
+    z-index: 5;
+  }
+
+  .round {
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+    width: 210px;
+    overflow: hidden;
+    height: 210px;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.17);
+    }
+
+    &.small {
+      top: -125px;
+      right: -15px;
+      opacity: 0.5;
+    }
+
+    &.big {
+      top: -85px;
+      right: -95px;
+    }
+  }
+
+  &.dashnum-card-small {
+    .round {
+      &[class*='bg-'] {
+        opacity: 0.5;
+
+        &.big:after {
+          background: linear-gradient(210.04deg, #ffffff -50.94%, rgba(255, 255, 255, 0) 83.49%);
+        }
+
+        &.small:after {
+          background: linear-gradient(140.9deg, #ffffff -14.02%, rgba(255, 255, 255, 0) 77.58%);
+        }
+      }
+
+      &.small {
+        top: -160px;
+        right: -130px;
+        opacity: 0.5;
+      }
+
+      &.big {
+        top: -30px;
+        right: -180px;
+      }
+    }
+  }
+}
+
+.nav-tabs {
+  .nav-link.active,
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-item.show .nav-link {
+    border: none;
+  }
+}

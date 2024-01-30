@@ -1,5 +1,5 @@
 // Angular import
-import { Component, Input, NgZone, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 // project import
 import { NavigationItem } from '../../navigation';
@@ -16,7 +16,6 @@ export class NavGroupComponent implements OnInit {
 
   // Constructor
   constructor(
-    private zone: NgZone,
     private location: Location,
     private locationStrategy: LocationStrategy
   ) {}

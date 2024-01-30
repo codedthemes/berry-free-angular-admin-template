@@ -1,5 +1,5 @@
 // Angular import
-import { Component, NgZone } from '@angular/core';
+import { Component } from '@angular/core';
 import { Location, LocationStrategy } from '@angular/common';
 
 // Project import
@@ -19,7 +19,6 @@ export class AdminComponent {
 
   // Constructor
   constructor(
-    private zone: NgZone,
     private location: Location,
     private locationStrategy: LocationStrategy
   ) {
