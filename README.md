@@ -96,7 +96,7 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/berry-f
 
 ## License
 
-- Licensed cover under [MIT](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/master/LICENSE)
+- Licensed cover under [MIT](https://github.com/codedthemes/berry-free-angular-admin-template/blob/master/LICENSE)
 
 ## Berry - React version
 
