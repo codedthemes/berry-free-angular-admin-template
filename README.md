@@ -1,4 +1,4 @@
-# Berry Free Angular Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20React%20-%20The%20most%20beautiful%20Material%20designed%20Admin%20Dashboard%20Template%20&url=https://berrydashboard.io&via=codedthemes&hashtags=angular,webdev,developers,javascript)
+# Berry Free Angular Bootstrap Admin Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Get%20Berry%20Angular%20-%20The%20Most%20Beautiful%20Bootstrap%20Designed%20Admin%20Dashboard%20Template%20&url=https://berrydashboard.io/angular/default&via=codedthemes&hashtags=angular,webdev,developers,typescript)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/berry-free-angular-admin-template/blob/main/LICENSE)
@@ -8,19 +8,21 @@ Berry is a free angular admin dashboard template built with Angular and latest B
 
 :star: :star: :star: Do not forget to star (Top right of this page) it if you like the theme :star: :star: :star:
 
-![IMG_8566.jpg](https://berrydashboard.io/imp-images/berry-github-free-angular-repo-1.jpg)
+![IMG_8566.jpg](https://org-public-assets.s3.us-west-2.amazonaws.com/Free-Version-Banners/GITHUB-FREE-ANGULAR-REPO-Berry.jpg)
 
-[Pro version](https://berrydashboard.io) of Berry Angular Dashboard template contains features like TypeScript, Apps, Authentication Methods (i.e. JWT, Auth0, Firebase), Advance Components, Form Plugins, Layouts, Widgets, and many more.
+[Pro version](https://berrydashboard.io/angular/default) of Berry Angular Dashboard template contains features like TypeScript, Apps, Authentication Methods (i.e. JWT), Advance Components, Form Plugins, Layouts, Widgets, and many more.
 
-| [Berry Free](https://berrydashboard.io/angular/free/) | [Berry](https://codedthemes.com/item/berry-angular-admin-dashboard-template/)             |
+| [Berry Free](https://berrydashboard.io/angular/free/) | [Berry](https://codedthemes.com/item/berry-angular-admin-dashboard-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)             |
 | ----------------------------------------------------- | :---------------------------------------------------------------------------------------- |
 | **9** Demo pages                                      | **45+** demo pages                                                                        |
 | -                                                     | ✓ Multi-language                                                                          |
 | -                                                     | ✓ Dark/Light Mode 🌓                                                                      |
 | -                                                     | ✓ TypeScript version                                                                      |
+| -                                                     | ✓ Design files (Figma)                                                                    |
 | -                                                     | ✓ 6+ color Options                                                                        |
 | -                                                     | ✓ RTL                                                                                     |
-| -                                                     | ✓ [More components](https://codedthemes.com/item/berry-angular-admin-dashboard-template/) |
+| -                                                     | ✓ JWT authentications                                                                     |
+| -                                                     | ✓ [More components](https://berrydashboard.io/angular/default/basic/alert)                |
 
 ## Why Berry?
 
@@ -41,7 +43,7 @@ Berry offers everything you need to create dashboards. We have included the foll
 ## Berry Pro version
 
 - [Preview](https://berrydashboard.io/angular/default)
-- [Purchase from CodedThemes](https://codedthemes.com/item/berry-angular-admin-dashboard-template/)
+- [Purchase from CodedThemes](https://codedthemes.com/item/berry-angular-admin-dashboard-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)
 
 ## Table of contents
 
@@ -66,13 +68,13 @@ git clone https://github.com/codedthemes/berry-free-angular-admin-template.git
 2. Install packages
 
 ```
-npm i --legacy-peer-deps
+yarn
 ```
 
 3. Run project
 
 ```
-npm run start
+yarn start
 ```
 
 ## Documentation
@@ -82,7 +84,7 @@ npm run start
 ## Technology Stack
 
 - Bootstrap 5
-- Angular 15
+- Angular 17
 
 ## Author
 
@@ -94,7 +96,7 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/berry-f
 
 ## License
 
-- Licensed cover under [MIT](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/master/LICENSE)
+- Licensed cover under [MIT](https://github.com/codedthemes/berry-free-angular-admin-template/blob/master/LICENSE)
 
 ## Berry - React version
 
@@ -105,17 +107,19 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/berry-f
 
 - [Datta Able Angular](https://codedthemes.com/item/datta-able-angular-lite/)
 - [Gradient Able Angular](https://codedthemes.com/item/gradient-able-angular-free-admin-template/)
+- [Mantis Angular](https://codedthemes.com/item/mantis-angular-free-admin-template/)
 - [Next Angular](https://codedthemes.com/item/next-free-admin-template/)
 
 ## More Premium Angular Dashboard Templates
 
-- [Datta Able Angular Pro](https://codedthemes.com/item/datta-able-angular/)
-- [Gradient Able Angular Pro](https://codedthemes.com/item/gradient-able-angular-admin-template/)
+- [Datta Able Angular Pro](https://codedthemes.com/item/datta-able-angular/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)
+- [Gradient Able Angular Pro](https://codedthemes.com/item/gradient-able-angular-admin-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)
+- [Mantis Angular Pro](https://codedthemes.com/item/mantis-angular-admin-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)
 - [Next Angular Pro](https://codedthemes.com/item/next-angular-admin-template/)
 
 ## Follow us
 
-- [Website](https://berrydashboard.io/angular/)
+- [Website](https://berrydashboard.io/angular/default/)
 - [Blog](https://blog.berrydashboard.io)
 - [CodedThemes](https://codedthemes.com)
 - [Dribbble](https://dribbble.com/codedthemes)
