@@ -8,10 +8,10 @@ File: style.css
 =================================================================================== */
 
 // main framework
-@import 'settings/preset-variables';
+@import 'settings/color-variables';
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
-@import 'settings/custom-variables';
+@import 'settings/bootstrap-variables';
 @import 'settings/theme-variables';
 
 @import 'node_modules/bootstrap/scss/mixins';

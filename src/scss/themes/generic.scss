@@ -23,6 +23,24 @@
   }
 }
 /*====== background ends ======*/
+/*====== Font-size css starts ======*/
+$i: 6;
+@while $i<=80 {
+  .f-#{$i} {
+    font-size: #{$i}px;
+  }
+  $i: $i + 2;
+}
+/*====== Font-size css ends ======*/
+/*====== Font-weight css starts ======*/
+$i: 100;
+@while $i<=900 {
+  .f-w-#{$i} {
+    font-weight: #{$i};
+  }
+  $i: $i + 100;
+}
+/*====== Font-weight css ends ======*/
 /*====== border color css starts ======*/
 @each $color, $value in $theme-colors {
   .b-#{$color} {

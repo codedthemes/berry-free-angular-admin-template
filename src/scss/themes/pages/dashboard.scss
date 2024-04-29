@@ -1,0 +1,281 @@
+.earning-card {
+  position: relative;
+
+  .avatar:not([class*='bg-']) {
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  .card-body {
+    position: relative;
+    z-index: 5;
+    padding: 18px;
+  }
+
+  .round {
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+    width: 210px;
+    overflow: hidden;
+    height: 210px;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &.small {
+      top: -125px;
+      right: -15px;
+      opacity: 0.5;
+    }
+
+    &.big {
+      top: -85px;
+      right: -95px;
+    }
+  }
+
+  &.dashboard-card-small {
+    .round {
+      &[class*='bg-'] {
+        opacity: 0.5;
+
+        &.big:after {
+          background: linear-gradient(210.04deg, $white -50.94%, rgba(255, 255, 255, 0) 83.49%);
+        }
+
+        &.small:after {
+          background: linear-gradient(140.9deg, $white -14.02%, rgba(255, 255, 255, 0) 77.58%);
+        }
+      }
+
+      &.small {
+        top: -160px;
+        right: -130px;
+        opacity: 0.5;
+      }
+
+      &.big {
+        top: -30px;
+        right: -180px;
+      }
+    }
+  }
+}
+
+.total-income-card {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: linear-gradient(140.9deg, rgb(144, 202, 249) -14.02%, rgba(144, 202, 249, 0) 77.58%);
+    border-radius: 50%;
+    top: -160px;
+    right: -130px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background: linear-gradient(210.04deg, rgb(144, 202, 249) -50.94%, rgba(144, 202, 249, 0) 83.49%);
+    border-radius: 50%;
+    top: -30px;
+    right: -180px;
+  }
+
+  .card-body {
+    position: relative;
+    z-index: 5;
+    padding: 16px;
+
+    .avatar {
+      &.icon-warning {
+        background: rgb(255, 248, 225) !important;
+        color: rgb(255, 193, 7);
+      }
+    }
+  }
+
+  &.warning {
+    &::before {
+      background: linear-gradient(140.9deg, rgb(255, 193, 7) -14.02%, rgba(144, 202, 249, 0) 70.5%);
+    }
+    &::after {
+      background: linear-gradient(210.04deg, rgb(255, 193, 7) -50.94%, rgba(144, 202, 249, 0) 83.49%);
+    }
+  }
+}
+
+.flat-card {
+  .row-table {
+    display: table;
+    align-items: center;
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    &:first-child {
+      border-bottom: 1px solid $border-color;
+    }
+
+    .br {
+      border-right: 1px solid $border-color;
+    }
+
+    .b-icons {
+      width: 45px;
+      height: 45px;
+      border-radius: 14px;
+      padding: 10px;
+
+      i {
+        font-size: 26px;
+      }
+    }
+
+    span {
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    h5 {
+      display: block;
+      margin-bottom: 0.3em;
+      margin-right: 0;
+    }
+
+    > [class*='col-'] {
+      display: table-cell;
+      float: none;
+      table-layout: fixed;
+      vertical-align: middle;
+      width: calc(100% / 3);
+
+      .row {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+
+      > [class*='col-'] {
+        display: inline-block;
+        width: calc(100% - 2px) !important;
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+
+  &[class*='widget-'] {
+    .row-table {
+      display: flex;
+    }
+  }
+}
+
+.order-card {
+  color: $white;
+  overflow: hidden;
+
+  .card-icon {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    font-size: 100px;
+    opacity: 0.5;
+
+    > svg {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+.widget-visitor-card {
+  overflow: hidden;
+
+  i,
+  svg {
+    font-size: 80px;
+    color: $white;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: -10px;
+    opacity: 0.3;
+    left: -10px;
+    transform: rotate(15deg);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      transform: rotate(0deg) scale(1.4);
+      opacity: 0.5;
+    }
+  }
+}
+
+.table-card {
+  .card-body,
+  .card-body,
+  &.card-body,
+  &.card-body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0;
+
+    .table {
+      > thead > tr > th {
+        border-top: 0;
+      }
+
+      tr {
+        td,
+        th {
+          &:first-child {
+            padding-left: 25px;
+          }
+
+          &:last-child {
+            padding-right: 25px;
+          }
+        }
+      }
+
+      &.without-header {
+        tr {
+          &:first-child {
+            td {
+              border-top: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.customer-list {
+    .card-body,
+    .card-body {
+      padding-top: 25px;
+    }
+
+    .btn i {
+      font-size: 20px;
+    }
+  }
+}

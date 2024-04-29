@@ -1,9 +1,7 @@
 <header class="pc-header coded-header">
-  <div class="">
-    <app-nav-logo [navCollapsed]="navCollapsed" (NavCollapse)="navCollapse()"></app-nav-logo>
-  </div>
+  <app-nav-logo [navCollapsed]="navCollapsed" (NavCollapse)="navCollapse()" />
   <div class="header-wrapper">
-    <app-nav-left (NavCollapsedMob)="navCollapseMob()"></app-nav-left>
-    <app-nav-right></app-nav-right>
+    <app-nav-left (NavCollapsedMob)="navCollapseMob()" />
+    <app-nav-right />
   </div>
 </header>

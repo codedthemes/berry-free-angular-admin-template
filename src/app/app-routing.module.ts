@@ -15,7 +15,7 @@ const routes: Routes = [
       },
       {
         path: 'default',
-        loadComponent: () => import('./demo/default/default.component')
+        loadComponent: () => import('./demo/default/default.component').then((c) => c.DefaultComponent)
       },
       {
         path: 'typography',

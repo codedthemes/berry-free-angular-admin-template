@@ -3,11 +3,11 @@
     <div class="page-header">
       <div class="page-block">
         <div class="row align-items-center">
-          <div class="col-md-12">
+          <div class="col-md-12 d-sm-flex align-items-center justify-content-between">
             <div class="page-header-title">
               @for (breadcrumb of navigationList; track breadcrumb; let last = $last) {
                 @if (last) {
-                  <h5 class="mb-2">
+                  <h5 class="m-b-10">
                     {{ breadcrumb.title }}
                   </h5>
                 }
@@ -15,17 +15,31 @@
             </div>
             <ul class="breadcrumb">
               <li class="breadcrumb-item">
-                <a [routerLink]="['/default/']">Home</a>
+                <a [routerLink]="['/default']" title="Home">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="icon icon-tabler icons-tabler-filled text-secondary icon-tabler-home"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M12.707 2.293l9 9c.63 .63 .184 1.707 -.707 1.707h-1v6a3 3 0 0 1 -3 3h-1v-7a3 3 0 0 0 -2.824 -2.995l-.176 -.005h-2a3 3 0 0 0 -3 3v7h-1a3 3 0 0 1 -3 -3v-6h-1c-.89 0 -1.337 -1.077 -.707 -1.707l9 -9a1 1 0 0 1 1.414 0m.293 11.707a1 1 0 0 1 1 1v7h-4v-7a1 1 0 0 1 .883 -.993l.117 -.007z"
+                    />
+                  </svg>
+                </a>
               </li>
               @for (breadcrumb of navigationList; track breadcrumb) {
                 @if (breadcrumb.url !== false) {
                   <li class="breadcrumb-item">
-                    <a [routerLink]="breadcrumb.url">{{ breadcrumb.title }}</a>
+                    <a class="text-muted f-w-500" [routerLink]="breadcrumb.url">{{ breadcrumb.title }}</a>
                   </li>
                 }
-                @if (breadcrumb.url === false) {
+                @if (breadcrumb.url === false && breadcrumb.type !== 'group') {
                   <li class="breadcrumb-item">
-                    <a href="javascript:">{{ breadcrumb.title }}</a>
+                    <a href="javascript:" class="f-w-500 text-dark">{{ breadcrumb.title }}</a>
                   </li>
                 }
               }
