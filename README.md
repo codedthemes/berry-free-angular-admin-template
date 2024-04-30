@@ -84,7 +84,7 @@ yarn start
 ## Technology Stack
 
 - Bootstrap 5
-- Angular 17
+- Angular 18
 
 ## Author
 
