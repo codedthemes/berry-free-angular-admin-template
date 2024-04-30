@@ -1,60 +1,61 @@
-<div class="menu-styler" [ngClass]="{ open: styleSelectorToggle }">
-  <div class="pct-c-btn">
-    <a href="javascript:" (click)="styleSelectorToggle = !styleSelectorToggle"></a>
+<div id="styleSelector" class="menu-styler" [ngClass]="{ open: styleSelectorToggle }">
+  <div class="pct-c-btn" ngbTooltip="Live Customize">
+    <a href="javascript:" (click)="styleSelectorToggle = !styleSelectorToggle">
+      <i class="ph-duotone ph-gear-six"></i>
+    </a>
   </div>
   <div class="style-block">
-    <h4 class="mb-2">Customizer</h4>
-    <hr class="my-0" />
-
-    <div class="card border mt-3">
-      <div class="card-header">
-        <h5>Font Family</h5>
-      </div>
-      <div class="card-body">
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault1"
-            checked
-            [ngClass]="{
-              active: setFontFamily === 'Roboto'
-            }"
-            (click)="setfontFamily('Roboto')"
-            data-value="Roboto"
-          />
-          <label class="form-check-label" for="flexRadioDefault1"> Roboto </label>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
-            [ngClass]="{
-              active: setFontFamily === 'poppins'
-            }"
-            (click)="setfontFamily('poppins')"
-            data-value="poppins"
-          />
-          <label class="form-check-label" for="flexRadioDefault2"> Poppins </label>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault3"
-            [ngClass]="{
-              active: setFontFamily === 'inter'
-            }"
-            (click)="setfontFamily('inter')"
-            data-value="inter"
-          />
-          <label class="form-check-label" for="flexRadioDefault3"> Inter </label>
-        </div>
+    <div class="customize-header">
+      <h5>Theme Customization</h5>
+      <div class="d-inline-flex align-items-center gap-2">
+        <button type="button" class="btn btn-sm rounded btn-outline-danger" id="layoutreset">Reset</button>
+        <button type="button" class="btn-close ms-1" aria-label="Close" (click)="styleSelectorToggle = !styleSelectorToggle"></button>
       </div>
     </div>
-  </div></div
->
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <h5 class="mb-1 text-uppercase">Font Style</h5>
+        <p class="text-muted text-sm">Choose theme font</p>
+        <div class="theme-color theme-font-style">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="layout_font"
+              id="layoutfontRoboto"
+              checked
+              [checked]="setFontFamily === 'Roboto'"
+              (click)="fontFamily('Roboto')"
+              ngbTooltip="Roboto"
+            />
+            <label class="form-check-label" for="layoutfontRoboto"> Roboto </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="layout_font"
+              id="layoutfontPoppins"
+              [checked]="setFontFamily === 'Poppins'"
+              (click)="fontFamily('Poppins')"
+              ngbTooltip="Poppins"
+            />
+            <label class="form-check-label" for="layoutfontPoppins"> Poppins </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="layout_font"
+              id="layoutfontInter"
+              [checked]="setFontFamily === 'Inter'"
+              (click)="fontFamily('Inter')"
+              ngbTooltip="Inter"
+            />
+            <label class="form-check-label" for="layoutfontInter"> Inter </label>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

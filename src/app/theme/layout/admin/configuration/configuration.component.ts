@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { BerryConfig } from 'src/app/app-config';
 
 @Component({
@@ -9,19 +9,20 @@ import { BerryConfig } from 'src/app/app-config';
 export class ConfigurationComponent implements OnInit {
   // public method
   styleSelectorToggle!: boolean; // open configuration menu
-  fontFamily: string;
-  setFontFamily!: string;
+  setFontFamily!: string; // fontFamily
+
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    this.setFontFamily = BerryConfig.fontFamily;
-    this.setfontFamily(this.setFontFamily);
+    this.setFontFamily = BerryConfig.font_family;
+    this.fontFamily(this.setFontFamily);
   }
 
-  setfontFamily(font) {
+  fontFamily(font: string) {
     this.setFontFamily = font;
-    (document.querySelector('body') as HTMLBodyElement).classList.remove('Roboto');
-    (document.querySelector('body') as HTMLBodyElement).classList.remove('poppins');
-    (document.querySelector('body') as HTMLBodyElement).classList.remove('inter');
-    (document.querySelector('body') as HTMLBodyElement).classList.add(font);
+    this.renderer.removeClass(document.body, 'Roboto');
+    this.renderer.removeClass(document.body, 'Poppins');
+    this.renderer.removeClass(document.body, 'Inter');
+    this.renderer.addClass(document.body, font);
   }
 }

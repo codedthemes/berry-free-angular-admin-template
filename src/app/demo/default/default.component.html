@@ -1,19 +1,18 @@
 <div class="row">
-  <!-- [ sample-page ] start -->
   <div class="col-xl-4 col-md-6">
-    <div class="card bg-secondary-dark dashnum-card text-white overflow-hidden">
-      <span class="round small"></span>
-      <span class="round big"></span>
+    <div class="card earning-card bg-secondary-dark text-white overflow-hidden">
+      <span class="round secondary-round small"></span>
+      <span class="round secondary-round big"></span>
       <div class="card-body">
         <div class="row">
           <div class="col">
-            <div class="avtar">
-              <i class="text-white ti ti-credit-card"></i>
+            <div class="avatar avatar-lg">
+              <i class="text-white ti ti-credit-card f-24"></i>
             </div>
           </div>
           <div class="col-auto">
             <div class="btn-group" ngbDropdown>
-              <a type="button" class="avtar bg-secondary dropdown-toggle arrow-none" data-bs-toggle="dropdown" ngbDropdownToggle>
+              <a type="button" class="avatar avatar-xs bg-secondary dropdown-toggle arrow-none" ngbDropdownToggle>
                 <i class="ti ti-dots"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
@@ -23,86 +22,43 @@
             </div>
           </div>
         </div>
-        <span class="text-white d-block fs-1 fw-bold my-2">1350 <i class="ti ti-arrow-up-right-circle opacity-50"></i></span>
-        <p class="mb-0 opacity-50">Total Pending Orders</p>
+        <span class="text-white d-block f-34 f-w-500 my-2">$500.00 <i class="ti ti-circle-arrow-up-right opacity-50"></i></span>
+        <p class="mb-0 opacity-50">Total Earning</p>
       </div>
     </div>
   </div>
   <div class="col-xl-4 col-md-6">
-    <div class="card bg-primary-dark dashnum-card text-white overflow-hidden">
-      <span class="round small"></span>
-      <span class="round big"></span>
+    <div class="card earning-card bg-primary-dark text-white overflow-hidden">
+      <span class="round primary-round small"></span>
+      <span class="round primary-round big"></span>
       <div class="card-body">
-        <div class="row">
-          <div class="col">
-            <div class="avtar">
-              <i class="text-white ti ti-credit-card"></i>
-            </div>
-          </div>
-          <div class="col-auto">
-            <ul ngbNav class="nav-tabs nav-pills" #nav="ngbNav" (navChange)="onNavChange($event)">
-              <li class="nav-item" [ngbNavItem]="1">
-                <a class="nav-link text-white" ngbNavLink>Month</a>
-                <ng-template ngbNavContent>
-                  <div class="row">
-                    <div class="col-6">
-                      <span class="text-white d-block fs-1 fw-bold my-2">$108 <i class="ti ti-arrow-up-right-circle opacity-50"></i></span>
-                      <p class="mb-0 opacity-50">Total Earning</p>
-                    </div>
-                    <div class="col-6">
-                      <div id="tab-chart-1"></div>
-                    </div>
-                  </div>
-                </ng-template>
-              </li>
-              <li class="nav-item" [ngbNavItem]="2">
-                <a class="nav-link text-white" ngbNavLink>Year</a>
-                <ng-template ngbNavContent>
-                  <div class="row">
-                    <div class="col-6">
-                      <span class="text-white d-block fs-1 fw-bold my-2">$961<i class="ti ti-arrow-down-right-circle opacity-50"></i></span>
-                      <p class="mb-0 opacity-50">C/W Last Year</p>
-                    </div>
-                    <div class="col-6">
-                      <div id="tab-chart-2"></div>
-                    </div>
-                  </div>
-                </ng-template>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div [ngbNavOutlet]="nav"> </div>
+        <app-chart-data-month />
       </div>
     </div>
   </div>
   <div class="col-xl-4 col-md-12">
-    <div class="card bg-primary-dark dashnum-card dashnum-card-small text-white overflow-hidden">
-      <span class="round bg-primary small"></span>
-      <span class="round bg-primary big"></span>
-      <div class="card-body p-3">
+    <div class="card total-income-card overflow-hidden bg-primary-dark text-white">
+      <div class="card-body">
         <div class="d-flex align-items-center">
-          <div class="avtar">
-            <i class="text-white ti ti-credit-card"></i>
+          <div class="avatar avatar-lg icon m-r-5">
+            <i class="text-white ti ti-layout-board-split f-24"></i>
           </div>
           <div class="ms-2">
-            <h4 class="text-white mb-1">$203k <i class="ti ti-arrow-up-right-circle opacity-50"></i></h4>
-            <p class="mb-0 opacity-50 text-sm">Net Profit</p>
+            <h4 class="text-white f-w-600 mb-1">$203k</h4>
+            <p class="mb-0 opacity-50 text-sm">Total Income</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="card dashnum-card dashnum-card-small overflow-hidden">
-      <span class="round bg-warning small"></span>
-      <span class="round bg-warning big"></span>
-      <div class="card-body p-3">
+    <div class="card total-income-card warning overflow-hidden">
+      <div class="card-body">
         <div class="d-flex align-items-center">
-          <div class="avtar bg-light-warning">
-            <i class="text-warning ti ti-credit-card"></i>
+          <div class="avatar avatar-lg icon-warning m-r-5">
+            <i class="text-warning ti ti-layout-board-split f-24"></i>
           </div>
           <div class="ms-2">
-            <h4 class="mb-1">$550K <i class="ti ti-arrow-up-right-circle opacity-50"></i></h4>
-            <p class="mb-0 opacity-50 text-sm">Total Revenue</p>
+            <h4 class="f-w-600 mb-1">$203k</h4>
+            <p class="mb-0 opacity-50 text-sm">Total Income</p>
           </div>
         </div>
       </div>
@@ -110,36 +66,7 @@
   </div>
 
   <div class="col-xl-8 col-md-12">
-    <div class="card">
-      <div class="card-body">
-        <div class="row mb-3 align-items-center">
-          <div class="col">
-            <small>Total Growth</small>
-            <h3>$2,324.00</h3>
-          </div>
-          <div class="col-auto">
-            <select class="form-select">
-              <option>Today</option>
-              <option selected>This Month</option>
-              <option>This Year</option>
-            </select>
-          </div>
-        </div>
-        <div id="growthChart">
-          <apx-chart
-            [series]="chartOptions.series"
-            [chart]="chartOptions.chart"
-            [dataLabels]="chartOptions.dataLabels"
-            [plotOptions]="chartOptions.plotOptions"
-            [responsive]="chartOptions.responsive"
-            [xaxis]="chartOptions.xaxis"
-            [colors]="chartOptions.colors"
-            [grid]="chartOptions.grid"
-            [tooltip]="chartOptions.tooltip"
-          ></apx-chart>
-        </div>
-      </div>
-    </div>
+    <app-bar-chart />
   </div>
   <div class="col-xl-4 col-md-12">
     <div class="card">
@@ -162,30 +89,20 @@
               </div>
             </div>
           </div>
-          <div id="bajajchart">
-            <apx-chart
-              [series]="chartOptions1.series"
-              [chart]="chartOptions1.chart"
-              [dataLabels]="chartOptions1.dataLabels"
-              [plotOptions]="chartOptions1.plotOptions"
-              [responsive]="chartOptions1.responsive"
-              [colors]="chartOptions1.colors"
-              [stroke]="chartOptions1.stroke"
-            ></apx-chart>
-          </div>
+          <app-bajaj-chart />
         </div>
         <ul class="list-group list-group-flush">
           @for (list of ListGroup; track list) {
-            <li class="list-group-item px-0">
+            <li class="list-group-item px-0 {{ list.space }}">
               <div class="row align-items-start">
                 <div class="col">
                   <h5 class="mb-0">{{ list.name }}</h5>
-                  <small class="text-success">{{ list.profit }}</small>
+                  <small class="{{ list.color }}">{{ list.profit }}</small>
                 </div>
                 <div class="col-auto">
                   <h4 class="mb-0">
                     {{ list.invest
-                    }}<span class="ms-2 align-top avtar avtar-xxs {{ list.bgColor }}"
+                    }}<span class="ms-2 align-top avatar avatar-xxs {{ list.bgColor }}"
                       ><i class="{{ list.icon }} {{ list.color }}"></i
                     ></span>
                   </h4>
@@ -195,10 +112,9 @@
           }
         </ul>
         <div class="text-center">
-          <a href="javascripr:" class="b-b-primary text-primary">View all <i class="ti ti-chevron-right"></i></a>
+          <a href="javascript:" class="b-b-primary text-primary f-w-500">View all <i class="ti ti-chevron-right"></i></a>
         </div>
       </div>
     </div>
   </div>
-  <!-- [ sample-page ] end -->
 </div>

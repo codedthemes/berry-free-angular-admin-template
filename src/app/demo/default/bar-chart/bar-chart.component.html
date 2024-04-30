@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row mb-3 align-items-center">
+      <div class="col">
+        <div class="text-sm">Total Growth</div>
+        <h3 class="mt-2 f-w-600">$2,324.00</h3>
+      </div>
+      <div class="col-auto">
+        <select class="form-select p-r-35" title="Select">
+          <option>Today</option>
+          <option selected>Month</option>
+          <option>Year</option>
+        </select>
+      </div>
+    </div>
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [dataLabels]="chartOptions.dataLabels"
+      [plotOptions]="chartOptions.plotOptions"
+      [responsive]="chartOptions.responsive"
+      [xaxis]="chartOptions.xaxis"
+      [colors]="chartOptions.colors"
+      [tooltip]="chartOptions.tooltip"
+    ></apx-chart>
+  </div>
+</div>
