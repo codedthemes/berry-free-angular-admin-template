@@ -12,17 +12,17 @@ Berry is a free angular admin dashboard template built with Angular and latest B
 
 [Pro version](https://berrydashboard.io/angular/default) of Berry Angular Dashboard template contains features like TypeScript, Apps, Authentication Methods (i.e. JWT), Advance Components, Form Plugins, Layouts, Widgets, and many more.
 
-| [Berry Free](https://berrydashboard.io/angular/free/) | [Berry](https://codedthemes.com/item/berry-angular-admin-dashboard-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)             |
-| ----------------------------------------------------- | :---------------------------------------------------------------------------------------- |
-| **9** Demo pages                                      | **45+** demo pages                                                                        |
-| -                                                     | ✓ Multi-language                                                                          |
-| -                                                     | ✓ Dark/Light Mode 🌓                                                                      |
-| -                                                     | ✓ TypeScript version                                                                      |
-| -                                                     | ✓ Design files (Figma)                                                                    |
-| -                                                     | ✓ 6+ color Options                                                                        |
-| -                                                     | ✓ RTL                                                                                     |
-| -                                                     | ✓ JWT authentications                                                                     |
-| -                                                     | ✓ [More components](https://berrydashboard.io/angular/default/basic/alert)                |
+| [Berry Free](https://berrydashboard.io/angular/free/) | [Berry](https://codedthemes.com/item/berry-angular-admin-dashboard-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium) |
+| ----------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **9** Demo pages                                      | **45+** demo pages                                                                                                                                             |
+| -                                                     | ✓ Multi-language                                                                                                                                               |
+| -                                                     | ✓ Dark/Light Mode 🌓                                                                                                                                           |
+| -                                                     | ✓ TypeScript version                                                                                                                                           |
+| -                                                     | ✓ Design files (Figma)                                                                                                                                         |
+| -                                                     | ✓ 6+ color Options                                                                                                                                             |
+| -                                                     | ✓ RTL                                                                                                                                                          |
+| -                                                     | ✓ JWT authentications                                                                                                                                          |
+| -                                                     | ✓ [More components](https://berrydashboard.io/angular/default/basic/alert)                                                                                     |
 
 ## Why Berry?
 

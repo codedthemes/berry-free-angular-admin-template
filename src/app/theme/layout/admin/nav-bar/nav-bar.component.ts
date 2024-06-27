@@ -1,5 +1,5 @@
 // Angular import
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { BerryConfig } from '../../../../app-config';
 
 @Component({
@@ -28,6 +28,13 @@ export class NavBarComponent {
       this.navCollapsed = !this.navCollapsed;
       this.NavCollapse.emit();
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  // eslint disable-next-line
+  onResize(event: any): void {
+    this.windowWidth = event.target.innerWidth;
+    this.navCollapseMob();
   }
 
   navCollapseMob() {
