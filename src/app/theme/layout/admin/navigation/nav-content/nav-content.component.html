@@ -1,7 +1,7 @@
 <!-- Vertical layout -->
 <ng-scrollbar style="height: calc(100vh - 70px)" visibility="hover">
   <div class="navbar-content">
-    <ul class="nav coded-inner-navbar" (click)="fireOutClick()">
+    <ul class="nav coded-inner-navbar" (click)="fireOutClick()" (keydown.space)="fireOutClick()" (keydown.enter)="fireOutClick()">
       @for (item of navigations; track item) {
         @if (item.type === 'group') {
           <app-nav-group [item]="item" />

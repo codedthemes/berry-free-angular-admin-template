@@ -64,6 +64,13 @@ export class ChartDataMonthComponent implements OnInit {
     };
   }
 
+  handleKeyDown(event: KeyboardEvent, value: string): void {
+    if (event.key === 'Enter' || event.key === ' ') {
+      this.toggleActive(value);
+      event.preventDefault(); // Prevent default scrolling for the spacebar key
+    }
+  }
+
   // public method
   toggleActive(value: string) {
     this.btnActive = value;

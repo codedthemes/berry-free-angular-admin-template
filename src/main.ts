@@ -1,6 +1,4 @@
 import { enableProdMode, importProvidersFrom } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
 
 import { environment } from './environments/environment';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
@@ -13,9 +11,5 @@ if (environment.production) {
 }
 
 bootstrapApplication(AppComponent, {
-    providers: [
-        importProvidersFrom(BrowserModule, AppRoutingModule),
-        provideAnimations()
-    ]
-})
-  .catch((err) => console.error(err));
+  providers: [importProvidersFrom(BrowserModule, AppRoutingModule), provideAnimations()]
+}).catch((err) => console.error(err));
