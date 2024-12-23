@@ -1,14 +1,14 @@
-<!-- [ Sidebar Menu ] start -->
-<nav>
+<nav class="">
   <div class="navbar-wrapper">
     <div class="m-header">
-      <!-- [ Header Topbar ] start -->
       <a [routerLink]="['/default/']" class="b-brand">
-        <!-- ========   change your logo hear   ============ -->
-        <img src="assets/images/logo-dark.svg" class="logo logo-lg" />
+        @if (themeMode === 'compact') {
+          <img src="assets/images/Logo-small.svg" alt="small-menu-logo" class="logo logo-sm" />
+        } @else {
+          <img src="assets/images/logo.svg" alt="logo" class="logo logo-lg" />
+        }
       </a>
     </div>
-    <app-nav-content (NavCollapsedMob)="navCollapseMob()" class="scroll-div w-100"></app-nav-content>
+    <app-nav-content (NavCollapsedMob)="navCollapseMob()" (SubmenuCollapse)="navSubmenuCollapse()" class="scroll-div w-100 compact" />
   </div>
 </nav>
-<!-- [ Sidebar Menu ] end -->

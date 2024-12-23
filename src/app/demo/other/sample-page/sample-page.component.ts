@@ -2,12 +2,12 @@
 import { Component } from '@angular/core';
 
 // project import
-import { SharedModule } from 'src/app/theme/shared/shared.module';
+
+import { CardComponent } from '../../../theme/shared/components/card/card.component';
 
 @Component({
   selector: 'app-sample-page',
-  standalone: true,
-  imports: [SharedModule],
+  imports: [CardComponent],
   templateUrl: './sample-page.component.html',
   styleUrls: ['./sample-page.component.scss']
 })

@@ -27,8 +27,6 @@
     }
   }
   .navbar-content {
-    position: relative;
-    height: calc(100vh - #{$header-height});
     padding: 10px 0;
   }
 
@@ -62,6 +60,23 @@
   }
   .m-header {
     display: none;
+  }
+
+  .version {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-left: 8px;
+      padding-right: 8px;
+      white-space: nowrap;
+      border-radius: 16px;
+    }
   }
 }
 .pc-sidebar.mob-open .m-header {

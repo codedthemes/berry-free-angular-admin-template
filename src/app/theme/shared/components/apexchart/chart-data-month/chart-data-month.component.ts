@@ -1,47 +1,23 @@
 // angular import
+import { CommonModule } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 // project import
-import { SharedModule } from 'src/app/theme/shared/shared.module';
 
 // third party
-import {
-  NgApexchartsModule,
-  ApexChart,
-  ChartComponent,
-  ApexDataLabels,
-  ApexAxisChartSeries,
-  ApexStroke,
-  ApexXAxis,
-  ApexYAxis,
-  ApexTheme,
-  ApexTooltip
-} from 'ng-apexcharts';
-
-export type ChartOptions = {
-  series: ApexAxisChartSeries;
-  chart: ApexChart;
-  dataLabels: ApexDataLabels;
-  xaxis: ApexXAxis;
-  colors: string[];
-  stroke: ApexStroke;
-  yaxis: ApexYAxis;
-  tooltip: ApexTooltip;
-  theme: ApexTheme;
-};
+import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-chart-data-month',
-  standalone: true,
-  imports: [SharedModule, NgApexchartsModule],
+  imports: [CommonModule, NgApexchartsModule],
   templateUrl: './chart-data-month.component.html',
   styleUrl: './chart-data-month.component.scss'
 })
 export class ChartDataMonthComponent implements OnInit {
   // public props
   @ViewChild('chart') chart!: ChartComponent;
-  chartOptions!: Partial<ChartOptions>;
-  amount: number = 961;
+  chartOptions!: Partial<ApexOptions>;
+  amount = 961;
   btnActive!: string;
 
   // life cycle event

@@ -1,14 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 /**======================================================================
 =========================================================================
-Template Name: berry - Most Complete Bootstrap Admin Template
+Template Name: berry - Most Complete Angular Admin Template
 Author: CodedThemes
 Support: https://codedthemes.support-hub.io/
 File: style.css
 =========================================================================
 =================================================================================== */
 
-// main framework
 // main framework
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
@@ -23,14 +22,13 @@ File: style.css
 @import 'node_modules/bootstrap/scss/utilities';
 @import 'node_modules/bootstrap/scss/utilities/api';
 
-// main framework
 @import 'scss/themes/generic.scss';
 @import 'scss/themes/general.scss';
 
 // Layouts
 @import 'scss/themes/layouts/layouts';
 
-// Componants
+// Components
 @import 'scss/themes/components/components';
 
 // pages
