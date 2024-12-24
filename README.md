@@ -83,8 +83,13 @@ yarn start
 
 ## Technology Stack
 
-- Bootstrap 5
-- Angular 18
+- Angular 19.x.x
+- Bootstrap 5.x.x
+- TypeScript
+- JWT (i.e. Pro version)
+- Role Base Authentication (i.e. Pro version)
+- Apex Charts
+- npm package installer
 
 ## Author
 

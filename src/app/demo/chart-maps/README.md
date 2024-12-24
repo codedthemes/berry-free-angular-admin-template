@@ -1,32 +1,43 @@
-# Admin Panel Demo
+# Berry Admin Panel - Unlock Premium Features with the Pro Version
 
-This is a demo of the admin panel for the CodedThemes Angular 19 Admin Template.
+Elevate your project with the Pro Version of the <b>Berry Admin Panel!</b> Built to cater to modern web applications, the Pro version is loaded with advanced features, intuitive design elements, and dynamic tools that ensure seamless functionality.
 
-The demo is a fully functional admin panel that showcases the features of the template. It includes a variety of pages and components, including:
+This page (folder) is a sneak peek into the premium features available in <b>version 4.0.0</b>. Upgrade to the Pro version to unlock exclusive pages and components that will take your project to the next level.
 
-- Dashboard
-- Users
-- Products
-- Settings
-- Profile
-- Login
-- Register
-- Forgot Password
+## Included in the Pro Version:
 
-The demo also includes a variety of custom components, including:
+[🚀 Dashboards](https://berrydashboard.io/angular/default/default) : Advanced, real-time dashboards with interactive data visualizations for actionable insights.
 
-- Sidebar
-- Navbar
-- Breadcrumbs
-- Cards
-- Tables
-- Forms
-- Charts
-- Maps
-- Notifications
+[📦 Widgets](https://berrydashboard.io/angular/default/widget/statistics) : A curated library of pre-built widgets to streamline your development process and enhance functionality.
 
-The demo is built using the latest version of Angular and is fully responsive, meaning it will work on a variety of devices and screen sizes.
+[⚙️ Admin Panel](https://berrydashboard.io/angular/default/online-course/dashboard) : Fully responsive and user-friendly admin panels designed for efficient management and control.
 
-## Running the Demo
+[🔧 Components](https://berrydashboard.io/angular/default/basic/alert) : A wide range of reusable and customizable UI components to suit diverse project needs.
 
-To run the demo, simply clone the repository and run `npm install` followed by `ng serve`. The demo will be available at `http://localhost:4200/`.
+[🚀 Advanced Components](https://berrydashboard.io/angular/default/advance/sweetAlert) : Sophisticated tools and features to amplify your project’s design and interactivity.
+
+[📝 Forms](https://berrydashboard.io/angular/default/forms/basic) : Dynamic, customizable forms with advanced validation options for a smooth user experience.
+
+[📊 Tables](https://berrydashboard.io/angular/default/ng-table/basicTable) : Interactive, structured tables with sorting, filtering, and pagination features for better data management.
+
+[📈 Charts](https://berrydashboard.io/angular/default/chart/apex-chart) : Beautifully designed charts powered by modern libraries for impactful data visualization.
+
+[🔒 Authentication](https://berrydashboard.io/angular/default/auth/auth2/login) : Secure pages for login, registration, and password recovery, ensuring robust user authentication and management.
+
+[🛒 E-commerce App](https://berrydashboard.io/angular/default/ec/ec-product) : A complete e-commerce management solution for handling products, inventory, and transactions.
+
+[💬 Chat Messages](https://berrydashboard.io/angular/default/chat) : Integrated chat functionality to boost communication within your application.
+
+[👤 User Profile](https://berrydashboard.io/angular/default/user/social-profile) : A sleek, customizable user profile page for managing user information and settings effortlessly.
+
+## Why Upgrade to the Pro Version?
+
+🚀 <b>Advanced Features</b> : Access premium components and tools designed for modern, high-end projects. <br/><br/>
+⚡ <b>Faster Development</b> : Pre-designed pages, widgets, and features help you save time and effort. <br/><br/>
+📱 <b>Fully Responsive Design</b> : Enjoy a flawless experience across desktops, tablets, and smartphones. <br/><br/>
+🛠 <b>Developer-Friendly</b> : Modular code, clear documentation, and well-structured components make customization a breeze. <br/><br/>
+🎨 <b>Customization-Ready</b> : Personalize every aspect of your project with ease to match your branding needs.
+
+## Get Started with the Pro Version!
+
+👉 [Explore the Pro version now](https://codedthemes.com/item/berry-angular-admin-dashboard-template/) - and supercharge your development experience!
