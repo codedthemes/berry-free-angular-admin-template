@@ -1,47 +1,65 @@
 // Angular import
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Location, LocationStrategy } from '@angular/common';
+import { Component, OnInit, output, inject } from '@angular/core';
+import { CommonModule, Location } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+//theme version
+import { environment } from 'src/environments/environment';
 
 // project import
-import { NavigationItem } from '../navigation';
-import { environment } from 'src/environments/environment';
+import { NavigationItem, NavigationItems } from '../navigation';
+
+import { NavCollapseComponent } from './nav-collapse/nav-collapse.component';
+import { NavGroupComponent } from './nav-group/nav-group.component';
+import { NavItemComponent } from './nav-item/nav-item.component';
+
+// NgScrollbarModule
+import { SharedModule } from 'src/app/theme/shared/shared.module';
 
 @Component({
   selector: 'app-nav-content',
+  standalone: true,
+  imports: [CommonModule, RouterModule, NavCollapseComponent, NavGroupComponent, NavItemComponent, SharedModule],
   templateUrl: './nav-content.component.html',
-  styleUrls: ['./nav-content.component.scss']
+  styleUrl: './nav-content.component.scss'
 })
 export class NavContentComponent implements OnInit {
+  private location = inject(Location);
+
   // public props
-  @Output() NavCollapsedMob: EventEmitter<any> = new EventEmitter();
+  NavCollapsedMob = output();
+  SubmenuCollapse = output();
 
   // version
+  title = 'Demo application for version numbering';
   currentApplicationVersion = environment.appVersion;
 
-  navigation: any;
-  windowWidth = window.innerWidth;
+  navigations!: NavigationItem[];
+  windowWidth: number;
 
   // Constructor
-  constructor(
-    public nav: NavigationItem,
-    private location: Location,
-    private locationStrategy: LocationStrategy
-  ) {
-    this.navigation = this.nav.get();
+  constructor() {
+    this.navigations = NavigationItems;
+    this.windowWidth = window.innerWidth;
   }
 
   // Life cycle events
   ngOnInit() {
     if (this.windowWidth < 1025) {
-      (document.querySelector('.coded-navbar') as HTMLDivElement).classList.add('menupos-static');
+      setTimeout(() => {
+        (document.querySelector('.coded-navbar') as HTMLDivElement).classList.add('menupos-static');
+      }, 500);
     }
   }
 
   fireOutClick() {
     let current_url = this.location.path();
-    const baseHref = this.locationStrategy.getBaseHref();
-    if (baseHref) {
-      current_url = baseHref + this.location.path();
+    // eslint-disable-next-line
+    // @ts-ignore
+    if (this.location['_baseHref']) {
+      // eslint-disable-next-line
+      // @ts-ignore
+      current_url = this.location['_baseHref'] + this.location.path();
     }
     const link = "a.nav-link[ href='" + current_url + "' ]";
     const ele = document.querySelector(link);
@@ -59,12 +77,6 @@ export class NavContentComponent implements OnInit {
         last_parent.classList.add('coded-trigger');
         last_parent.classList.add('active');
       }
-    }
-  }
-
-  navMob() {
-    if (this.windowWidth < 1025 && document.querySelector('app-navigation.coded-navbar').classList.contains('mob-open')) {
-      this.NavCollapsedMob.emit();
     }
   }
 }

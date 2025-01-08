@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { BerryConfig } from 'src/app/app-config';
 
 @Component({
   selector: 'app-configuration',
+  imports: [CommonModule],
   templateUrl: './configuration.component.html',
   styleUrls: ['./configuration.component.scss']
 })

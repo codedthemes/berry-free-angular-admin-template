@@ -2,43 +2,20 @@
 import { Component, ViewChild } from '@angular/core';
 
 // project import
-import { SharedModule } from 'src/app/theme/shared/shared.module';
 
 // third party
-import {
-  NgApexchartsModule,
-  ApexChart,
-  ChartComponent,
-  ApexDataLabels,
-  ApexAxisChartSeries,
-  ApexTooltip,
-  ApexPlotOptions,
-  ApexResponsive,
-  ApexStroke
-} from 'ng-apexcharts';
-
-export type ChartOptions = {
-  series: ApexAxisChartSeries;
-  chart: ApexChart;
-  dataLabels: ApexDataLabels;
-  plotOptions: ApexPlotOptions;
-  responsive: ApexResponsive[];
-  colors: string[];
-  stroke: ApexStroke;
-  tooltip: ApexTooltip;
-};
+import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-bajaj-chart',
-  standalone: true,
-  imports: [SharedModule, NgApexchartsModule],
+  imports: [NgApexchartsModule],
   templateUrl: './bajaj-chart.component.html',
   styleUrl: './bajaj-chart.component.scss'
 })
 export class BajajChartComponent {
   // public props
   @ViewChild('chart') chart!: ChartComponent;
-  chartOptions!: Partial<ChartOptions>;
+  chartOptions!: Partial<ApexOptions>;
 
   // constructor
   constructor() {

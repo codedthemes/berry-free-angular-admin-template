@@ -1,131 +1,84 @@
-// Angular import
-import { Component, Input } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+// Angular Import
+import { Component, Input, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NavigationEnd, Router, RouterModule, Event } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 // project import
-import { NavigationItem } from '../../../layout/admin/navigation/navigation';
+import { NavigationItem, NavigationItems } from 'src/app/theme/layout/admin/navigation/navigation';
+
+interface titleType {
+  // eslint-disable-next-line
+  url: string | boolean | any | undefined;
+  title: string;
+  breadcrumbs: unknown;
+  type: string;
+}
 
 @Component({
-  selector: 'app-breadcrumbs',
+  selector: 'app-breadcrumb',
   standalone: true,
-  imports: [RouterModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './breadcrumbs.component.html',
-  styleUrl: './breadcrumbs.component.scss'
+  styleUrls: ['./breadcrumbs.component.scss']
 })
-export class BreadcrumbsComponent {
+export class BreadcrumbComponent {
+  private route = inject(Router);
+  private titleService = inject(Title);
+
   // public props
   @Input() type: string;
-  navigation: any;
-  breadcrumbList: Array<any> = [];
-  navigationList: any;
 
-  // Constructor
-  constructor(
-    private _router: Router,
-    public nav: NavigationItem,
-    private titleService: Title
-  ) {
-    this.navigation = this.nav.get();
+  navigations: NavigationItem[];
+  breadcrumbList: string[] = [];
+  navigationList!: titleType[];
+
+  // constructor
+  constructor() {
+    this.navigations = NavigationItems;
+    this.type = 'icon';
     this.setBreadcrumb();
   }
 
   // public method
   setBreadcrumb() {
-    let routerUrl: string;
-    this._router.events.subscribe((router: any) => {
-      routerUrl = router.urlAfterRedirects;
-      if (routerUrl && typeof routerUrl === 'string') {
-        this.breadcrumbList.length = 0;
+    this.route.events.subscribe((router: Event) => {
+      if (router instanceof NavigationEnd) {
         const activeLink = router.url;
-        this.filterNavigation(activeLink);
+        const breadcrumbList = this.filterNavigation(this.navigations, activeLink);
+        this.navigationList = breadcrumbList.splice(-2);
+        const title = breadcrumbList[breadcrumbList.length - 1]?.title || 'Welcome';
+        this.titleService.setTitle(title + ' | Berry Angular Admin Template');
       }
     });
   }
 
-  filterNavigation(activeLink: any) {
-    let result: any;
-    let title = 'Welcome';
-    this.navigation.forEach(function (a: any) {
-      if (a.type === 'item' && 'url' in a && a.url === activeLink) {
-        result = [
+  filterNavigation(navItems: NavigationItem[], activeLink: string): titleType[] {
+    for (const navItem of navItems) {
+      if (navItem.type === 'item' && 'url' in navItem && navItem.url === activeLink) {
+        return [
           {
-            url: 'url' in a ? a.url : false,
-            title: a.title,
-            breadcrumbs: 'breadcrumbs' in a ? a.breadcrumbs : true,
-            type: a.type
+            url: 'url' in navItem ? navItem.url : false,
+            title: navItem.title,
+            breadcrumbs: 'breadcrumbs' in navItem ? navItem.breadcrumbs : true,
+            type: navItem.type
           }
         ];
-        title = a.title;
-      } else {
-        if (a.type === 'group' && 'children' in a) {
-          a.children.forEach(function (b: any) {
-            if (b.type === 'item' && 'url' in b && b.url === activeLink) {
-              result = [
-                {
-                  url: 'url' in a ? a.url : false,
-                  title: a.title,
-                  breadcrumbs: 'breadcrumbs' in a ? a.breadcrumbs : true,
-                  type: a.type
-                },
-                {
-                  url: 'url' in b ? b.url : false,
-                  title: b.title,
-                  breadcrumbs: 'breadcrumbs' in b ? b.breadcrumbs : true,
-                  type: b.type
-                }
-              ];
-              title = b.title;
-            } else {
-              if (b.type === 'collapse' && 'children' in b) {
-                b.children.forEach(function (c: any) {
-                  if (c.type === 'item' && 'url' in c && c.url === activeLink) {
-                    result = [
-                      {
-                        url: 'url' in b ? b.url : false,
-                        title: b.title,
-                        breadcrumbs: 'breadcrumbs' in b ? b.breadcrumbs : true,
-                        type: b.type
-                      },
-                      {
-                        url: 'url' in c ? c.url : false,
-                        title: c.title,
-                        breadcrumbs: 'breadcrumbs' in c ? c.breadcrumbs : true,
-                        type: c.type
-                      }
-                    ];
-                    title = c.title;
-                  } else {
-                    if (c.type === 'collapse' && 'children' in c) {
-                      c.children.forEach(function (d: any) {
-                        if (d.type === 'item' && 'url' in d && d.url === activeLink) {
-                          result = [
-                            {
-                              url: 'url' in c ? c.url : false,
-                              title: c.title,
-                              breadcrumbs: 'breadcrumbs' in c ? c.breadcrumbs : true,
-                              type: c.type
-                            },
-                            {
-                              url: 'url' in d ? d.url : false,
-                              title: d.title,
-                              breadcrumbs: 'breadcrumbs' in d ? d.breadcrumbs : true,
-                              type: d.type
-                            }
-                          ];
-                          title = d.title;
-                        }
-                      });
-                    }
-                  }
-                });
-              }
-            }
+      }
+      if ((navItem.type === 'group' || navItem.type === 'collapse') && 'children' in navItem) {
+        const breadcrumbList = this.filterNavigation(navItem.children!, activeLink);
+
+        if (breadcrumbList.length > 0) {
+          breadcrumbList.unshift({
+            url: 'url' in navItem ? navItem.url : false,
+            title: navItem.title,
+            breadcrumbs: 'breadcrumbs' in navItem ? navItem.breadcrumbs : true,
+            type: navItem.type
           });
+          return breadcrumbList;
         }
       }
-    });
-    this.navigationList = result;
-    this.titleService.setTitle(title + ' | Berry Angular Template');
+    }
+    return [];
   }
 }

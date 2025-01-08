@@ -1,22 +1,21 @@
-import { Injectable } from '@angular/core';
-
 export interface NavigationItem {
   id: string;
   title: string;
   type: 'item' | 'collapse' | 'group';
+  translate?: string;
   icon?: string;
+  hidden?: boolean;
   url?: string;
   classes?: string;
   external?: boolean;
   target?: boolean;
   breadcrumbs?: boolean;
-  children?: Navigation[];
+  children?: NavigationItem[];
+  role?: string[];
+  isMainParent?: boolean;
 }
 
-export interface Navigation extends NavigationItem {
-  children?: NavigationItem[];
-}
-const NavigationItems = [
+export const NavigationItems: NavigationItem[] = [
   {
     id: 'dashboard',
     title: 'Dashboard',
@@ -127,10 +126,3 @@ const NavigationItems = [
     ]
   }
 ];
-
-@Injectable()
-export class NavigationItem {
-  get() {
-    return NavigationItems;
-  }
-}

@@ -95,6 +95,13 @@ File: style.css
           color: $pc-secondary;
         }
       }
+
+      .version {
+        label {
+          background: shift-color($pc-secondary, $soft-bg-level);
+          color: $pc-secondary;
+        }
+      }
     }
     .page-link {
       color: $pc-primary;

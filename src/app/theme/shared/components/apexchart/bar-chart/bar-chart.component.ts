@@ -2,45 +2,20 @@
 import { Component, ViewChild } from '@angular/core';
 
 // project import
-import { SharedModule } from 'src/app/theme/shared/shared.module';
 
 // third party
-import {
-  NgApexchartsModule,
-  ApexChart,
-  ChartComponent,
-  ApexDataLabels,
-  ApexAxisChartSeries,
-  ApexXAxis,
-  ApexYAxis,
-  ApexTooltip,
-  ApexPlotOptions,
-  ApexResponsive
-} from 'ng-apexcharts';
-
-export type ChartOptions = {
-  series: ApexAxisChartSeries;
-  chart: ApexChart;
-  dataLabels: ApexDataLabels;
-  plotOptions: ApexPlotOptions;
-  responsive: ApexResponsive[];
-  xaxis: ApexXAxis;
-  colors: string[];
-  yaxis: ApexYAxis;
-  tooltip: ApexTooltip;
-};
+import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-bar-chart',
-  standalone: true,
-  imports: [NgApexchartsModule, SharedModule],
+  imports: [NgApexchartsModule],
   templateUrl: './bar-chart.component.html',
   styleUrl: './bar-chart.component.scss'
 })
 export class BarChartComponent {
   // public props
   @ViewChild('chart') chart!: ChartComponent;
-  chartOptions!: Partial<ChartOptions>;
+  chartOptions!: Partial<ApexOptions>;
 
   // Constructor
   constructor() {

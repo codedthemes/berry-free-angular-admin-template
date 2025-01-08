@@ -15,7 +15,7 @@ const routes: Routes = [
       },
       {
         path: 'default',
-        loadComponent: () => import('./demo/default/default.component').then((c) => c.DefaultComponent)
+        loadComponent: () => import('./demo/dashboard/default/default.component').then((c) => c.DefaultComponent)
       },
       {
         path: 'typography',
@@ -27,7 +27,7 @@ const routes: Routes = [
       },
       {
         path: 'sample-page',
-        loadComponent: () => import('./demo/sample-page/sample-page.component')
+        loadComponent: () => import('./demo/other/sample-page/sample-page.component')
       }
     ]
   },

@@ -6,10 +6,22 @@
   </div>
   <div class="col-auto">
     <div class="d-flex align-items-center gap-2 chart-income">
-      <div class="btn btn-sm text-white" [ngClass]="this.btnActive === 'month' ? 'btn-primary' : ''" (click)="toggleActive('month')">
+      <div
+        class="btn btn-sm text-white"
+        [ngClass]="this.btnActive === 'month' ? 'btn-primary' : ''"
+        (click)="toggleActive('month')"
+        tabindex="0"
+        (keydown)="handleKeyDown($event, 'month')"
+      >
         Month
       </div>
-      <div class="btn btn-sm text-white" [ngClass]="this.btnActive === 'year' ? 'btn-primary' : ''" (click)="toggleActive('year')">
+      <div
+        class="btn btn-sm text-white"
+        [ngClass]="this.btnActive === 'year' ? 'btn-primary' : ''"
+        (click)="toggleActive('year')"
+        tabindex="0"
+        (keydown)="handleKeyDown($event, 'year')"
+      >
         Year
       </div>
     </div>
@@ -21,7 +33,7 @@
       ${{ amount }}
       <i class="ti ti-circle-arrow-up-right opacity-50"></i>
     </span>
-    <p class="mb-0 opacity-50">C/W Last Year</p>
+    <p class="mb-0 opacity-50">C/w Last Year</p>
   </div>
   <div class="col-6">
     <div id="chart text-dark">

@@ -1,29 +1,40 @@
 // Angular import
-import { Component } from '@angular/core';
-import { Location, LocationStrategy } from '@angular/common';
+import { AfterViewInit, Component, inject } from '@angular/core';
+import { CommonModule, Location, LocationStrategy } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { ChangeDetectorRef } from '@angular/core';
 
 // Project import
-import { BerryConfig } from '../../../app-config';
+import { BerryConfig } from 'src/app/app-config';
+
+import { ConfigurationComponent } from './configuration/configuration.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumbs/breadcrumbs.component';
 
 @Component({
   selector: 'app-admin',
+  standalone: true,
+  imports: [CommonModule, NavigationComponent, NavBarComponent, ConfigurationComponent, RouterModule, BreadcrumbComponent],
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  styleUrl: './admin.component.scss'
 })
-export class AdminComponent {
+export class AdminComponent implements AfterViewInit {
+  private location = inject(Location);
+  private locationStrategy = inject(LocationStrategy);
+  cdr = inject(ChangeDetectorRef);
+
   // public props
-  berryConfig;
-  navCollapsed: boolean;
+  currentLayout!: string;
+  navCollapsed = true;
   navCollapsedMob = false;
-  windowWidth: number;
+  windowWidth!: number;
 
   // Constructor
-  constructor(
-    private location: Location,
-    private locationStrategy: LocationStrategy
-  ) {
-    this.berryConfig = BerryConfig;
 
+  // life cycle hook
+
+  ngAfterViewInit() {
     let current_url = this.location.path();
     const baseHref = this.locationStrategy.getBaseHref();
     if (baseHref) {
@@ -31,11 +42,17 @@ export class AdminComponent {
     }
 
     if (current_url === baseHref + '/layout/theme-compact' || current_url === baseHref + '/layout/box') {
-      this.berryConfig.isCollapse_menu = true;
+      BerryConfig.isCollapse_menu = true;
     }
 
     this.windowWidth = window.innerWidth;
     this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.isCollapse_menu : false;
+    this.cdr.detectChanges();
+  }
+
+  // private method
+  private isThemeLayout(layout: string) {
+    this.currentLayout = layout;
   }
 
   // public method
