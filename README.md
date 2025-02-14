@@ -3,51 +3,20 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/berry-free-angular-admin-template/blob/main/LICENSE)
 [![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/berry-free-angular-admin-template)](https://github.com/codedthemes/berry-free-angular-admin-template/)
+[![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=flat-square&logo=github)](https://codedthemes.com/item/berry-angular-free-admin-template/)
+[![Join Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/invite/p2E2WhCb6s)
+
 
 Berry is a free angular admin dashboard template built with Angular and latest Bootstrap 5. It is meant to provide the best possible User Experience with highly customizable feature-rich pages. It is a complete Dashboard Template that has easy and intuitive responsive design whether it is viewed on retina screens or laptops.
 
-:star: :star: :star: Do not forget to star (Top right of this page) it if you like the theme :star: :star: :star:
+✨ Support us! If you like this theme, click the ⭐ (Top right) and let it shine
 
 ![IMG_8566.jpg](https://org-public-assets.s3.us-west-2.amazonaws.com/Free-Version-Banners/GITHUB-FREE-ANGULAR-REPO-Berry.jpg)
-
-[Pro version](https://berrydashboard.io/angular/default) of Berry Angular Dashboard template contains features like TypeScript, Apps, Authentication Methods (i.e. JWT), Advance Components, Form Plugins, Layouts, Widgets, and many more.
-
-| [Berry Free](https://berrydashboard.io/angular/free/) | [Berry](https://codedthemes.com/item/berry-angular-admin-dashboard-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium) |
-| ----------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **9** Demo pages                                      | **45+** demo pages                                                                                                                                             |
-| -                                                     | ✓ Multi-language                                                                                                                                               |
-| -                                                     | ✓ Dark/Light Mode 🌓                                                                                                                                           |
-| -                                                     | ✓ TypeScript version                                                                                                                                           |
-| -                                                     | ✓ Design files (Figma)                                                                                                                                         |
-| -                                                     | ✓ 6+ color Options                                                                                                                                             |
-| -                                                     | ✓ RTL                                                                                                                                                          |
-| -                                                     | ✓ JWT authentications                                                                                                                                          |
-| -                                                     | ✓ [More components](https://berrydashboard.io/angular/default/basic/alert)                                                                                     |
-
-## Why Berry?
-
-Berry offers everything you need to create dashboards. We have included the following high-end features in our initial release:
-
-- Modern aesthetics UI design
-- Bootstrap components
-- Fully Responsive, all modern browser supported
-- Easy to use code structure
-- Flexible & High-Performance code
-- Easy Documentation Guide
-
-## Free Berry Angular version
-
-- [Preview](https://berrydashboard.io/angular/free/)
-- [Download from Github](https://github.com/codedthemes/berry-free-angular-admin-template)
-
-## Berry Pro version
-
-- [Preview](https://berrydashboard.io/angular/default)
-- [Purchase from CodedThemes](https://codedthemes.com/item/berry-angular-admin-dashboard-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)
 
 ## Table of contents
 
 - [Getting Started](#getting-started)
+- [Download ](#download)
 - [Documentation](#documentation)
 - [Technology Stack](#technology-stack)
 - [Author](#author)
@@ -74,8 +43,29 @@ yarn
 3. Run project
 
 ```
-yarn start
+yarn run start
 ```
+
+## Download
+
+- Berry Free 
+    - [Live Preview](https://berrydashboard.io/angular/free/) 
+    - [Download](https://codedthemes.com/item/berry-angular-free-admin-template/)
+- Berry Pro 
+    - [Live Preview](https://berrydashboard.io/angular/default/) 
+    - [Download](https://codedthemes.com/item/berry-angular-admin-dashboard-template/)
+
+## License
+- Licensed under [MIT](https://github.com/codedthemes/berry-free-angular-admin-template/blob/master/LICENSE)
+- Copyright © [CodedThemes](https://codedthemes.com/)
+
+## More Angular Dashboard Templates
+
+| ![Theme Logo](https://via.placeholder.com/100) |                     
+|-----------------------------------------------|
+| [Free](https://example.com/free)  [Pro](https://example.com/pro) |
+                                         
+
 
 ## Documentation
 
@@ -130,3 +120,36 @@ To report a bug, please submit an [issue](https://github.com/codedthemes/berry-f
 - [Dribbble](https://dribbble.com/codedthemes)
 - [Facebook](https://www.facebook.com/codedthemes)
 - [Twitter](https://twitter.com/codedthemes)
+
+
+[Pro version](https://berrydashboard.io/angular/default) of Berry Angular Dashboard template contains features like TypeScript, Apps, Authentication Methods (i.e. JWT), Advance Components, Form Plugins, Layouts, Widgets, and many more.
+
+| [Berry Free](https://berrydashboard.io/angular/free/) | [Berry](https://codedthemes.com/item/berry-angular-admin-dashboard-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium) |
+| ----------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **9** Demo pages                                      | **45+** demo pages                                                                                                                                             |
+| -                                                     | ✓ Multi-language                                                                                                                                               |
+| -                                                     | ✓ Dark/Light Mode 🌓                                                                                                                                           |
+| -                                                     | ✓ TypeScript version                                                                                                                                           |
+| -                                                     | ✓ Design files (Figma)                                                                                                                                         |
+| -                                                     | ✓ 6+ color Options                                                                                                                                             |
+| -                                                     | ✓ RTL                                                                                                                                                          |
+| -                                                     | ✓ JWT authentications                                                                                                                                          |
+| -                                                     | ✓ [More components](https://berrydashboard.io/angular/default/basic/alert)                                                                                     |
+
+## Why Berry?
+
+Berry offers everything you need to create dashboards. We have included the following high-end features in our initial release:
+
+- Modern aesthetics UI design
+- Bootstrap components
+- Fully Responsive, all modern browser supported
+- Easy to use code structure
+- Flexible & High-Performance code
+- Easy Documentation Guide
+
+
+
+## Berry Pro version
+
+- [Preview](https://berrydashboard.io/angular/default)
+- [Purchase from CodedThemes](https://codedthemes.com/item/berry-angular-admin-dashboard-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)
