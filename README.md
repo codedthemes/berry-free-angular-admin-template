@@ -59,7 +59,7 @@ yarn start
   - [Download](https://github.com/codedthemes/berry-free-angular-admin-template)
 - Berry
   - [Live Preview](https://berrydashboard.io/angular/default)
-  - [Download](https://codedthemes.com/item/berry-angular-admin-dashboard-template/?utm_source=free_demo&utm_medium=codedthemes&utm_campaign=button_download_premium)
+  - [Download](https://codedthemes.com/item/berry-angular-admin-dashboard-template/)
 
 ## Why Berry?
 
@@ -85,7 +85,7 @@ Berry offers everything you need to create dashboards. We have included the foll
 | -                                             | ✓ Design files (Figma)                                                   |
 | -                                             | ✓ 6+ color Options                                                       |
 | -                                             | ✓ RTL                                                                    |
-| -                                             | ✓ JJWT authentications                                   |
+| -                                             | ✓ JWT authentications                                   |
 | -                                             | ✓ [More components](https://berrydashboard.io/angular/default/basic/alert)   |
 
 ## Documentation
