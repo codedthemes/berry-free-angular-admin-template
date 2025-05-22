@@ -77,16 +77,16 @@ Berry offers everything you need to create dashboards. We have included the foll
 [Pro version](https://berrydashboard.io/angular/default) of Berry Angular Dashboard template contains features like TypeScript, Apps, Authentication Methods (i.e. JWT), Advance Components, Form Plugins, Layouts, Widgets, and many more.
 
 | [Berry Free](https://berrydashboard.io/angular/free/) | [Berry](https://codedthemes.com/item/berry-angular-admin-dashboard-template/) |
-| --------------------------------------------- | :----------------------------------------------------------------------- |
-| **9** Demo pages                              | **45+** demo pages                                                       |
-| -                                             | ✓ Multi-language                                                         |
-| -                                             | ✓ Dark/Light Mode 🌓                                                     |
-| -                                             | ✓ TypeScript version                                                     |
-| -                                             | ✓ Design files (Figma)                                                   |
-| -                                             | ✓ 6+ color Options                                                       |
-| -                                             | ✓ RTL                                                                    |
-| -                                             | ✓ JWT authentications                                   |
-| -                                             | ✓ [More components](https://berrydashboard.io/angular/default/basic/alert)   |
+| ----------------------------------------------------- | :---------------------------------------------------------------------------- |
+| **9** Demo pages                                      | **45+** demo pages                                                            |
+| -                                                     | ✓ Multi-language                                                              |
+| -                                                     | ✓ Dark/Light Mode 🌓                                                          |
+| -                                                     | ✓ TypeScript version                                                          |
+| -                                                     | ✓ Design files (Figma)                                                        |
+| -                                                     | ✓ 6+ color Options                                                            |
+| -                                                     | ✓ RTL                                                                         |
+| -                                                     | ✓ JWT authentications                                                         |
+| -                                                     | ✓ [More components](https://berrydashboard.io/angular/default/basic/alert)    |
 
 ## Documentation
 
@@ -98,8 +98,8 @@ Berry offers everything you need to create dashboards. We have included the foll
 
 ## Technology Stack
 
-- Angular 20.x.x
-- Bootstrap 5.x.x
+- Angular 20
+- Bootstrap 5
 - TypeScript
 - JWT (i.e. Pro version)
 - Role Base Authentication (i.e. Pro version)
@@ -119,11 +119,11 @@ Berry offers everything you need to create dashboards. We have included the foll
 
 ## Other Technologies
 
-| Technology                                                                                                                        | Free                                                                              | Pro                                                                             |
-| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/React.png" width="25" height="25"></p>   | [**Free**](https://codedthemes.com/item/berry-mui-free-react-admin-template/)       | [**Pro**](https://material-ui.com/store/items/berry-react-material-admin/) |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Bootstrap.png" width="30" height="30"></p> | [**Free**](https://codedthemes.com/item/berry-bootstrap-free-admin-template/)     | [**Pro**](https://codedthemes.com/item/berry-bootstrap-5-admin-template/)       |
-| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Vue.png" width="25" height="25"></p>       | [**Free**](https://codedthemes.com/item/berry-free-vuetify-vuejs-admin-template/) | [**Pro**](https://codedthemes.com/item/berry-vue-admin-dashboard/)              |
+| Technology                                                                                                                        | Free                                                                              | Pro                                                                        |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/React.png" width="25" height="25"></p>     | [**Free**](https://codedthemes.com/item/berry-mui-free-react-admin-template/)     | [**Pro**](https://material-ui.com/store/items/berry-react-material-admin/) |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Bootstrap.png" width="30" height="30"></p> | [**Free**](https://codedthemes.com/item/berry-bootstrap-free-admin-template/)     | [**Pro**](https://codedthemes.com/item/berry-bootstrap-5-admin-template/)  |
+| <p align="center"><img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Vue.png" width="25" height="25"></p>       | [**Free**](https://codedthemes.com/item/berry-free-vuetify-vuejs-admin-template/) | [**Pro**](https://codedthemes.com/item/berry-vue-admin-dashboard/)         |
 
 ## Save more with Big Bundle
 
@@ -131,10 +131,10 @@ Berry offers everything you need to create dashboards. We have included the foll
 
 ## More Angular Dashboard Templates
 
-| Dashboard                                                                                                                                                          | FREE                                                                                | PRO                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Mantis%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;">  | [**Free**](https://codedthemes.com/item/mantis-angular-free-admin-template/)                                        | [**Pro**](https://codedthemes.com/item/mantis-angular-admin-template/)</span>  |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Datta%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;">    | [**Free**](https://codedthemes.com/item/datta-able-react-free-admin-template/)      | [**Pro**](https://codedthemes.com/item/datta-able-angular/)</span>       |
+| Dashboard                                                                                                                                                          | FREE                                                                                | PRO                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Mantis%20with%20name.png"  height="30" style="display:inline-block; vertical-align:middle;">  | [**Free**](https://codedthemes.com/item/mantis-angular-free-admin-template/)        | [**Pro**](https://codedthemes.com/item/mantis-angular-admin-template/)</span>        |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Datta%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;">    | [**Free**](https://codedthemes.com/item/datta-able-react-free-admin-template/)      | [**Pro**](https://codedthemes.com/item/datta-able-angular/)</span>                   |
 | <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Gradient%20with%20name.png" height="30" style="display:inline-block; vertical-align:middle;"> | [**Free**](https://codedthemes.com/item/gradient-able-angular-free-admin-template/) | [**Pro**](https://codedthemes.com/item/gradient-able-angular-admin-template/)</span> |
 
 ## Issues
