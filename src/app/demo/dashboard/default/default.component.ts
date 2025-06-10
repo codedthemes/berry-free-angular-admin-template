@@ -1,6 +1,5 @@
 // Angular Import
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 // project import
 import { SharedModule } from 'src/app/theme/shared/shared.module';
@@ -10,7 +9,7 @@ import { ChartDataMonthComponent } from 'src/app/theme/shared/components/apexcha
 
 @Component({
   selector: 'app-default',
-  imports: [CommonModule, BajajChartComponent, BarChartComponent, ChartDataMonthComponent, SharedModule],
+  imports: [BajajChartComponent, BarChartComponent, ChartDataMonthComponent, SharedModule],
   templateUrl: './default.component.html',
   styleUrls: ['./default.component.scss']
 })

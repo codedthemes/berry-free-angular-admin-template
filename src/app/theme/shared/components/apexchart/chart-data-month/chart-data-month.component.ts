@@ -2,8 +2,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-// project import
-
 // third party
 import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
 

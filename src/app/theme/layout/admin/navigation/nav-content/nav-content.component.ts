@@ -1,6 +1,6 @@
 // Angular import
 import { Component, OnInit, output, inject } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
+import { Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 //theme version
@@ -18,8 +18,7 @@ import { SharedModule } from 'src/app/theme/shared/shared.module';
 
 @Component({
   selector: 'app-nav-content',
-  standalone: true,
-  imports: [CommonModule, RouterModule, NavCollapseComponent, NavGroupComponent, NavItemComponent, SharedModule],
+  imports: [RouterModule, NavCollapseComponent, NavGroupComponent, NavItemComponent, SharedModule],
   templateUrl: './nav-content.component.html',
   styleUrl: './nav-content.component.scss'
 })

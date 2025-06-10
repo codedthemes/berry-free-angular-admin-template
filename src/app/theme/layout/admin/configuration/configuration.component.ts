@@ -1,5 +1,8 @@
+// Angular import
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, inject, OnInit, Renderer2 } from '@angular/core';
+
+// project import
 import { BerryConfig } from 'src/app/app-config';
 
 @Component({
@@ -9,17 +12,19 @@ import { BerryConfig } from 'src/app/app-config';
   styleUrls: ['./configuration.component.scss']
 })
 export class ConfigurationComponent implements OnInit {
+  renderer = inject(Renderer2);
+
   // public method
   styleSelectorToggle!: boolean; // open configuration menu
   setFontFamily!: string; // fontFamily
 
-  constructor(private renderer: Renderer2) {}
-
+  // life cycle event
   ngOnInit(): void {
     this.setFontFamily = BerryConfig.font_family;
     this.fontFamily(this.setFontFamily);
   }
 
+  // public method
   fontFamily(font: string) {
     this.setFontFamily = font;
     this.renderer.removeClass(document.body, 'Roboto');

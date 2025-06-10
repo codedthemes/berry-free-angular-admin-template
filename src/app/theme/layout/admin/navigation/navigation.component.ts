@@ -1,5 +1,4 @@
 // Angular import
-import { CommonModule } from '@angular/common';
 import { Component, output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -9,8 +8,7 @@ import { NavContentComponent } from './nav-content/nav-content.component';
 
 @Component({
   selector: 'app-navigation',
-  standalone: true,
-  imports: [NavContentComponent, CommonModule, RouterModule],
+  imports: [NavContentComponent, RouterModule],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'
 })

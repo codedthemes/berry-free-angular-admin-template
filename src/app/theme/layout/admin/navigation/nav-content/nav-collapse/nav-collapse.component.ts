@@ -10,7 +10,6 @@ import { NavItemComponent } from '../nav-item/nav-item.component';
 
 @Component({
   selector: 'app-nav-collapse',
-  standalone: true,
   imports: [CommonModule, RouterModule, NavItemComponent],
   templateUrl: './nav-collapse.component.html',
   styleUrl: './nav-collapse.component.scss'

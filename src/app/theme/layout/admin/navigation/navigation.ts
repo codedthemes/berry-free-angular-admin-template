@@ -49,7 +49,7 @@ export const NavigationItems: NavigationItem[] = [
             id: 'login',
             title: 'Login',
             type: 'item',
-            url: '/guest/login',
+            url: '/login',
             target: true,
             breadcrumbs: false
           },
@@ -57,7 +57,7 @@ export const NavigationItems: NavigationItem[] = [
             id: 'register',
             title: 'Register',
             type: 'item',
-            url: '/guest/register',
+            url: '/register',
             target: true,
             breadcrumbs: false
           }

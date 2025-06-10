@@ -1,25 +1,39 @@
 // Angular import
-import { CommonModule } from '@angular/common';
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, Input, output, inject } from '@angular/core';
+import { Router } from '@angular/router';
+
+// project import
+import { SharedModule } from 'src/app/theme/shared/shared.module';
 
 @Component({
   selector: 'app-nav-logo',
-  imports: [CommonModule, RouterModule],
+  imports: [SharedModule],
   templateUrl: './nav-logo.component.html',
-  styleUrls: ['./nav-logo.component.scss']
+  styleUrl: './nav-logo.component.scss'
 })
 export class NavLogoComponent {
-  // public props
-  @Input() navCollapsed: boolean;
-  @Output() NavCollapse = new EventEmitter();
-  windowWidth = window.innerWidth;
+  router = inject(Router);
 
-  // public import
+  // public props
+  @Input() navCollapsed!: boolean;
+  NavCollapse = output();
+  windowWidth: number;
+  themeMode!: boolean;
+
+  // Constructor
+  constructor() {
+    this.windowWidth = window.innerWidth;
+  }
+
+  // public method
   navCollapse() {
     if (this.windowWidth >= 1025) {
       this.navCollapsed = !this.navCollapsed;
       this.NavCollapse.emit();
     }
+  }
+
+  returnToHome() {
+    this.router.navigate(['/default']);
   }
 }
