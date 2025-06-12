@@ -1,8 +1,6 @@
 // angular import
 import { Component, ViewChild } from '@angular/core';
 
-// project import
-
 // third party
 import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
 

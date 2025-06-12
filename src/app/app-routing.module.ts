@@ -19,15 +19,15 @@ const routes: Routes = [
       },
       {
         path: 'typography',
-        loadComponent: () => import('./demo/elements/typography/typography.component')
+        loadComponent: () => import('./demo/elements/typography/typography.component').then((c) => c.TypographyComponent)
       },
       {
         path: 'color',
-        loadComponent: () => import('./demo/elements/element-color/element-color.component')
+        loadComponent: () => import('./demo/elements/element-color/element-color.component').then((c) => c.ElementColorComponent)
       },
       {
         path: 'sample-page',
-        loadComponent: () => import('./demo/other/sample-page/sample-page.component')
+        loadComponent: () => import('./demo/other/sample-page/sample-page.component').then((c) => c.SamplePageComponent)
       }
     ]
   },
@@ -36,8 +36,12 @@ const routes: Routes = [
     component: GuestComponent,
     children: [
       {
-        path: 'guest',
-        loadChildren: () => import('./demo/pages/authentication/authentication.module').then((m) => m.AuthenticationModule)
+        path: 'login',
+        loadComponent: () => import('./demo/pages/authentication/login/login.component').then((c) => c.LoginComponent)
+      },
+      {
+        path: 'register',
+        loadComponent: () => import('./demo/pages/authentication/register/register.component').then((c) => c.RegisterComponent)
       }
     ]
   }
