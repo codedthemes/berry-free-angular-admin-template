@@ -1,11 +1,12 @@
 // Angular Import
 import { Component, Input, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { NavigationEnd, Router, RouterModule, Event } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 // project import
 import { NavigationItem, NavigationItems } from 'src/app/theme/layout/admin/navigation/navigation';
+import { SharedModule } from '../../shared.module';
 
 interface titleType {
   // eslint-disable-next-line
@@ -17,8 +18,7 @@ interface titleType {
 
 @Component({
   selector: 'app-breadcrumb',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule, SharedModule],
   templateUrl: './breadcrumbs.component.html',
   styleUrls: ['./breadcrumbs.component.scss']
 })
@@ -30,7 +30,7 @@ export class BreadcrumbComponent {
   @Input() type: string;
 
   navigations: NavigationItem[];
-  breadcrumbList: string[] = [];
+  breadcrumbList: Array<string> = [];
   navigationList!: titleType[];
 
   // constructor
@@ -46,8 +46,8 @@ export class BreadcrumbComponent {
       if (router instanceof NavigationEnd) {
         const activeLink = router.url;
         const breadcrumbList = this.filterNavigation(this.navigations, activeLink);
-        this.navigationList = breadcrumbList.splice(-2);
         const title = breadcrumbList[breadcrumbList.length - 1]?.title || 'Welcome';
+        this.navigationList = breadcrumbList.splice(-2);
         this.titleService.setTitle(title + ' | Berry Angular Admin Template');
       }
     });
