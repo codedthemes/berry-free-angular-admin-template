@@ -2,7 +2,6 @@
 import { Component } from '@angular/core';
 
 // project import
-
 import { CardComponent } from '../../../theme/shared/components/card/card.component';
 
 @Component({
@@ -11,4 +10,4 @@ import { CardComponent } from '../../../theme/shared/components/card/card.compon
   templateUrl: './sample-page.component.html',
   styleUrls: ['./sample-page.component.scss']
 })
-export default class SamplePageComponent {}
+export class SamplePageComponent {}

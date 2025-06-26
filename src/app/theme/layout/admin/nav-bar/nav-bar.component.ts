@@ -1,5 +1,4 @@
 // Angular import
-import { CommonModule } from '@angular/common';
 import { Component, output } from '@angular/core';
 
 // project import
@@ -11,8 +10,7 @@ import { NavRightComponent } from './nav-right/nav-right.component';
 
 @Component({
   selector: 'app-nav-bar',
-  standalone: true,
-  imports: [NavLogoComponent, NavLeftComponent, NavRightComponent, CommonModule],
+  imports: [NavLogoComponent, NavLeftComponent, NavRightComponent],
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
