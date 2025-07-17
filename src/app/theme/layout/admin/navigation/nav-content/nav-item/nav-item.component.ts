@@ -8,7 +8,6 @@ import { NavigationItem } from '../../navigation';
 
 @Component({
   selector: 'app-nav-item',
-  standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './nav-item.component.html',
   styleUrl: './nav-item.component.scss'

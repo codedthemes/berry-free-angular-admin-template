@@ -7,4 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './typography.component.html',
   styleUrls: ['./typography.component.scss']
 })
-export default class TypographyComponent {}
+export class TypographyComponent {}

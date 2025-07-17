@@ -7,4 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './element-color.component.html',
   styleUrls: ['./element-color.component.scss']
 })
-export default class ElementColorComponent {}
+export class ElementColorComponent {}

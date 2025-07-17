@@ -1,7 +1,9 @@
 <div class="m-header">
-  <a [routerLink]="['/default/']" class="b-brand">
-    <img src="assets/images/logo-dark.svg" alt="" class="logo logo-lg" />
+  <a (click)="returnToHome()" class="b-brand">
+    <!-- ========   change your logo hear   ============ -->
+    <img src="assets/images/logo-dark.svg" alt="darkMode-logo" class="logo" />
   </a>
+  <!-- ======= Menu collapse Icon ===== -->
   <div class="pc-h-item">
     <a
       href="javascript:"
@@ -9,9 +11,9 @@
       [ngClass]="{ on: navCollapsed }"
       id="sidebar-hide mobile-collapse"
       (click)="navCollapse()"
+      title="Click to Menu Collapse"
     >
       <i class="ti ti-menu-2"></i>
     </a>
   </div>
 </div>
-<!-- [ Header ] end -->
