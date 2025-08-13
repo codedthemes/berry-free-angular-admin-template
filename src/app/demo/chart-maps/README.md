@@ -10,29 +10,29 @@ This page (folder) is a sneak peek into the premium features available in <b>ver
 
 ## Included in the Pro Version:
 
-[🚀 Dashboards](https://berrydashboard.io/angular/default/default) : Advanced, real-time dashboards with interactive data visualizations for actionable insights.
+[🚀 Dashboards](https://berrydashboard.com/angular/default/default) : Advanced, real-time dashboards with interactive data visualizations for actionable insights.
 
-[📦 Widgets](https://berrydashboard.io/angular/default/widget/statistics) : A curated library of pre-built widgets to streamline your development process and enhance functionality.
+[📦 Widgets](https://berrydashboard.com/angular/default/widget/statistics) : A curated library of pre-built widgets to streamline your development process and enhance functionality.
 
-[⚙️ Admin Panel](https://berrydashboard.io/angular/default/online-course/dashboard) : Fully responsive and user-friendly admin panels designed for efficient management and control.
+[⚙️ Admin Panel](https://berrydashboard.com/angular/default/online-course/dashboard) : Fully responsive and user-friendly admin panels designed for efficient management and control.
 
-[🔧 Components](https://berrydashboard.io/angular/default/basic/alert) : A wide range of reusable and customizable UI components to suit diverse project needs.
+[🔧 Components](https://berrydashboard.com/angular/default/basic/alert) : A wide range of reusable and customizable UI components to suit diverse project needs.
 
-[🚀 Advanced Components](https://berrydashboard.io/angular/default/advance/sweetAlert) : Sophisticated tools and features to amplify your project’s design and interactivity.
+[🚀 Advanced Components](https://berrydashboard.com/angular/default/advance/sweetAlert) : Sophisticated tools and features to amplify your project’s design and interactivity.
 
-[📝 Forms](https://berrydashboard.io/angular/default/forms/basic) : Dynamic, customizable forms with advanced validation options for a smooth user experience.
+[📝 Forms](https://berrydashboard.com/angular/default/forms/basic) : Dynamic, customizable forms with advanced validation options for a smooth user experience.
 
-[📊 Tables](https://berrydashboard.io/angular/default/ng-table/basicTable) : Interactive, structured tables with sorting, filtering, and pagination features for better data management.
+[📊 Tables](https://berrydashboard.com/angular/default/ng-table/basicTable) : Interactive, structured tables with sorting, filtering, and pagination features for better data management.
 
-[📈 Charts](https://berrydashboard.io/angular/default/chart/apex-chart) : Beautifully designed charts powered by modern libraries for impactful data visualization.
+[📈 Charts](https://berrydashboard.com/angular/default/chart/apex-chart) : Beautifully designed charts powered by modern libraries for impactful data visualization.
 
-[🔒 Authentication](https://berrydashboard.io/angular/default/auth/auth2/login) : Secure pages for login, registration, and password recovery, ensuring robust user authentication and management.
+[🔒 Authentication](https://berrydashboard.com/angular/default/auth/auth2/login) : Secure pages for login, registration, and password recovery, ensuring robust user authentication and management.
 
-[🛒 E-commerce App](https://berrydashboard.io/angular/default/ec/ec-product) : A complete e-commerce management solution for handling products, inventory, and transactions.
+[🛒 E-commerce App](https://berrydashboard.com/angular/default/ec/ec-product) : A complete e-commerce management solution for handling products, inventory, and transactions.
 
-[💬 Chat Messages](https://berrydashboard.io/angular/default/chat) : Integrated chat functionality to boost communication within your application.
+[💬 Chat Messages](https://berrydashboard.com/angular/default/chat) : Integrated chat functionality to boost communication within your application.
 
-[👤 User Profile](https://berrydashboard.io/angular/default/user/social-profile) : A sleek, customizable user profile page for managing user information and settings effortlessly.
+[👤 User Profile](https://berrydashboard.com/angular/default/user/social-profile) : A sleek, customizable user profile page for managing user information and settings effortlessly.
 
 ## Why Upgrade to the Pro Version?
 
