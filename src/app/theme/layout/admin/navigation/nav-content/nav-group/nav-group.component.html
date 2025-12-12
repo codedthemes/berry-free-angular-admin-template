@@ -1,12 +1,10 @@
-@if (!item.hidden) {
-  <li class="nav-item coded-menu-caption" [ngClass]="item.classes">
-    <label for="{{ item.id }}">{{ item.title }}</label>
-  </li>
-  @for (items of item.children; track items) {
-    @if (items.type === 'collapse') {
-      <app-nav-collapse [item]="items" />
-    } @else if (items.type === 'item') {
-      <app-nav-item [item]="items" />
-    }
+<li class="nav-item coded-menu-caption" [ngClass]="item().classes">
+  <label for="{{ item().id }}">{{ item().title }}</label>
+</li>
+@for (items of item().children; track items) {
+  @if (items.type === 'collapse') {
+    <app-nav-collapse [item]="items" />
+  } @else if (items.type === 'item') {
+    <app-nav-item [item]="items" />
   }
 }
