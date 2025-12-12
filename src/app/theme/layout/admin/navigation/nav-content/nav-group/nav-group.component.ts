@@ -1,16 +1,16 @@
 // Angular import
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, input } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 
 // project import
 import { NavigationItem } from '../../navigation';
-
+import { SharedModule } from 'src/app/theme/shared/shared.module';
 import { NavCollapseComponent } from '../nav-collapse/nav-collapse.component';
 import { NavItemComponent } from '../nav-item/nav-item.component';
 
 @Component({
   selector: 'app-nav-group',
-  imports: [CommonModule, NavCollapseComponent, NavItemComponent],
+  imports: [CommonModule, SharedModule, NavCollapseComponent, NavItemComponent],
   templateUrl: './nav-group.component.html',
   styleUrl: './nav-group.component.scss'
 })
@@ -18,7 +18,7 @@ export class NavGroupComponent implements OnInit {
   private location = inject(Location);
 
   // public props
-  @Input() item!: NavigationItem;
+  item = input.required<NavigationItem>();
 
   current_url!: string;
 

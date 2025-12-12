@@ -98,7 +98,7 @@ Berry offers everything you need to create dashboards. We have included the foll
 
 ## Technology Stack
 
-- Angular 20
+- Angular 21
 - Bootstrap 5
 - TypeScript
 - JWT (i.e. Pro version)
