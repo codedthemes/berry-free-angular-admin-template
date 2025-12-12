@@ -1,20 +1,23 @@
 // Angular import
-import { Component, Input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 // Project import
 import { NavigationItem } from '../../navigation';
+import { SharedModule } from 'src/app/theme/shared/shared.module';
+import { LayoutStateService } from 'src/app/theme/shared/service/layout-state.service';
 
 @Component({
   selector: 'app-nav-item',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, SharedModule, RouterModule],
   templateUrl: './nav-item.component.html',
   styleUrl: './nav-item.component.scss'
 })
 export class NavItemComponent {
   // public props
-  @Input() item!: NavigationItem;
+  item = input.required<NavigationItem>();
+  private layoutState = inject(LayoutStateService);
 
   // public method
   closeOtherMenu(event: MouseEvent) {
@@ -28,7 +31,6 @@ export class NavItemComponent {
         up_parent.classList.remove('active');
       } else {
         const sections = document.querySelectorAll('.coded-hasmenu');
-
         for (let i = 0; i < sections.length; i++) {
           sections[i].classList.remove('active');
           sections[i].classList.remove('coded-trigger');
@@ -47,6 +49,7 @@ export class NavItemComponent {
       }
     }
 
+    // this.layoutState.toggleNavCollapsedMob();
     if ((document.querySelector('app-navigation.coded-navbar') as HTMLDivElement).classList.contains('mob-open')) {
       (document.querySelector('app-navigation.coded-navbar') as HTMLDivElement).classList.remove('mob-open');
     }

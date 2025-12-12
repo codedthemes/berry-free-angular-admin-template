@@ -1,16 +1,15 @@
 // Angular import
-import { AfterViewInit, Component, inject } from '@angular/core';
+import { AfterViewInit, Component, effect, inject } from '@angular/core';
 import { CommonModule, Location, LocationStrategy } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
 
 // Project import
-import { BerryConfig } from 'src/app/app-config';
-
 import { ConfigurationComponent } from './configuration/configuration.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { BreadcrumbComponent } from '../../shared/components/breadcrumbs/breadcrumbs.component';
+import { LayoutStateService } from '../../shared/service/layout-state.service';
 
 @Component({
   selector: 'app-admin',
@@ -22,30 +21,26 @@ export class AdminComponent implements AfterViewInit {
   private location = inject(Location);
   private locationStrategy = inject(LocationStrategy);
   cdr = inject(ChangeDetectorRef);
+  private layoutState = inject(LayoutStateService);
 
   // public props
   currentLayout!: string;
-  navCollapsed = true;
+  navCollapsed = false;
   navCollapsedMob = false;
   windowWidth!: number;
 
   // Constructor
+  constructor() {
+    effect(() => {
+      this.navCollapsedMob = this.layoutState.navCollapsedMob();
+      this.cdr.detectChanges();
+    });
+  }
 
   // life cycle hook
 
   ngAfterViewInit() {
-    let current_url = this.location.path();
-    const baseHref = this.locationStrategy.getBaseHref();
-    if (baseHref) {
-      current_url = baseHref + this.location.path();
-    }
-
-    if (current_url === baseHref + '/layout/theme-compact' || current_url === baseHref + '/layout/box') {
-      BerryConfig.isCollapse_menu = true;
-    }
-
     this.windowWidth = window.innerWidth;
-    this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.isCollapse_menu : false;
     this.cdr.detectChanges();
   }
 
@@ -56,14 +51,7 @@ export class AdminComponent implements AfterViewInit {
 
   // public method
   navMobClick() {
-    if (this.navCollapsedMob && !document.querySelector('app-navigation.coded-navbar')?.classList.contains('mob-open')) {
-      this.navCollapsedMob = !this.navCollapsedMob;
-      setTimeout(() => {
-        this.navCollapsedMob = !this.navCollapsedMob;
-      }, 100);
-    } else {
-      this.navCollapsedMob = !this.navCollapsedMob;
-    }
+    this.layoutState.toggleNavCollapsedMob();
     if (document.querySelector('app-navigation.pc-sidebar')?.classList.contains('navbar-collapsed')) {
       document.querySelector('app-navigation.pc-sidebar')?.classList.remove('navbar-collapsed');
     }
@@ -76,8 +64,6 @@ export class AdminComponent implements AfterViewInit {
   }
 
   closeMenu() {
-    if (document.querySelector('app-navigation.pc-sidebar')?.classList.contains('mob-open')) {
-      document.querySelector('app-navigation.pc-sidebar')?.classList.remove('mob-open');
-    }
+    this.layoutState.toggleNavCollapsedMob();
   }
 }

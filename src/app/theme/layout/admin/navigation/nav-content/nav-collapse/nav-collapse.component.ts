@@ -1,16 +1,16 @@
 // Angular import
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, input } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 // project import
 import { NavigationItem } from '../../navigation';
-
+import { SharedModule } from 'src/app/theme/shared/shared.module';
 import { NavItemComponent } from '../nav-item/nav-item.component';
 
 @Component({
   selector: 'app-nav-collapse',
-  imports: [CommonModule, RouterModule, NavItemComponent],
+  imports: [CommonModule, SharedModule, RouterModule, NavItemComponent],
   templateUrl: './nav-collapse.component.html',
   styleUrl: './nav-collapse.component.scss'
 })
@@ -18,9 +18,9 @@ export class NavCollapseComponent implements OnInit {
   private location = inject(Location);
 
   // public props
-  @Input() item!: NavigationItem;
+  item = input.required<NavigationItem>();
   windowWidth = window.innerWidth;
-  current_url = ''; // Add current URL property
+  current_url: string = ''; // Add current URL property
 
   ngOnInit() {
     this.current_url = this.location.path();
