@@ -15,7 +15,7 @@
             </div>
             <ul class="breadcrumb">
               <li class="breadcrumb-item">
-                @if (type === 'icon') {
+                @if (type() === 'icon') {
                   <a [routerLink]="['/default']" title="Home">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@
                     </svg>
                   </a>
                 }
-                @if (type === 'text') {
+                @if (type() === 'text') {
                   <a [routerLink]="['/default']">{{ 'Home' }}</a>
                 }
               </li>
@@ -44,7 +44,7 @@
                 }
                 @if (breadcrumb.url === false && breadcrumb.type !== 'group') {
                   <li class="breadcrumb-item">
-                    <a href="javascript:" class="f-w-500 text-dark">{{ breadcrumb.title }}</a>
+                    <a href="javascript:void(0)" class="f-w-500 text-dark">{{ breadcrumb.title }}</a>
                   </li>
                 }
               }

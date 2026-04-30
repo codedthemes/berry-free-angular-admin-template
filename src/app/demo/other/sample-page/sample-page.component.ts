@@ -8,6 +8,6 @@ import { CardComponent } from '../../../theme/shared/components/card/card.compon
   selector: 'app-sample-page',
   imports: [CardComponent],
   templateUrl: './sample-page.component.html',
-  styleUrls: ['./sample-page.component.scss']
+  styleUrl: './sample-page.component.scss'
 })
 export class SamplePageComponent {}

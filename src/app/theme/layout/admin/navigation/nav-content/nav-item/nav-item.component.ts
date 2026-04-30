@@ -1,23 +1,24 @@
 // Angular import
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 // Project import
 import { NavigationItem } from '../../navigation';
-import { SharedModule } from 'src/app/theme/shared/shared.module';
-import { LayoutStateService } from 'src/app/theme/shared/service/layout-state.service';
+import { SHARED_IMPORTS } from 'src/app/theme/shared/shared.module';
+import { ConfigService } from 'src/app/theme/shared/service/config.service';
 
 @Component({
   selector: 'app-nav-item',
-  imports: [CommonModule, SharedModule, RouterModule],
+  imports: [...SHARED_IMPORTS,CommonModule, RouterModule],
   templateUrl: './nav-item.component.html',
-  styleUrl: './nav-item.component.scss'
+  styleUrl: './nav-item.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavItemComponent {
   // public props
   item = input.required<NavigationItem>();
-  private layoutState = inject(LayoutStateService);
+  private layoutState = inject(ConfigService);
 
   // public method
   closeOtherMenu(event: MouseEvent) {

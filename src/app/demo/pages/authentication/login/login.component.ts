@@ -8,7 +8,7 @@ import { email, Field, form, minLength, required } from '@angular/forms/signals'
   selector: 'app-login',
   imports: [RouterModule, Field],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   private cd = inject(ChangeDetectorRef);

@@ -8,7 +8,7 @@ import { email, Field, form, minLength, required } from '@angular/forms/signals'
   selector: 'app-register',
   imports: [CommonModule, RouterModule, Field],
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
   private cd = inject(ChangeDetectorRef);

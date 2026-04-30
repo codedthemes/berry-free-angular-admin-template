@@ -1,13 +1,13 @@
 // Angular import
-import { Component, Input, output, inject } from '@angular/core';
+import { Component, output, inject, model } from '@angular/core';
 import { Router } from '@angular/router';
 
 // project import
-import { SharedModule } from 'src/app/theme/shared/shared.module';
+import { SHARED_IMPORTS } from 'src/app/theme/shared/shared.module';
 
 @Component({
   selector: 'app-nav-logo',
-  imports: [SharedModule],
+  imports: [...SHARED_IMPORTS],
   templateUrl: './nav-logo.component.html',
   styleUrl: './nav-logo.component.scss'
 })
@@ -15,7 +15,7 @@ export class NavLogoComponent {
   router = inject(Router);
 
   // public props
-  @Input() navCollapsed!: boolean;
+  navCollapsed = model<boolean>(false);
   NavCollapse = output();
   windowWidth: number;
   themeMode!: boolean;
@@ -28,7 +28,7 @@ export class NavLogoComponent {
   // public method
   navCollapse() {
     if (this.windowWidth >= 1025) {
-      this.navCollapsed = !this.navCollapsed;
+      this.navCollapsed.update((v) => !v);
       this.NavCollapse.emit();
     }
   }
