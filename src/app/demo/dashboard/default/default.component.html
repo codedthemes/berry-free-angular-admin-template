@@ -96,27 +96,29 @@
         </div>
         <ul class="list-group list-group-flush">
           @for (list of ListGroup; track list) {
-            <li class="list-group-item px-0 {{ list.space }}">
-              <div class="row align-items-start">
-                <div class="col">
-                  <h5 class="mb-0">{{ list.name }}</h5>
-                  <small class="{{ list.color }}">{{ list.profit }}</small>
-                </div>
-                <div class="col-auto">
-                  <h4 class="mb-0">
-                    {{ list.invest }}
-                    <span class="ms-2 align-top avatar avatar-xxs {{ list.bgColor }}">
-                      <i class="{{ list.icon }} {{ list.color }}"></i>
-                    </span>
-                  </h4>
-                </div>
+          <li class="list-group-item px-0 {{ list.space }}">
+            <div class="row align-items-start">
+              <div class="col">
+                <h5 class="mb-0">{{ list.name }}</h5>
+                <small class="{{ list.color }}">{{ list.profit }}</small>
               </div>
-            </li>
+              <div class="col-auto">
+                <h4 class="mb-0">
+                  {{ list.invest }}
+                  <span class="ms-2 align-top avatar avatar-xxs {{ list.bgColor }}">
+                    <i class="{{ list.icon }} {{ list.color }}"></i>
+                  </span>
+                </h4>
+              </div>
+            </div>
+          </li>
           }
         </ul>
-        <div class="d-flex align-items-center justify-content-center text-primary">
-          View all
-          <i class="ti ti-chevron-right"></i>
+        <div class="text-center">
+          <a href="javascript:void(0)" class="b-b-primary text-primary f-w-500">
+            View all
+            <i class="ti ti-chevron-right"></i>
+          </a>
         </div>
       </div>
     </div>
