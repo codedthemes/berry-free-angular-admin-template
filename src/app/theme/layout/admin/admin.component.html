@@ -6,7 +6,7 @@
     compact: currentLayout === 'compact',
     'mob-open': navCollapsedMob
   }"
-  (NavCollapsedMob)="navMobClick()"
+  (NavCollapsedMob)="closeMenu()"
 />
 <app-nav-bar (NavCollapse)="this.navCollapsed = !this.navCollapsed" (NavCollapsedMob)="navMobClick()" />
 <div class="pc-container">

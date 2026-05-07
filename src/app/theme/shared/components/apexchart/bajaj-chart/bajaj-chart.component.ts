@@ -2,7 +2,7 @@
 import { Component, ViewChild } from '@angular/core';
 
 // third party
-import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
+import { NgApexchartsModule, ChartComponent } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-bajaj-chart',
@@ -13,7 +13,8 @@ import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
 export class BajajChartComponent {
   // public props
   @ViewChild('chart') chart!: ChartComponent;
-  chartOptions!: Partial<ApexOptions>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  chartOptions: any;
 
   // constructor
   constructor() {
