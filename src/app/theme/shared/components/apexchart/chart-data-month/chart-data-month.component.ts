@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 // third party
-import { NgApexchartsModule, ChartComponent } from 'ng-apexcharts';
+import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-chart-data-month',
@@ -14,8 +14,7 @@ import { NgApexchartsModule, ChartComponent } from 'ng-apexcharts';
 export class ChartDataMonthComponent implements OnInit {
   // public props
   @ViewChild('chart') chart!: ChartComponent;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  chartOptions: any;
+  chartOptions!: ApexOptions;
   amount = 961;
   btnActive!: string;
 

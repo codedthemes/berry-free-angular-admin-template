@@ -2,7 +2,7 @@
 import { Component, ViewChild } from '@angular/core';
 
 // third party
-import { NgApexchartsModule, ChartComponent } from 'ng-apexcharts';
+import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-bar-chart',
@@ -13,8 +13,7 @@ import { NgApexchartsModule, ChartComponent } from 'ng-apexcharts';
 export class BarChartComponent {
   // public props
   @ViewChild('chart') chart!: ChartComponent;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  chartOptions: any;
+  chartOptions: ApexOptions;
 
   // Constructor
   constructor() {
