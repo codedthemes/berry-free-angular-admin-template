@@ -70,3 +70,9 @@ strong {
     }
   }
 }
+
+ng-scrollbar {
+        --scrollbar-thumb-color: #{$gray-500};
+        --scrollbar-track-color: transparent !important;
+      }
+    
