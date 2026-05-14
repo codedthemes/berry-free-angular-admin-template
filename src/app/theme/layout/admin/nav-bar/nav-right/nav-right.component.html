@@ -1,6 +1,6 @@
 <div class="ms-auto">
   <ul class="list-unstyled">
-    <li class="d-none d-lg-inline-flex">
+    <li class="d-inline-flex">
       <div class="pc-h-item" ngbDropdown>
         <a
           class="pc-head-link head-link-primary arrow-none me-0"
@@ -13,12 +13,7 @@
     </li>
     <li>
       <div class="pc-h-item" ngbDropdown>
-        <a
-          class="pc-head-link head-link-secondary arrow-none me-0"
-          data-bs-toggle="dropdown"
-          href="javascript:void(0)"
-          ngbDropdownToggle
-        >
+        <a class="pc-head-link head-link-secondary arrow-none me-0" href="javascript:void(0)" ngbDropdownToggle>
           <i class="ti ti-bell"></i>
         </a>
         <div class="dropdown-notification dropdown-menu-end pc-h-dropdown" ngbDropdownMenu>
@@ -128,12 +123,7 @@
     </li>
     <li>
       <div class="pc-h-item header-user-profile" ngbDropdown>
-        <a
-          class="pc-head-link head-link-primary arrow-none me-0"
-          data-bs-toggle="dropdown"
-          href="javascript:void(0)"
-          ngbDropdownToggle
-        >
+        <a class="pc-head-link head-link-primary arrow-none me-0" href="javascript:void(0)" ngbDropdownToggle>
           <img src="assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar" />
           <span>
             <i class="ti ti-settings"></i>
@@ -177,7 +167,7 @@
                 </div>
               </div>
               <hr />
-              <a [routerLink]="['/guest/register']" class="dropdown-item">
+              <a href="javascript:void(0)" class="dropdown-item">
                 <i class="ti ti-settings"></i>
                 <span>Account Profile</span>
               </a>
@@ -185,7 +175,7 @@
                 <i class="ti ti-user"></i>
                 <span>Social Profile</span>
               </a>
-              <a [routerLink]="['/guest/login']" class="dropdown-item">
+              <a href="javascript:void(0)" class="dropdown-item">
                 <i class="ti ti-logout"></i>
                 <span>Logout</span>
               </a>
