@@ -4,7 +4,7 @@ import { Injectable, signal } from '@angular/core';
  * Central layout state for coordinating mobile sidebar open/close.
  */
 @Injectable({ providedIn: 'root' })
-export class LayoutStateService {
+export class ConfigService {
   // true when the mobile sidebar should be open
   readonly navCollapsedMob = signal(false);
 

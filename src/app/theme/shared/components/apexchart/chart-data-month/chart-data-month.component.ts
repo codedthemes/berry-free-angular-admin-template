@@ -14,7 +14,7 @@ import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
 export class ChartDataMonthComponent implements OnInit {
   // public props
   @ViewChild('chart') chart!: ChartComponent;
-  chartOptions!: Partial<ApexOptions>;
+  chartOptions!: ApexOptions;
   amount = 961;
   btnActive!: string;
 

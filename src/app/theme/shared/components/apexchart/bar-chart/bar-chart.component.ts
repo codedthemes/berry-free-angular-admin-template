@@ -13,7 +13,7 @@ import { NgApexchartsModule, ChartComponent, ApexOptions } from 'ng-apexcharts';
 export class BarChartComponent {
   // public props
   @ViewChild('chart') chart!: ChartComponent;
-  chartOptions!: Partial<ApexOptions>;
+  chartOptions: ApexOptions;
 
   // Constructor
   constructor() {

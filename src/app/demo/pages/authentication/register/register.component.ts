@@ -2,13 +2,13 @@
 import { ChangeDetectorRef, Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { email, Field, form, minLength, required } from '@angular/forms/signals';
+import { email, FormField, form, minLength, required } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-register',
-  imports: [CommonModule, RouterModule, Field],
+  imports: [CommonModule, RouterModule, FormField],
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
   private cd = inject(ChangeDetectorRef);

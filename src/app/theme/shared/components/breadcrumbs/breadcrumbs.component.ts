@@ -1,12 +1,11 @@
-// Angular Import
-import { Component, Input, inject } from '@angular/core';
+// Angular import
+import { Component, inject, input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
 import { NavigationEnd, Router, RouterModule, Event } from '@angular/router';
-import { Title } from '@angular/platform-browser';
 
 // project import
 import { NavigationItem, NavigationItems } from 'src/app/theme/layout/admin/navigation/navigation';
-import { SharedModule } from '../../shared.module';
+import { SHARED_IMPORTS } from '../../shared.module';
 
 interface titleType {
   // eslint-disable-next-line
@@ -18,16 +17,17 @@ interface titleType {
 
 @Component({
   selector: 'app-breadcrumb',
-  imports: [RouterModule, SharedModule],
+  imports: [...SHARED_IMPORTS, RouterModule],
   templateUrl: './breadcrumbs.component.html',
-  styleUrls: ['./breadcrumbs.component.scss']
+  styleUrl: './breadcrumbs.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BreadcrumbComponent {
   private route = inject(Router);
-  private titleService = inject(Title);
+  private cdr = inject(ChangeDetectorRef);
 
   // public props
-  @Input() type: string;
+  type = input<string>('icon');
 
   navigations: NavigationItem[];
   breadcrumbList: Array<string> = [];
@@ -36,7 +36,6 @@ export class BreadcrumbComponent {
   // constructor
   constructor() {
     this.navigations = NavigationItems;
-    this.type = 'icon';
     this.setBreadcrumb();
   }
 
@@ -46,9 +45,8 @@ export class BreadcrumbComponent {
       if (router instanceof NavigationEnd) {
         const activeLink = router.url;
         const breadcrumbList = this.filterNavigation(this.navigations, activeLink);
-        const title = breadcrumbList[breadcrumbList.length - 1]?.title || 'Welcome';
         this.navigationList = breadcrumbList.splice(-2);
-        this.titleService.setTitle(title + ' | Berry Angular Admin Template');
+        this.cdr.markForCheck();
       }
     });
   }

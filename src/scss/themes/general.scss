@@ -70,3 +70,10 @@ strong {
     }
   }
 }
+
+ng-scrollbar {
+        --scrollbar-thumb-color: #{$gray-300};
+        --scrollbar-track-color: transparent !important;
+        --scrollbar-track-shape: 3px;
+      }
+    

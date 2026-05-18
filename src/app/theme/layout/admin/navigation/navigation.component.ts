@@ -18,8 +18,8 @@ export class NavigationComponent {
   SubmenuCollapse = output();
   navCollapsedMob = false;
   windowWidth = window.innerWidth;
-  themeMode!: string;
-
+  layout!: string;
+  
   // public method
   navCollapseMob() {
     if (this.windowWidth < 1025) {

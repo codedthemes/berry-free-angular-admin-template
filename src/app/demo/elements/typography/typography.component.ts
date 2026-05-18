@@ -1,10 +1,11 @@
 // angular import
 import { Component } from '@angular/core';
+import { CardComponent } from "src/app/theme/shared/components/card/card.component";
 
 @Component({
   selector: 'app-typography',
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './typography.component.html',
-  styleUrls: ['./typography.component.scss']
+  styleUrl: './typography.component.scss'
 })
 export class TypographyComponent {}
