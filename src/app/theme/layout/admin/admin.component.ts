@@ -9,7 +9,7 @@ import { ConfigurationComponent } from './configuration/configuration.component'
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { BreadcrumbComponent } from '../../shared/components/breadcrumbs/breadcrumbs.component';
-import { LayoutStateService } from '../../shared/service/layout-state.service';
+import { ConfigService } from '../../shared/service/config.service';
 
 @Component({
   selector: 'app-admin',
@@ -21,7 +21,7 @@ export class AdminComponent implements AfterViewInit {
   private location = inject(Location);
   private locationStrategy = inject(LocationStrategy);
   cdr = inject(ChangeDetectorRef);
-  private layoutState = inject(LayoutStateService);
+  private layoutState = inject(ConfigService);
 
   // public props
   currentLayout!: string;

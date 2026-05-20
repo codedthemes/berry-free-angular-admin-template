@@ -1,17 +1,17 @@
 <div class="auth-main">
   <div class="auth-wrapper v3">
     <div class="auth-form">
-      <div class="card my-5">
+      <div class="card auth-card my-5">
         <div class="card-body">
           <form (ngSubmit)="onSubmit($event)">
-            <a href="#" class="d-flex justify-content-center">
+            <a href="javascript:void(0)" class="d-flex justify-content-center">
               <img src="assets/images/logo-dark.svg" alt="logo" />
             </a>
             <div class="row">
               <div class="d-flex justify-content-center">
                 <div class="auth-header">
                   <h2 class="text-secondary mt-5"><b>Hi, Welcome Back</b></h2>
-                  <p class="fs-4 mt-2">Enter your credentials to continue</p>
+                  <p class="f-16 mt-2">Enter your credentials to continue</p>
                 </div>
               </div>
             </div>
@@ -32,7 +32,7 @@
                 id="floatingInput"
                 [class.is-invalid]="submitted() && loginForm.email().invalid()"
                 placeholder="Email Address"
-                [field]="loginForm.email"
+                [formField]="loginForm.email"
               />
               <label for="floatingInput">Email address / Username</label>
               @if (submitted() && loginForm.email().invalid()) {
@@ -48,7 +48,7 @@
                 type="password"
                 id="password"
                 class="form-control"
-                [field]="loginForm.password"
+                [formField]="loginForm.password"
                 [class.is-invalid]="submitted() && loginForm.password().errors().length > 0"
                 placeholder="Password (min. 8 characters)"
               />
@@ -67,7 +67,7 @@
                 <label class="form-check-label text-muted" for="customCheckc1">Remember me</label>
               </div>
               <h5 class="text-secondary">
-                <a href="javascript:">Forgot Password?</a>
+                <a href="javascript:void(0)">Forgot Password?</a>
               </h5>
             </div>
             @if (error()) {

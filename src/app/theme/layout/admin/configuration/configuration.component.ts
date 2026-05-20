@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit, Renderer2 } from '@angular/core';
 
 // project import
-import { BerryConfig } from 'src/app/app-config';
+import { BerryDefaultConfig } from 'src/app/app-config';
 
 @Component({
   selector: 'app-configuration',
   imports: [CommonModule],
   templateUrl: './configuration.component.html',
-  styleUrls: ['./configuration.component.scss']
+  styleUrl: './configuration.component.scss'
 })
 export class ConfigurationComponent implements OnInit {
   renderer = inject(Renderer2);
@@ -20,7 +20,7 @@ export class ConfigurationComponent implements OnInit {
 
   // life cycle event
   ngOnInit(): void {
-    this.setFontFamily = BerryConfig.font_family;
+    this.setFontFamily = BerryDefaultConfig.font_family;
     this.fontFamily(this.setFontFamily);
   }
 

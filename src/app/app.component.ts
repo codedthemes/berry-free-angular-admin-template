@@ -8,7 +8,7 @@ import { SpinnerComponent } from './theme/shared/components/spinner/spinner.comp
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss',
   imports: [RouterOutlet, SpinnerComponent]
 })
 export class AppComponent {
