@@ -48,7 +48,7 @@ export class ChartDataMonthComponent implements OnInit {
         max: 95
       },
       tooltip: {
-        theme: 'dark',
+        theme: 'light',
         fixed: {
           enabled: false
         },
