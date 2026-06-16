@@ -1,10 +1,11 @@
 // angular import
 import { Component } from '@angular/core';
+import { CardComponent } from "src/app/theme/shared/components/card/card.component";
 
 @Component({
   selector: 'app-element-color',
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './element-color.component.html',
-  styleUrls: ['./element-color.component.scss']
+  styleUrl: './element-color.component.scss'
 })
-export class ElementColorComponent {}
+export class ElementColorComponent { }

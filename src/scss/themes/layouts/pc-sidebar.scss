@@ -3,6 +3,8 @@
 // ============================
 
 .pc-sidebar {
+  --pc-sidebar-color: #{$sidebar-color};
+  --pc-sidebar-caption-color: #{$sidebar-caption};
   background: $sidebar-background;
   width: $sidebar-width;
   position: fixed;
@@ -26,6 +28,7 @@
       display: none;
     }
   }
+
   .navbar-content {
     padding: 10px 0;
   }
@@ -58,6 +61,7 @@
       height: 200px;
     }
   }
+
   .m-header {
     display: none;
   }
@@ -79,6 +83,7 @@
     }
   }
 }
+
 .pc-sidebar.mob-open .m-header {
   display: flex;
 }

@@ -2,7 +2,7 @@
 import { Component, output } from '@angular/core';
 
 // project import
-import { BerryConfig } from 'src/app/app-config';
+import { BerryDefaultConfig } from 'src/app/app-config';
 
 import { NavLeftComponent } from './nav-left/nav-left.component';
 import { NavLogoComponent } from './nav-logo/nav-logo.component';
@@ -12,7 +12,7 @@ import { NavRightComponent } from './nav-right/nav-right.component';
   selector: 'app-nav-bar',
   imports: [NavLogoComponent, NavLeftComponent, NavRightComponent],
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
   // public props
@@ -25,7 +25,7 @@ export class NavBarComponent {
   // Constructor
   constructor() {
     this.windowWidth = window.innerWidth;
-    this.navCollapsed = this.windowWidth >= 1025 ? BerryConfig.isCollapse_menu : false;
+    this.navCollapsed = this.windowWidth >= 1025 ? BerryDefaultConfig.isCollapse_menu : false;
     this.navCollapsedMob = false;
   }
 
