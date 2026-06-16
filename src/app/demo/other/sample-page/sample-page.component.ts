@@ -10,4 +10,4 @@ import { CardComponent } from '../../../theme/shared/components/card/card.compon
   templateUrl: './sample-page.component.html',
   styleUrl: './sample-page.component.scss'
 })
-export class SamplePageComponent {}
+export class SamplePageComponent { }

@@ -1,6 +1,8 @@
 // Angular import
-import { Component, OnDestroy, ViewEncapsulation, input, inject, ChangeDetectionStrategy,
-  ChangeDetectorRef } from '@angular/core';
+import {
+  Component, OnDestroy, ViewEncapsulation, input, inject, ChangeDetectionStrategy,
+  ChangeDetectorRef
+} from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
 
 // project import
@@ -10,7 +12,7 @@ import { Spinkit } from './spinkits';
   selector: 'app-spinner',
   templateUrl: './spinner.component.html',
   styleUrls: ['./spinner.component.scss', './spinkit-css/sk-line-material.scss'],
-  encapsulation: ViewEncapsulation.None,  changeDetection: ChangeDetectionStrategy.OnPush
+  encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SpinnerComponent implements OnDestroy {
   private router = inject(Router);

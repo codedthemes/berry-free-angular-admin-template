@@ -26,39 +26,29 @@
             </div>
             <h5 class="my-4 d-flex justify-content-center">Sign in with Email address</h5>
             <div class="form-floating mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="floatingInput"
-                [class.is-invalid]="submitted() && loginForm.email().invalid()"
-                placeholder="Email Address"
-                [formField]="loginForm.email"
-              />
+              <input type="email" class="form-control" id="floatingInput"
+                [class.is-invalid]="submitted() && loginForm.email().invalid()" placeholder="Email Address"
+                [formField]="loginForm.email" />
               <label for="floatingInput">Email address / Username</label>
               @if (submitted() && loginForm.email().invalid()) {
-                <div class="invalid-feedback">
-                  @for (error of loginForm.email().errors(); track error.kind) {
-                    <div>{{ error.message }}</div>
-                  }
-                </div>
+              <div class="invalid-feedback">
+                @for (error of loginForm.email().errors(); track error.kind) {
+                <div>{{ error.message }}</div>
+                }
+              </div>
               }
             </div>
             <div class="form-floating mb-3">
-              <input
-                type="password"
-                id="password"
-                class="form-control"
-                [formField]="loginForm.password"
+              <input type="password" id="password" class="form-control" [formField]="loginForm.password"
                 [class.is-invalid]="submitted() && loginForm.password().errors().length > 0"
-                placeholder="Password (min. 8 characters)"
-              />
+                placeholder="Password (min. 8 characters)" />
               <label for="password">Password</label>
               @if (submitted() && loginForm.password().errors().length > 0) {
-                <div class="invalid-feedback">
-                  @for (error of loginForm.password().errors(); track error.kind) {
-                    <div>{{ error.message }}</div>
-                  }
-                </div>
+              <div class="invalid-feedback">
+                @for (error of loginForm.password().errors(); track error.kind) {
+                <div>{{ error.message }}</div>
+                }
+              </div>
               }
             </div>
             <div class="d-flex mt-1 justify-content-between">
@@ -71,9 +61,9 @@
               </h5>
             </div>
             @if (error()) {
-              <div class="alert alert-danger" role="alert">
-                {{ error() }}
-              </div>
+            <div class="alert alert-danger" role="alert">
+              {{ error() }}
+            </div>
             }
             <div class="d-grid mt-4">
               <button type="submit" class="btn btn-secondary">Sign In</button>

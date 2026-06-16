@@ -19,7 +19,7 @@ export class NavigationComponent {
   navCollapsedMob = false;
   windowWidth = window.innerWidth;
   layout!: string;
-  
+
   // public method
   navCollapseMob() {
     if (this.windowWidth < 1025) {

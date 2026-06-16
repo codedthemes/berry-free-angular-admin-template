@@ -6,22 +6,12 @@
   </div>
   <div class="col-auto">
     <div class="d-flex align-items-center gap-2 chart-income">
-      <div
-        class="btn btn-sm text-white"
-        [ngClass]="this.btnActive === 'month' ? 'btn-primary' : ''"
-        (click)="toggleActive('month')"
-        tabindex="0"
-        (keydown)="handleKeyDown($event, 'month')"
-      >
+      <div class="btn btn-sm text-white" [ngClass]="this.btnActive === 'month' ? 'btn-primary' : ''"
+        (click)="toggleActive('month')" tabindex="0" (keydown)="handleKeyDown($event, 'month')">
         Month
       </div>
-      <div
-        class="btn btn-sm text-white"
-        [ngClass]="this.btnActive === 'year' ? 'btn-primary' : ''"
-        (click)="toggleActive('year')"
-        tabindex="0"
-        (keydown)="handleKeyDown($event, 'year')"
-      >
+      <div class="btn btn-sm text-white" [ngClass]="this.btnActive === 'year' ? 'btn-primary' : ''"
+        (click)="toggleActive('year')" tabindex="0" (keydown)="handleKeyDown($event, 'year')">
         Year
       </div>
     </div>
@@ -37,15 +27,9 @@
   </div>
   <div class="col-6">
     <div id="chart text-dark" class="text-primary">
-      <apx-chart 
-        [series]="chartOptions.series!"
-        [chart]="chartOptions.chart!"
-        [dataLabels]="chartOptions.dataLabels!"
-        [yaxis]="chartOptions.yaxis!"
-        [colors]="chartOptions.colors!"
-        [stroke]="chartOptions.stroke!"
-        [tooltip]="chartOptions.tooltip!"
-      />
+      <apx-chart [series]="chartOptions.series!" [chart]="chartOptions.chart!" [dataLabels]="chartOptions.dataLabels!"
+        [yaxis]="chartOptions.yaxis!" [colors]="chartOptions.colors!" [stroke]="chartOptions.stroke!"
+        [tooltip]="chartOptions.tooltip!" />
     </div>
   </div>
 </div>

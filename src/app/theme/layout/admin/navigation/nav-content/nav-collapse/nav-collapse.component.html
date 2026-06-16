@@ -1,9 +1,9 @@
 <li data-username="Berry Dashboard" class="nav-item coded-hasmenu" [routerLinkActive]="['active']">
   <a [routerLinkActive]="['active']" href="javascript:void(0)" class="nav-link" (click)="navCollapse($event)">
     @if (item().icon) {
-      <span class="coded-micon">
-        <i class="{{ item().icon }}"></i>
-      </span>
+    <span class="coded-micon">
+      <i class="{{ item().icon }}"></i>
+    </span>
     }
     <span class="coded-mtext">
       {{ item().title }}
@@ -11,11 +11,11 @@
   </a>
   <ul class="coded-submenu" [routerLinkActive]="['active']" [ngClass]="item().classes!">
     @for (items of item().children; track items) {
-      @if (items.type === 'item') {
-        <app-nav-item [item]="items" />
-      } @else if (items.type === 'collapse') {
-        <app-nav-collapse [item]="items" />
-      }
+    @if (items.type === 'item') {
+    <app-nav-item [item]="items" />
+    } @else if (items.type === 'collapse') {
+    <app-nav-collapse [item]="items" />
+    }
     }
   </ul>
 </li>

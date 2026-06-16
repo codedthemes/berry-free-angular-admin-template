@@ -14,7 +14,7 @@ import { NavGroupComponent } from './nav-group/nav-group.component';
 import { NavItemComponent } from './nav-item/nav-item.component';
 
 // NgScrollbarModule
-import { SHARED_IMPORTS} from 'src/app/theme/shared/shared.module';
+import { SHARED_IMPORTS } from 'src/app/theme/shared/shared.module';
 
 @Component({
   selector: 'app-nav-content',

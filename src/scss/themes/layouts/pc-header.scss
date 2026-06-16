@@ -185,7 +185,7 @@
     display: none;
 
     &.show,
-    .show > & {
+    .show>& {
       display: block !important;
       z-index: 1026;
     }

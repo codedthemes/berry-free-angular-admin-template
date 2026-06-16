@@ -2,7 +2,7 @@
 import { Component, output } from '@angular/core';
 
 // project import
-import {BerryDefaultConfig } from 'src/app/app-config';
+import { BerryDefaultConfig } from 'src/app/app-config';
 
 import { NavLeftComponent } from './nav-left/nav-left.component';
 import { NavLogoComponent } from './nav-logo/nav-logo.component';

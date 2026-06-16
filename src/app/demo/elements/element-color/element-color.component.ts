@@ -8,4 +8,4 @@ import { CardComponent } from "src/app/theme/shared/components/card/card.compone
   templateUrl: './element-color.component.html',
   styleUrl: './element-color.component.scss'
 })
-export class ElementColorComponent {}
+export class ElementColorComponent { }

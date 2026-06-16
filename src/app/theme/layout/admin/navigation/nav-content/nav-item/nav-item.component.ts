@@ -10,7 +10,7 @@ import { ConfigService } from 'src/app/theme/shared/service/config.service';
 
 @Component({
   selector: 'app-nav-item',
-  imports: [...SHARED_IMPORTS,CommonModule, RouterModule],
+  imports: [...SHARED_IMPORTS, CommonModule, RouterModule],
   templateUrl: './nav-item.component.html',
   styleUrl: './nav-item.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

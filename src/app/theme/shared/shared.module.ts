@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // project import
 import { CardComponent } from './components/card/card.component';
-export { CardComponent };
 
 // third party
 import { NgScrollbarModule } from 'ngx-scrollbar';

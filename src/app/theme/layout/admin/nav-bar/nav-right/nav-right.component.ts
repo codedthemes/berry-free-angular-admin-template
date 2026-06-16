@@ -11,4 +11,4 @@ import { SHARED_IMPORTS } from 'src/app/theme/shared/shared.module';
   templateUrl: './nav-right.component.html',
   styleUrl: './nav-right.component.scss'
 })
-export class NavRightComponent {}
+export class NavRightComponent { }

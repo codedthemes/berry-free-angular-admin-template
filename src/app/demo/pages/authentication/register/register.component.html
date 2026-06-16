@@ -26,79 +26,59 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-floating mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInput"
-                    placeholder="Enter Your First Name"
+                  <input type="email" class="form-control" id="floatingInput" placeholder="Enter Your First Name"
                     [formField]="registerForm.firstName"
-                    [class.is-invalid]="submitted() && registerForm.firstName().errors().length > 0"
-                  />
+                    [class.is-invalid]="submitted() && registerForm.firstName().errors().length > 0" />
                   <label for="floatingInput">First Name</label>
                   @if (submitted() && registerForm.firstName().errors().length > 0) {
-                    <div class="invalid-feedback">
-                      @for (error of registerForm.firstName().errors(); track error.kind) {
-                        <div>{{ error.message }}</div>
-                      }
-                    </div>
+                  <div class="invalid-feedback">
+                    @for (error of registerForm.firstName().errors(); track error.kind) {
+                    <div>{{ error.message }}</div>
+                    }
+                  </div>
                   }
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-floating mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInput"
-                    placeholder="Enter Your Last Name"
+                  <input type="email" class="form-control" id="floatingInput" placeholder="Enter Your Last Name"
                     [formField]="registerForm.lastName"
-                    [class.is-invalid]="submitted() && registerForm.lastName().errors().length > 0"
-                  />
+                    [class.is-invalid]="submitted() && registerForm.lastName().errors().length > 0" />
                   <label for="floatingInput">Last Name</label>
                   @if (submitted() && registerForm.lastName().errors().length > 0) {
-                    <div class="invalid-feedback">
-                      @for (error of registerForm.lastName().errors(); track error.kind) {
-                        <div>{{ error.message }}</div>
-                      }
-                    </div>
+                  <div class="invalid-feedback">
+                    @for (error of registerForm.lastName().errors(); track error.kind) {
+                    <div>{{ error.message }}</div>
+                    }
+                  </div>
                   }
                 </div>
               </div>
             </div>
             <div class="form-floating mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="floatingInput"
-                [class.is-invalid]="submitted() && registerForm.email().invalid()"
-                placeholder="Email Address"
-                [formField]="registerForm.email"
-              />
+              <input type="email" class="form-control" id="floatingInput"
+                [class.is-invalid]="submitted() && registerForm.email().invalid()" placeholder="Email Address"
+                [formField]="registerForm.email" />
               <label for="floatingInput">Email address / Username</label>
               @if (submitted() && registerForm.email().invalid()) {
-                <div class="invalid-feedback">
-                  @for (error of registerForm.email().errors(); track error.kind) {
-                    <div>{{ error.message }}</div>
-                  }
-                </div>
+              <div class="invalid-feedback">
+                @for (error of registerForm.email().errors(); track error.kind) {
+                <div>{{ error.message }}</div>
+                }
+              </div>
               }
             </div>
             <div class="form-floating mb-3">
-              <input
-                type="password"
-                id="password"
-                class="form-control"
-                [formField]="registerForm.password"
+              <input type="password" id="password" class="form-control" [formField]="registerForm.password"
                 [class.is-invalid]="submitted() && registerForm.password().errors().length > 0"
-                placeholder="Password (min. 8 characters)"
-              />
+                placeholder="Password (min. 8 characters)" />
               <label for="password">Password</label>
               @if (submitted() && registerForm.password().errors().length > 0) {
-                <div class="invalid-feedback">
-                  @for (error of registerForm.password().errors(); track error.kind) {
-                    <div>{{ error.message }}</div>
-                  }
-                </div>
+              <div class="invalid-feedback">
+                @for (error of registerForm.password().errors(); track error.kind) {
+                <div>{{ error.message }}</div>
+                }
+              </div>
               }
             </div>
             <div class="form-check mt-3s">

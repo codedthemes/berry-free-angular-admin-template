@@ -8,7 +8,8 @@
     <div class="customize-header">
       <h5>Theme Customization</h5>
       <div class="d-inline-flex align-items-center gap-2">
-        <button type="button" class="btn-close ms-1" aria-label="Close" (click)="styleSelectorToggle = !styleSelectorToggle"></button>
+        <button type="button" class="btn-close ms-1" aria-label="Close"
+          (click)="styleSelectorToggle = !styleSelectorToggle"></button>
       </div>
     </div>
     <ul class="list-group list-group-flush">
@@ -17,40 +18,18 @@
         <p class="text-muted text-sm">Choose theme font</p>
         <div class="theme-color theme-font-style">
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="layout_font"
-              id="layoutfontRoboto"
-              checked
-              [checked]="setFontFamily === 'Roboto'"
-              (click)="fontFamily('Roboto')"
-              ngbTooltip="Roboto"
-            />
+            <input class="form-check-input" type="radio" name="layout_font" id="layoutfontRoboto" checked
+              [checked]="setFontFamily === 'Roboto'" (click)="fontFamily('Roboto')" ngbTooltip="Roboto" />
             <label class="form-check-label" for="layoutfontRoboto">Roboto</label>
           </div>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="layout_font"
-              id="layoutfontPoppins"
-              [checked]="setFontFamily === 'Poppins'"
-              (click)="fontFamily('Poppins')"
-              ngbTooltip="Poppins"
-            />
+            <input class="form-check-input" type="radio" name="layout_font" id="layoutfontPoppins"
+              [checked]="setFontFamily === 'Poppins'" (click)="fontFamily('Poppins')" ngbTooltip="Poppins" />
             <label class="form-check-label" for="layoutfontPoppins">Poppins</label>
           </div>
           <div class="form-check">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="layout_font"
-              id="layoutfontInter"
-              [checked]="setFontFamily === 'Inter'"
-              (click)="fontFamily('Inter')"
-              ngbTooltip="Inter"
-            />
+            <input class="form-check-input" type="radio" name="layout_font" id="layoutfontInter"
+              [checked]="setFontFamily === 'Inter'" (click)="fontFamily('Inter')" ngbTooltip="Inter" />
             <label class="form-check-label" for="layoutfontInter">Inter</label>
           </div>
         </div>
