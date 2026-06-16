@@ -1,29 +1,21 @@
 <div class="ms-auto">
   <ul class="list-unstyled">
-    <li>
-      <div class="dropdown pc-h-item">
-        <a
-          class="pc-head-link head-link-primary arrow-none me-0"
-          href="https://github.com/codedthemes/berry-free-angular-admin-template/"
-          target="_blank"
-        >
+    <li class="d-inline-flex">
+      <div class="pc-h-item" ngbDropdown>
+        <a class="pc-head-link head-link-primary arrow-none me-0"
+          href="https://github.com/codedthemes/berry-free-angular-admin-template/" target="_blank">
           <i class="ti ti-brand-github"></i>
         </a>
       </div>
     </li>
     <li>
-      <div class="dropdown pc-h-item" ngbDropdown>
-        <a
-          class="pc-head-link head-link-secondary dropdown-toggle arrow-none me-0"
-          data-bs-toggle="dropdown"
-          href="javascript:"
-          ngbDropdownToggle
-        >
+      <div class="pc-h-item" ngbDropdown>
+        <a class="pc-head-link head-link-secondary arrow-none me-0" href="javascript:void(0)" ngbDropdownToggle>
           <i class="ti ti-bell"></i>
         </a>
-        <div class="dropdown-menu dropdown-notification dropdown-menu-end pc-h-dropdown" ngbDropdownMenu>
+        <div class="dropdown-notification dropdown-menu-end pc-h-dropdown" ngbDropdownMenu>
           <div class="dropdown-header">
-            <a href="javascript:!" class="link-primary float-end text-decoration-underline">Mark as all read</a>
+            <a href="javascript:void(0)!" class="link-primary float-end text-decoration-underline">Mark as all read</a>
             <h5>
               All Notification
               <span class="badge bg-warning rounded-pill ms-1">01</span>
@@ -49,7 +41,7 @@
                       <span class="float-end text-muted">2 min ago</span>
                       <h5>John Doe</h5>
                       <p class="text-body fs-6">It is a long established fact that a reader will be distracted</p>
-                      <div class="badge rounded-pill bg-light-danger">Unread</div>
+                      <div class="badge rounded-pill bg-light-danger me-1">Unread</div>
                       <div class="badge rounded-pill bg-light-warning">New</div>
                     </div>
                   </div>
@@ -63,7 +55,8 @@
                       <span class="float-end text-muted">3 min ago</span>
                       <h5>Store Verification Done</h5>
                       <p class="text-body fs-6">We have successfully received your request.</p>
-                      <div class="badge rounded-pill bg-light-danger">Unread</div>
+                      <div class="badge rounded-pill bg-light-danger me-1">Unread</div>
+                      <div class="badge rounded-pill bg-light-warning">New</div>
                     </div>
                   </div>
                 </a>
@@ -120,25 +113,20 @@
           </ng-scrollbar>
           <div class="dropdown-divider"></div>
           <div class="text-center py-2">
-            <a href="javascript:" class="link-primary">Mark as all read</a>
+            <a href="javascript:void(0)" class="link-primary">Mark as all read</a>
           </div>
         </div>
       </div>
     </li>
     <li>
-      <div class="dropdown pc-h-item header-user-profile" ngbDropdown>
-        <a
-          class="pc-head-link head-link-primary dropdown-toggle arrow-none me-0"
-          data-bs-toggle="dropdown"
-          href="javascript:"
-          ngbDropdownToggle
-        >
+      <div class="pc-h-item header-user-profile" ngbDropdown>
+        <a class="pc-head-link head-link-primary arrow-none me-0" href="javascript:void(0)" ngbDropdownToggle>
           <img src="assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar" />
           <span>
             <i class="ti ti-settings"></i>
           </span>
         </a>
-        <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown" ngbDropdownMenu>
+        <div class="dropdown-user-profile dropdown-menu-end pc-h-dropdown" ngbDropdownMenu>
           <div class="dropdown-header">
             <h4>
               Good Morning,
@@ -160,7 +148,8 @@
                   <br />
                   subscriptions.
                 </p>
-                <a href="https://codedthemes.com/item/berry-angular-admin-dashboard-template/" target="_blank" class="btn btn-warning">
+                <a href="https://codedthemes.com/item/berry-angular-admin-dashboard-template/" target="_blank"
+                  class="btn btn-warning">
                   Go Premium
                 </a>
               </div>
@@ -176,15 +165,15 @@
                 </div>
               </div>
               <hr />
-              <a [routerLink]="['/guest/register']" class="dropdown-item">
+              <a href="javascript:void(0)" class="dropdown-item">
                 <i class="ti ti-settings"></i>
                 <span>Account Profile</span>
               </a>
-              <a href="javascript:" class="dropdown-item">
+              <a href="javascript:void(0)" class="dropdown-item">
                 <i class="ti ti-user"></i>
                 <span>Social Profile</span>
               </a>
-              <a [routerLink]="['/guest/login']" class="dropdown-item">
+              <a href="javascript:void(0)" class="dropdown-item">
                 <i class="ti ti-logout"></i>
                 <span>Logout</span>
               </a>

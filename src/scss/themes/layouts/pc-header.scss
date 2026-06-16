@@ -31,6 +31,7 @@
     padding: 0 20px;
     flex-grow: 1;
     justify-content: space-between;
+    align-items: center;
   }
 
   .header-search {
@@ -98,12 +99,12 @@
     border-radius: $border-radius;
 
     @each $color, $value in $theme-colors {
-      @if ($color == 'primary' or $color == 'secondary') {
+      @if ($color =='primary' or $color =='secondary') {
         &.head-link-#{$color} {
           background: shift-color($value, $soft-bg-level);
           color: $value;
 
-          > i {
+          >i {
             color: $value;
           }
 
@@ -112,7 +113,7 @@
 
             color: #fff;
 
-            > i {
+            >i {
               color: #fff;
             }
           }
@@ -120,12 +121,12 @@
       }
     }
 
-    > i {
+    >i {
       font-size: 20px;
       color: $primary;
     }
 
-    > svg {
+    >svg {
       width: 20px;
       height: 20px;
     }
@@ -181,6 +182,14 @@
   }
 
   .pc-h-dropdown {
+    display: none;
+
+    &.show,
+    .show>& {
+      display: block !important;
+      z-index: 1026;
+    }
+
     .fa-circle {
       font-size: 5px;
       vertical-align: middle;
@@ -194,6 +203,7 @@
       left: auto !important;
     }
   }
+
   .dropdown .dropdown-item {
     small {
       opacity: 0.8;
@@ -203,6 +213,10 @@
 
   .drp-search {
     min-width: 20rem;
+
+    @media (max-width: 1024px) {
+      min-width: 0;
+    }
   }
 
   .user-avtar {
@@ -217,7 +231,7 @@
       width: 92px;
       border-radius: 50px;
 
-      > span > i {
+      >span>i {
         font-size: 22px;
         margin-right: 8px;
       }
@@ -233,7 +247,7 @@
           margin-right: 0;
         }
 
-        > span > i {
+        >span>i {
           display: none;
         }
       }
@@ -293,7 +307,7 @@
         padding-left: 0;
         margin-bottom: 0;
 
-        + .form-switch {
+        +.form-switch {
           margin-top: 15px;
         }
 
@@ -315,6 +329,7 @@
     max-width: 100%;
 
     .list-group-item-action {
+
       &:active,
       &:hover,
       &:focus {
@@ -356,6 +371,7 @@
 @media (min-width: 1025px) {
   .pc-header {
     z-index: 1027;
+
     .header-mobile-collapse {
       display: none;
     }
@@ -373,6 +389,7 @@
     }
 
     .pc-head-link {
+
       .user-desc,
       .user-name {
         display: none;

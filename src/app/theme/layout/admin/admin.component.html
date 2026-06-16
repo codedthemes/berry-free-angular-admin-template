@@ -1,13 +1,9 @@
-<app-navigation
-  class="coded-navbar pc-sidebar"
-  [ngClass]="{
+<app-navigation class="coded-navbar pc-sidebar" [ngClass]="{
     'navbar-collapsed': navCollapsed,
     horizontal: currentLayout === 'horizontal',
     compact: currentLayout === 'compact',
     'mob-open': navCollapsedMob
-  }"
-  (NavCollapsedMob)="navMobClick()"
-/>
+  }" (NavCollapsedMob)="closeMenu()" />
 <app-nav-bar (NavCollapse)="this.navCollapsed = !this.navCollapsed" (NavCollapsedMob)="navMobClick()" />
 <div class="pc-container">
   <div class="coded-wrapper">
@@ -35,9 +31,11 @@
       </div>
       <div class="col-auto my-1">
         <ul class="list-inline footer-link mb-0">
-          <li class="list-inline-item"><a href="https://github.com/codedthemes/berry-free-angular-admin-template/" target="_blank">Github</a></li>
+          <li class="list-inline-item"><a href="https://github.com/codedthemes/berry-free-angular-admin-template/"
+              target="_blank">Github</a></li>
           <li class="list-inline-item">
-            <a href="https://www.figma.com/community/file/1468460364009262125/berry-free-dashboard-ui-kit" target="_blank">Figma UI Kit</a>
+            <a href="https://www.figma.com/community/file/1468460364009262125/berry-free-dashboard-ui-kit"
+              target="_blank">Figma UI Kit</a>
           </li>
         </ul>
       </div>

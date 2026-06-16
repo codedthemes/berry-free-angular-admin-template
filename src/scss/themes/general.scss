@@ -7,9 +7,11 @@
     outline: none;
   }
 }
+
 .accordion {
   --#{$prefix}accordion-color: #{$body-color};
 }
+
 a {
   &:hover {
     outline: none;
@@ -35,6 +37,7 @@ strong {
     margin-right: 5px;
     margin-bottom: 5px;
   }
+
   .btn-group {
     .btn {
       margin-right: 0;
@@ -54,19 +57,30 @@ strong {
     border-radius: $border-radius;
   }
 }
+
 .color-block {
   border-radius: $border-radius;
   margin: 4px 0;
+
   @each $name, $value in $more-colors {
     $i: 100;
+
     @while $i<=900 {
       &.bg-#{$name}-#{$i} {
         color: color-contrast(map-get($value, $i));
       }
+
       &.text-#{$name}-#{$i} {
         background-color: color-contrast(map-get($value, $i));
       }
+
       $i: $i + 100;
     }
   }
+}
+
+ng-scrollbar {
+  --scrollbar-thumb-color: #{$gray-300};
+  --scrollbar-track-color: transparent !important;
+  --scrollbar-track-shape: 3px;
 }

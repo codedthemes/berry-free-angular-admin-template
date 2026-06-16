@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -8,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   // public props
-  @Input() cardTitle: string;
-  @Input() customHeader: boolean;
+  cardTitle = input<string>();
+  customHeader = input<boolean>();
 }

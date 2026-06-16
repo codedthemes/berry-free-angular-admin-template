@@ -22,10 +22,11 @@ body {
     padding-top: 20px;
   }
 
-  .page-header + .row {
+  .page-header+.row {
     padding-top: 24px;
   }
-  .page-header + .coded-content {
+
+  .page-header+.coded-content {
     padding-top: calc(30px + 55px);
   }
 }
@@ -54,15 +55,13 @@ body {
 
   h5 {
     margin-bottom: 0;
-    margin-right: 8px;
-    padding-right: 8px;
     font-weight: 500;
-    border-right: 1px solid darken($body-bg, 10%);
   }
 
   .breadcrumb {
     padding: 0;
     display: inline-flex;
+    align-items: center;
     margin-bottom: 0;
     background: transparent;
     font-size: 13px;
@@ -76,9 +75,9 @@ body {
         color: $primary;
       }
 
-      + .breadcrumb-item::before {
+      +.breadcrumb-item::before {
         position: relative;
-        top: 0px;
+        top: 2px;
       }
 
       &:last-child {
@@ -89,7 +88,7 @@ body {
     svg {
       width: 14px;
       height: 14px;
-      vertical-align: baseline;
+      vertical-align: text-top;
     }
   }
 }
@@ -98,8 +97,9 @@ body {
   .pc-container {
     margin-left: 10px;
     margin-right: 10px;
-    .page-header + .row,
-    .page-header + .coded-content,
+
+    .page-header+.row,
+    .page-header+.coded-content,
     .coded-content {
       padding-top: 20px;
       padding-left: 10px;
@@ -111,8 +111,6 @@ body {
     position: relative;
     left: 0;
     top: 0;
-    margin-left: 10px;
-    margin-right: 10px;
   }
 }
 

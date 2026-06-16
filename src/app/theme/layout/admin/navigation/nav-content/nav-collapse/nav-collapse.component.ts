@@ -5,12 +5,12 @@ import { RouterModule } from '@angular/router';
 
 // project import
 import { NavigationItem } from '../../navigation';
-import { SharedModule } from 'src/app/theme/shared/shared.module';
+import { SHARED_IMPORTS } from 'src/app/theme/shared/shared.module';
 import { NavItemComponent } from '../nav-item/nav-item.component';
 
 @Component({
   selector: 'app-nav-collapse',
-  imports: [CommonModule, SharedModule, RouterModule, NavItemComponent],
+  imports: [...SHARED_IMPORTS, CommonModule, RouterModule, NavItemComponent],
   templateUrl: './nav-collapse.component.html',
   styleUrl: './nav-collapse.component.scss'
 })

@@ -2,13 +2,13 @@
 import { ChangeDetectorRef, Component, inject, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { email, Field, form, minLength, required } from '@angular/forms/signals';
+import { email, form, minLength, required, FormField } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-login',
-  imports: [RouterModule, Field],
+  imports: [RouterModule, FormField],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrl: './login.component.scss'
 })
 export class LoginComponent {
   private cd = inject(ChangeDetectorRef);
