@@ -29,6 +29,8 @@ jobs:
 
       - name: 🔨 Build Project
         run: |
+          corepack enable
+          yarn set version 4.13.0        
           yarn
           yarn build-prod
 
