@@ -115,7 +115,7 @@ export const NavigationItems: NavigationItem[] = [
       },
       {
         id: 'document',
-        title: 'Document',
+        title: 'Documentation',
         type: 'item',
         classes: 'nav-item',
         url: 'https://codedthemes.gitbook.io/berry-angular/',

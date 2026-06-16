@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // project import
+export { CardComponent } from './components/card/card.component';
 import { CardComponent } from './components/card/card.component';
 
 // third party
