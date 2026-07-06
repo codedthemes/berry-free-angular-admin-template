@@ -103,5 +103,4 @@ dist
 
 #angular catch file
 .angular
-.vscode/
 config.bat
